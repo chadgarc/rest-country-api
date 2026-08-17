@@ -1,0 +1,7 @@
+
+.theme {
+    display: 'block';
+    &.hidden{
+        display: 'none';
+    }
+}
