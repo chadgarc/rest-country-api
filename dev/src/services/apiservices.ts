@@ -12,7 +12,7 @@ enum apiCountry {
 export const getSetCountries = async (limit: number = 20, startOn: number = 0) => {
     
     try{
-        const response = await fetch(`${apiCountry.CORS_ANYWHERE}${apiCountry.URL}?limit=${limit}&offset=${startOn}&${apiCountry.DETAILS_PARAMETERS}`,
+        const response = await fetch(`${apiCountry.URL}?limit=${limit}&offset=${startOn}&${apiCountry.DETAILS_PARAMETERS}`,
             { method: "GET", headers: { 'Authorization': apiCountry.TOKEN }} );
 
         if(!response.ok) {
@@ -41,11 +41,12 @@ export const getCountruesByRegion = async (region: string) => {
 
         const data = await response.json();
 
-        console.log(data);
-
+        console.log(data)
         const countries: CountryData[] = data.data.objects.map((country:any) => jsonNormalization(country))
         console.log(countries)
+        return countries;
     } catch(error){
-
+        console.error(error)
+        return []
     }
 }
