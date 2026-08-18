@@ -1,6 +1,12 @@
 import type { CountryData } from "../entities/country";
+import { getCountry } from "../main";
 
 export const detailPost = (country: CountryData) => {
+
+    const borderCountries: string[] = []
+
+    country.borderCountries.forEach(code => borderCountries.push(getCountry(code)?.name ?? ''));
+
     const container = document.createElement('div') as HTMLElement;
     container.className = 'flex flex-1 flex-col lg:flex-row md:h-95 gap-10 justify-between lg:justify-around mt-10'
 
@@ -40,7 +46,7 @@ export const detailPost = (country: CountryData) => {
             <section class="flex flex-col sm:flex-row mt-6 sm:mt-15 gap-2 items-start sm:items-center ms-[1%] sm:ms-0">
                 <p class='mb-2 sm:mb-0'>Border Countries: </p>
                 <div class="flex flex-wrap justify-start gap-2">
-                    ${countriesStack(country.borderCountries).innerHTML}
+                    ${countriesStack(borderCountries).innerHTML}
                 </div>
             <section>
         </section>
