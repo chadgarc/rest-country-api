@@ -1,6 +1,7 @@
 import { searchBar } from "./components/searchBar";
 import { dropList } from "./components/dropDownList";
 import { detailPost } from "./components/details";
+import type { CountryData } from "./entities/country";
 
 const searchFilterSection = document.getElementById('searchFilter') as HTMLElement;
 const contentContainer = document.getElementById('content') as HTMLElement;
@@ -20,7 +21,7 @@ function renderCountryList(){
 
 }
 
-function renderCountryDetails(country:string) {
+function renderCountryDetails(country:CountryData) {
     searchFilterSection.innerHTML = '';
     contentContainer.classList.remove(contentAllCountriesSettings[0]);
     contentContainer.classList.remove(contentAllCountriesSettings[1]);
@@ -36,7 +37,11 @@ function renderCountryDetails(country:string) {
 
     searchFilterSection.appendChild(button);
 
-    const demoEcuador = {
+    
+    contentContainer.appendChild(detailPost(country));
+}
+
+const demoEcuador = {
         name: "Ecuador",
         nativeName: "Ecuador",
         population: 17643060,
@@ -49,8 +54,6 @@ function renderCountryDetails(country:string) {
         borderCountries: ["COL", "PER"],
         flagRoute: ''
     };
-    contentContainer.appendChild(detailPost(demoEcuador));
-}
-
-renderCountryDetails('spain');
+    
+// renderCountryDetails(demoEcuador);
 renderCountryList();
