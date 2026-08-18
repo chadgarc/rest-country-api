@@ -1,7 +1,7 @@
 import { searchBar } from "./components/searchBar";
 import { dropList } from "./components/dropDownList";
 import { detailPost } from "./components/details";
-import { Country, type CountryData } from "./entities/country";
+import type { CountryData } from "./entities/country";
 import { countryList } from "./components/countryList";
 
 const searchFilterSection = document.getElementById('searchFilter') as HTMLElement;
