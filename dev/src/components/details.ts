@@ -29,7 +29,7 @@ export const detailPost = (country: CountryData) => {
                     <p>Population: <span>${country.population}</span></p>
                     <p>Region: <span>${country.region}</span></p>
                     <p>Sub Region: : <span>${country.subRegion}</span></p>
-                    <p>Capital: <span>${country.capital}</span></p>
+                    <p>Capital: <span>${country.capital.join(', ')}</span></p>
                 </article>
                 <article class='flex flex-col gap-2'>
                     <p>Top Level Domain: <span>${country.domain}</span></p>
