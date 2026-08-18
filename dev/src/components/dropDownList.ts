@@ -15,7 +15,7 @@
 
 const newAnchor = (name:string) => {
     const anchor = document.createElement('a');
-    anchor.setAttribute('data-continent',name);
+    anchor.dataset.region = name;
     anchor.textContent = name;
     return anchor;
 }
@@ -41,6 +41,7 @@ export const dropList = (title: string, targetID: number, list: string[]): HTMLE
 
     list.forEach( item => {
         const li = document.createElement('li');
+        
         li.appendChild(newAnchor(item));
         ulList.appendChild(li);
     });
