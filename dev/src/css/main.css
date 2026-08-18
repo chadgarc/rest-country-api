@@ -80,8 +80,9 @@ p span {
 
 .countryStack {
   background-color: var(--element);
-  width: 110px;
   height: 33px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .cardTopLeft {
