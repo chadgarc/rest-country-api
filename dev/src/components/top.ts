@@ -23,7 +23,7 @@ export const top = (title: string) => {
     `;
 
     const themeArea = document.createElement('div');
-    themeArea.className = 'flex items-center gap-2 me-20';
+    themeArea.className = 'flex items-center gap-2 me-20 themeArea';
     const themeBtn = themeButton();
     themeArea.appendChild(themeBtn)
     themeArea.appendChild(span('light','Light Mode', true));
