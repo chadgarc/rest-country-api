@@ -1,3 +1,4 @@
+import { errorHandler } from "../modules/errorHandler";
 import { jsonNormalization, type CountryData } from "../entities/country";
 
 
@@ -20,13 +21,13 @@ export const getSetCountries = async (limit: number = 20, startOn: number = 0) =
 
         const data = await response.json();
 
-        console.log(data)
+        
         const countries: CountryData[] = data.data.objects.map((country:any) => jsonNormalization(country))
-        console.log(countries)
+        
         return countries;
     } catch(error){
-        console.error(error)
-        return []
+        errorHandler(error as Error)
+        return [];
     }
 }
 
@@ -40,11 +41,13 @@ export const getCountruesByRegion = async (region: string) => {
 
         const data = await response.json();
 
-        console.log(data);
-
+        
         const countries: CountryData[] = data.data.objects.map((country:any) => jsonNormalization(country))
-        console.log(countries)
+        
+        return countries;
     } catch(error){
-
+        errorHandler(error as Error)
+        return [];
     }
 }
+
