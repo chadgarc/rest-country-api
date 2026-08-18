@@ -7,8 +7,8 @@ export const detailPost = (country: CountryData) => {
     container.innerHTML = `
         <div class='w-97 xl:w-130 aspect-3/2 mx-auto hover-3d'>
 
-        <figure class="w-full aspect-3/2">
-            <img src="${country.flagRoute}" alt="Flag of ${country.name}" />
+        <figure class="">
+            <img class='w-full aspect-3/2' src="${country.flagRoute}" alt="Flag of ${country.name}" />
         </figure>
 
         <div></div>

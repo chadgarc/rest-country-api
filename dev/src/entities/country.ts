@@ -1,5 +1,6 @@
 
 export interface CountryData{
+    code: string,
     name: string,
     nativeName: string,
     population: number,
@@ -14,6 +15,7 @@ export interface CountryData{
 }
 
 export class Country implements CountryData {
+    code: string;
     name: string;
     nativeName: string;
     population: number;
@@ -27,6 +29,7 @@ export class Country implements CountryData {
     flagRoute: string;
 
     constructor(
+        code:string,
         name: string = '',
         nativeName: string = '',
         population: number = 0,
@@ -39,6 +42,7 @@ export class Country implements CountryData {
         borderCountries: string[] = [],
         flagRoute: string = ''
     ) {
+        this.code = code || '';
         this.name = name || '';
         this.nativeName = nativeName || '';
         this.population = population || 0;

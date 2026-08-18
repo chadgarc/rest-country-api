@@ -97,6 +97,16 @@ p{
     height: 33px;
 }
 
+.cardTopLeft{
+    border-top-left-radius: .6rem;
+}
+.cardTopRight{
+    border-top-right-radius: .6rem;
+}
+.cardContent{
+    font-size: .5rem !important;
+}
+
 @media (max-width: 550px) {
     html{
         font-size: 13px;

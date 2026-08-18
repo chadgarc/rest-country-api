@@ -1,18 +1,34 @@
+import type { CountryData } from "../entities/country";
 
-export const card = (imageSource: string, country: string, population: number, region: string, capital: string): HTMLElement => {
-    const container = document.createElement('section') as HTMLElement;
-    container.className = 'card bg-base-100 w-96 shadow-sm'
+export const card = (country: CountryData): HTMLElement => {
+    const container = document.createElement('div') as HTMLElement;
+    container.className = 'card w-80 md:w-65 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]'
     container.innerHTML=`
-        <figure>
+        <div class="hover-3d md:h-45 aspect-3/2">
+            <figure >
             <img
-                src="${imageSource}"
-                alt="${country}'s flag"/>
-        </figure>
+                class='w-full h-full cardTopLeft cardTopRight'
+                src="${country.flagRoute}"
+                alt="${country.name}'s flag"/>
+            </figure>
+            <!-- 8 empty divs needed for the 3D effect -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
         <article class="card-body">
-            <h2 class="card-title">${country}</h2>
-            <p>Population: ${population}</p>
-            <p>Region: ${region}</p>
-            <p>Capital: ${capital}</p>
+            <div class='cardContent flex flex-col gap-1 '>
+            <h2 class="card-title">${country.name}</h2>
+            <p>Population: ${country.population}</p>
+            <p>Region: ${country.region}</p>
+            <p>Capital: ${country.capital}</p>
+            </div>
             <div class="card-actions justify-end">
             </div>
         </article>

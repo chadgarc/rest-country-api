@@ -84,6 +84,18 @@ p span {
   height: 33px;
 }
 
+.cardTopLeft {
+  border-top-left-radius: 0.6rem;
+}
+
+.cardTopRight {
+  border-top-right-radius: 0.6rem;
+}
+
+.cardContent {
+  font-size: 0.5rem !important;
+}
+
 @media (max-width: 550px) {
   html {
     font-size: 13px;
