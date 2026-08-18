@@ -16,7 +16,7 @@ export const searchBar = (searchMessage: string): HTMLElement => {
             </g>
         </svg>
 
-        <input class='ps-4' type="search" required placeholder="${searchMessage}" />
+        <input id='searchEntries' class='ps-4' type="search" required placeholder="${searchMessage}" />
     `;
     return bar;
 }

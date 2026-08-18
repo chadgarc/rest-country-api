@@ -2,10 +2,10 @@ import type { CountryData } from "../entities/country";
 
 export const card = (country: CountryData): HTMLElement => {
     const container = document.createElement('div') as HTMLElement;
-    container.className = 'card w-80 md:w-65 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]'
+    container.className = 'card w-85 md:w-60 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]'
     container.dataset.code = country.code;
     container.innerHTML=`
-        <div class="hover-3d md:h-45 aspect-3/2">
+        <div class="hover-3d md:h-34 aspect-3/2">
             <figure >
             <img
                 class='w-full h-full cardTopLeft cardTopRight'

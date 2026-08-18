@@ -37,13 +37,13 @@
             </g>
         </svg>
 
-        <input class='ps-4' type="search" required placeholder="${e}" />
-    `,t},l=e=>{let t=document.createElement(`a`);return t.setAttribute(`data-continent`,e),t.textContent=e,t},u=(e,t,n)=>{let r=document.createElement(`button`),i=document.createElement(`ul`);return r.className=`btn dropdownBtn`,r.setAttribute(`popovertarget`,`popover-${t}`),r.style.anchorName=`--anchor-${t}`,r.innerHTML=`
+        <input id='searchEntries' class='ps-4' type="search" required placeholder="${e}" />
+    `,t},l=e=>{let t=document.createElement(`a`);return t.dataset.region=e,t.textContent=e,t},u=(e,t,n)=>{let r=document.createElement(`button`),i=document.createElement(`ul`);return r.className=`btn dropdownBtn`,r.setAttribute(`popovertarget`,`popover-${t}`),r.style.anchorName=`--anchor-${t}`,r.innerHTML=`
         <span>${e}</span>
         <svg class="rotate-90 h-6 w-6 fill-current md:h-8 md:w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
         </svg>
-        `,i.className=`dropdownItems dropdown menu w-52 rounded-box bg-base-100 shadow-sm`,i.setAttribute(`popover`,``),i.id=`popover-${t}`,i.style.positionAnchor=`--anchor-${t}`,n.forEach(e=>{let t=document.createElement(`li`);t.appendChild(l(e)),i.appendChild(t)}),[r,i]},d=e=>{let t=document.createElement(`div`);return t.className=`flex flex-1 flex-col lg:flex-row md:h-95 gap-10 justify-between lg:justify-around mt-10`,t.innerHTML=`
+        `,i.className=`dropdownItems dropdown menu w-52 rounded-box bg-base-100 shadow-sm`,i.setAttribute(`popover`,``),i.id=`popover-${t}`,i.style.positionAnchor=`--anchor-${t}`,n.forEach(e=>{let t=document.createElement(`li`);t.appendChild(l(e)),i.appendChild(t)}),[r,i]},d=e=>{let t=[];e.borderCountries.forEach(e=>t.push(w(e)?.name??``));let n=document.createElement(`div`);return n.className=`flex flex-1 flex-col lg:flex-row md:h-95 gap-10 justify-between lg:justify-around mt-10`,n.innerHTML=`
         <div class='w-97 xl:w-130 aspect-3/2 mx-auto hover-3d'>
 
         <figure class="">
@@ -79,12 +79,12 @@
             <section class="flex flex-col sm:flex-row mt-6 sm:mt-15 gap-2 items-start sm:items-center ms-[1%] sm:ms-0">
                 <p class='mb-2 sm:mb-0'>Border Countries: </p>
                 <div class="flex flex-wrap justify-start gap-2">
-                    ${f(e.borderCountries).innerHTML}
+                    ${f(t).innerHTML}
                 </div>
             <section>
         </section>
-    `,t},f=e=>{let t=document.createElement(`div`);return e.forEach(e=>{let n=document.createElement(`div`);n.className=`countryStack shadow-lg flex items-center justify-center`,n.textContent=e,t.appendChild(n)}),t},p=e=>{let t=document.createElement(`div`);return t.className=`card w-80 md:w-65 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]`,t.dataset.code=e.code,t.innerHTML=`
-        <div class="hover-3d md:h-45 aspect-3/2">
+    `,n},f=e=>{let t=document.createElement(`div`);return e.forEach(e=>{let n=document.createElement(`div`);n.className=`countryStack shadow-lg flex items-center justify-center`,n.textContent=e,t.appendChild(n)}),t},p=e=>{let t=document.createElement(`div`);return t.className=`card w-85 md:w-60 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]`,t.dataset.code=e.code,t.innerHTML=`
+        <div class="hover-3d md:h-34 aspect-3/2">
             <figure >
             <img
                 class='w-full h-full cardTopLeft cardTopRight'
@@ -112,9 +112,9 @@
             <div class="card-actions justify-end">
             </div>
         </article>
-    `,t},m=e=>e.map(e=>p(e)),h=e=>{let t=e.codes?.alpha_3||`UNK`,n=e.names?.official||`No Oficial Name`,r=e.population||0,i=e.subregion||`No available`,a=e.region||`No available`,o=e.borders||[`N/A`],s=e.flag?.url_png||`../../assets/placeholder-flag.webp`,c=e.tlds?.length?e.tlds[0]:`No domain`,l=e.names?.native?Object.values(e.names.native).map(e=>e.official):[`N/A`],u=e.languages?.length?e.languages.map(e=>e.iso639_1||e.name):[`No Oficial Language`],d=e.capitals?.length?e.capitals.map(e=>e.name):[`No oficial capital`],f=e.currencies?.length?e.currencies.map(e=>e.code):[`No oficial currency`];return console.log(n),{code:t,name:n,nativeName:l,population:r,region:a,subRegion:i,capital:d,languages:u,domain:c,currencies:f,borderCountries:o,flagRoute:s}},g=async(e=20,t=0)=>{try{let n=await fetch(`https://cors-anywhere.herokuapp.com/https://api.restcountries.com/countries/v5?limit=${e}&offset=${t}&response_fields=codes.alpha_3,names.official,languages,names.native,population,region,subregion,capitals.name,tlds,currencies.code,borders,flag.url_png`,{method:`GET`,headers:{Authorization:`rc_live_31893b86ab1a4231be2c893453cbac9b`}});if(!n.ok)throw Error(`Not able to get data`);let r=await n.json();console.log(r);let i=r.data.objects.map(e=>h(e));return console.log(i),i}catch(e){return console.error(e),[]}},_=[],v=localStorage.getItem(`countries`);v&&v.length?_=JSON.parse(v):(_.push(...await g(100)),_.push(...await g(100,100)),_.push(...await g(100,200)),localStorage.setItem(`countries`,JSON.stringify(_)));var y=[`DEU`,`USA`,`BRA`,`ISL`,`AFG`,`ALA`,`ALB`,`DZA`],b=()=>_.filter(e=>y.includes(e.code)),x=document.getElementById(`searchFilter`),S=document.getElementById(`content`),C=document.createElement(`button`),w=[`grid`,`grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]`],[T,E]=u(`Filter by Region`,1,[`Africa`,`America`,`Asia`,`Europe`,`Oceania`]);function D(e){x.innerHTML=``,S.innerHTML=``,S.classList.add(w[0]),S.classList.add(w[1]),x.appendChild(c(`Search for a country...`)),x.appendChild(T),x.appendChild(E),m(e).map(e=>S.appendChild(e))}function O(e){x.innerHTML=``,S.innerHTML=``,S.classList.remove(w[0]),S.classList.remove(w[1]),C.className=`btn backBtn mt-7 mb-9 ms-9`,C.innerHTML=`
-        <svg class="h-6 w-6 fill-current" viewBox="0 -960 960 960">
-            <path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/>
-        </svg>
-
-        <span">Back<span>`,x.appendChild(C),S.appendChild(d(e))}C.addEventListener(`click`,()=>{D(b())}),S.addEventListener(`click`,e=>{let t=e.target.closest(`.card`);if(!t)return;let n=t.dataset.code,r=_.find(e=>e.code===n);r&&O(r)}),D(b());
+    `,t},m=e=>e.map(e=>p(e)),h=class extends Error{constructor(e){super(e),this.name=`DataError`}},g=e=>{e instanceof h?console.error(`Data Error:`,e.message):console.error(e)},_=e=>{let t=e.codes?.alpha_3||`UNK`,n=e.names?.official||`No Oficial Name`,r=e.population||0,i=e.subregion||`No available`,a=e.region||`No available`,o=e.borders||[`N/A`],s=e.flag?.url_png||`../../assets/placeholder-flag.webp`,c=e.tlds?.length?e.tlds[0]:`No domain`,l=e.names?.native?Object.values(e.names.native).map(e=>e.official):[`N/A`],u=e.languages?.length?e.languages.map(e=>e.iso639_1||e.name):[`No Oficial Language`],d=e.capitals?.length?e.capitals.map(e=>e.name):[`No oficial capital`],f=e.currencies?.length?e.currencies.map(e=>e.code):[`No oficial currency`];return console.log(n),{code:t,name:n,nativeName:l,population:r,region:a,subRegion:i,capital:d,languages:u,domain:c,currencies:f,borderCountries:o,flagRoute:s}},v=async(e=20,t=0)=>{try{let n=await fetch(`https://cors-anywhere.herokuapp.com/https://api.restcountries.com/countries/v5?limit=${e}&offset=${t}&response_fields=codes.alpha_3,names.official,languages,names.native,population,region,subregion,capitals.name,tlds,currencies.code,borders,flag.url_png`,{method:`GET`,headers:{Authorization:`rc_live_31893b86ab1a4231be2c893453cbac9b`}});if(!n.ok)throw Error(`Not able to get data`);return(await n.json()).data.objects.map(e=>_(e))}catch(e){return g(e),[]}},y=[],b=localStorage.getItem(`countries`);b&&b.length?y=JSON.parse(b):(y.push(...await v(100)),y.push(...await v(100,100)),y.push(...await v(100,200)),localStorage.setItem(`countries`,JSON.stringify(y)));var x=[`DEU`,`USA`,`BRA`,`ISL`,`AFG`,`ALA`,`ALB`,`DZA`],S=y.filter(e=>x.includes(e.code));x.forEach((e,t)=>S.find(n=>{n.code===e&&(x[t]=n)}));var C=x,w=(e,t=y)=>t.find(t=>t.code===e),T=document.getElementById(`searchFilter`),E=document.getElementById(`content`),D=document.createElement(`button`),O=c(`Search for a country...`),k=O.querySelector(`input`),A=[`grid`,`grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]`],j=[`Africa`,`Americas`,`Asia`,`Europe`,`Oceania`,`Reset Filter`],M=j[5],[N,P]=u(`Filter by Region`,1,j);function F(e,t=!1){t&&(T.innerHTML=``,T.appendChild(O),T.appendChild(N),T.appendChild(P)),E.innerHTML=``,E.classList.add(A[0]),E.classList.add(A[1]),m(e).map(e=>E.appendChild(e))}function I(e){T.innerHTML=``,E.innerHTML=``,E.classList.remove(A[0]),E.classList.remove(A[1]),D.className=`btn backBtn mt-7 mb-9 ms-9`,D.innerHTML=`
+    <svg class="h-6 w-6 fill-current" viewBox="0 -960 960 960">
+    <path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/>
+    </svg>
+    
+    <span">Back<span>`,T.appendChild(D),E.appendChild(d(e))}D.addEventListener(`click`,()=>{F(C,!0)}),E.addEventListener(`click`,e=>{let t=e.target.closest(`.card`);if(!t)return;let n=w(t.dataset.code??``);n&&I(n)}),k.addEventListener(`input`,()=>{let e=j[5],t=k.value.trim(),n=[];n=t===``&&M===e?x:t===``?y.filter(e=>e.region===M):M===e?y.filter(e=>e.name.toLowerCase().includes(t)):y.filter(e=>e.region===M&&e.name.toLowerCase().includes(t)),C=n,F(n)}),P.addEventListener(`click`,e=>{let t=e.target.closest(`a`);t&&(M=t.dataset.region||``,C=M===j[5]?x:y.filter(e=>e.region===M),F(C))}),F(x,!0);
