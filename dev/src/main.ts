@@ -27,6 +27,12 @@ function renderCountryDetails(country:string) {
 
     const button = document.createElement('button') as HTMLButtonElement;
     button.className = 'btn backBtn mt-7 mb-9 ms-9';
+    button.innerHTML = `
+        <svg class="h-6 w-6 fill-current" viewBox="0 -960 960 960">
+            <path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/>
+        </svg>
+
+        <span">Back<span>`
 
     searchFilterSection.appendChild(button);
 
@@ -47,4 +53,4 @@ function renderCountryDetails(country:string) {
 }
 
 renderCountryDetails('spain');
-// renderCountryList();
+renderCountryList();

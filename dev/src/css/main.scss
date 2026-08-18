@@ -79,6 +79,7 @@ main{
     width: 10rem;
     height: 3rem;
     background-color: var(--element);
+    margin-left: 6%;
 }
 
 p{
@@ -114,6 +115,7 @@ p{
         font-size: 1rem;
     }
 
-    .countryStack{
+    .backBtn{
+        margin-left: .1rem;
     }
 }
