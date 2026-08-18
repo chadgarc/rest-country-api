@@ -1,7 +1,7 @@
 import { searchBar } from "./components/searchBar";
 import { dropList } from "./components/dropDownList";
 import { detailPost } from "./components/details";
-import type { CountryData } from "./entities/country";
+import { Country, type CountryData } from "./entities/country";
 
 const searchFilterSection = document.getElementById('searchFilter') as HTMLElement;
 const contentContainer = document.getElementById('content') as HTMLElement;
@@ -10,7 +10,7 @@ const contentAllCountriesSettings: string[] = ['grid','grid-cols-[repeat(auto-fi
 const regions: string[] = ['Africa', 'America','Asia', 'Europe', 'Oceania'];
 const [dropListBtn, dropListOptions] = dropList('Filter by Region',1,regions)
 
-function renderCountryList(){
+function renderCountryList(countries: CountryData[]){
     searchFilterSection.innerHTML = '';
     contentContainer.classList.add(contentAllCountriesSettings[0]);
     contentContainer.classList.add(contentAllCountriesSettings[1]);
@@ -41,7 +41,10 @@ function renderCountryDetails(country:CountryData) {
     contentContainer.appendChild(detailPost(country));
 }
 
-const demoEcuador = {
+
+// For demo and testing
+let countries: CountryData[] = [
+    {
         name: "Ecuador",
         nativeName: "Ecuador",
         population: 17643060,
@@ -52,8 +55,114 @@ const demoEcuador = {
         currencies: ["USD"],
         languages: ["Spanish"],
         borderCountries: ["COL", "PER"],
-        flagRoute: ''
-    };
+        flagRoute: "https://flagcdn.com/w320/ec.png"
+    },
+    {
+        name: "Germany",
+        nativeName: "Deutschland",
+        population: 83240525,
+        region: "Europe",
+        subRegion: "Western Europe",
+        capital: "Berlin",
+        domain: ".de",
+        currencies: ["EUR"],
+        languages: ["German"],
+        borderCountries: ["AUT", "BEL", "CZE", "DNK", "FRA", "LUX", "NLD", "POL", "CHE"],
+        flagRoute: "https://flagcdn.com/w320/de.png"
+    },
+    {
+        name: "United States",
+        nativeName: "United States",
+        population: 339996563,
+        region: "Americas",
+        subRegion: "North America",
+        capital: "Washington D.C.",
+        domain: ".us",
+        currencies: ["USD"],
+        languages: ["English"],
+        borderCountries: ["CAN", "MEX"],
+        flagRoute: "https://flagcdn.com/w320/us.png"
+    },
+    {
+        name: "Brazil",
+        nativeName: "Brasil",
+        population: 203062512,
+        region: "Americas",
+        subRegion: "South America",
+        capital: "Brasília",
+        domain: ".br",
+        currencies: ["BRL"],
+        languages: ["Portuguese"],
+        borderCountries: ["ARG", "BOL", "COL", "GUF", "GUY", "PRY", "PER", "SUR", "URY", "VEN"],
+        flagRoute: "https://flagcdn.com/w320/br.png"
+    },
+    {
+        name: "Iceland",
+        nativeName: "Ísland",
+        population: 375318,
+        region: "Europe",
+        subRegion: "Northern Europe",
+        capital: "Reykjavík",
+        domain: ".is",
+        currencies: ["ISK"],
+        languages: ["Icelandic"],
+        borderCountries: [],
+        flagRoute: "https://flagcdn.com/w320/is.png"
+    },
+    {
+        name: "Afghanistan",
+        nativeName: "افغانستان",
+        population: 42239854,
+        region: "Asia",
+        subRegion: "Southern Asia",
+        capital: "Kabul",
+        domain: ".af",
+        currencies: ["AFN"],
+        languages: ["Pashto", "Dari"],
+        borderCountries: ["IRN", "PAK", "TKM", "UZB", "TJK", "CHN"],
+        flagRoute: "https://flagcdn.com/w320/af.png"
+    },
+    {
+        name: "Åland Islands",
+        nativeName: "Åland",
+        population: 30144,
+        region: "Europe",
+        subRegion: "Northern Europe",
+        capital: "Mariehamn",
+        domain: ".ax",
+        currencies: ["EUR"],
+        languages: ["Swedish"],
+        borderCountries: [],
+        flagRoute: "https://flagcdn.com/w320/ax.png"
+    },
+    {
+        name: "Albania",
+        nativeName: "Shqipëria",
+        population: 2837743,
+        region: "Europe",
+        subRegion: "Southern Europe",
+        capital: "Tirana",
+        domain: ".al",
+        currencies: ["ALL"],
+        languages: ["Albanian"],
+        borderCountries: ["MNE", "GRC", "MKD", "KOS"],
+        flagRoute: "https://flagcdn.com/w320/al.png"
+    },
+    {
+        name: "Algeria",
+        nativeName: "الجزائر",
+        population: 45606404,
+        region: "Africa",
+        subRegion: "Northern Africa",
+        capital: "Algiers",
+        domain: ".dz",
+        currencies: ["DZD"],
+        languages: ["Arabic", "Berber"],
+        borderCountries: ["TUN", "LBY", "NER", "MLI", "MRT", "ESH", "MAR"],
+        flagRoute: "https://flagcdn.com/w320/dz.png"
+    }
+];
+
     
-// renderCountryDetails(demoEcuador);
-renderCountryList();
+renderCountryDetails(countries[0]);
+// renderCountryList(countries);

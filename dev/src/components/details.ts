@@ -8,7 +8,7 @@ export const detailPost = (country: CountryData) => {
         <div class='w-97 xl:w-130 aspect-3/2 mx-auto hover-3d'>
 
         <figure class="w-full aspect-3/2">
-            <img src="https://imgs.search.brave.com/3ZgR9MwuNpcUMQSdw8FD-PHGVikKCGFFgduEi4c3XrI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vNDkvMTQ5LTA1/MC03QUQ0MEIxRi9m/bGFnLWRlc2lnbi1z/aW1pbGFyaXRpZXMt/RWN1YWRvci1Db2xv/bWJpYS1mbGFncy1W/ZW5lenVlbGEuanBn/P3c9MTAwMA" alt="Tailwind CSS 3D card" />
+            <img src="${country.flagRoute}" alt="Flag of ${country.name}" />
         </figure>
 
         <div></div>
