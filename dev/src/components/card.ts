@@ -3,6 +3,7 @@ import type { CountryData } from "../entities/country";
 export const card = (country: CountryData): HTMLElement => {
     const container = document.createElement('div') as HTMLElement;
     container.className = 'card w-80 md:w-65 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]'
+    container.dataset.code = country.code;
     container.innerHTML=`
         <div class="hover-3d md:h-45 aspect-3/2">
             <figure >
@@ -25,9 +26,9 @@ export const card = (country: CountryData): HTMLElement => {
         <article class="card-body">
             <div class='cardContent flex flex-col gap-1 '>
             <h2 class="card-title">${country.name}</h2>
-            <p>Population: ${country.population}</p>
-            <p>Region: ${country.region}</p>
-            <p>Capital: ${country.capital}</p>
+            <p>Population: <span>${country.population}</span></p>
+            <p>Region: <span>${country.region}</span></p>
+            <p>Capital: <span>${country.capital}</span></p>
             </div>
             <div class="card-actions justify-end">
             </div>

@@ -46,9 +46,6 @@ function renderCountryDetails(country:CountryData) {
     contentContainer.appendChild(detailPost(country));
 }
 
-backButton.addEventListener('click', () => {
-    renderCountryList(countries);
-});
 
 // For demo and testing
 let countries: CountryData[] = [
@@ -181,6 +178,24 @@ let countries: CountryData[] = [
 ];
 
 
-    
+
 // renderCountryDetails(countries[0]);
 renderCountryList(countries);
+
+backButton.addEventListener('click', () => {
+    renderCountryList(countries);
+});
+
+contentContainer.addEventListener('click', event => {
+    const card = (event.target as HTMLElement).closest('.card') as HTMLElement;
+;
+
+    if(!card) return;
+
+    const code = card.dataset.code;
+    const country = countries.find(country => country.code === code);
+
+    if (country) {
+        renderCountryDetails(country);
+    }
+});
