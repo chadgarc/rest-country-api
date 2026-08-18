@@ -1,9 +1,9 @@
 
 export const searchBar = (searchMessage: string): HTMLElement => {
     const bar = document.createElement('label');
-    bar.className = 'input';
+    bar.className = 'input searchInput';
     bar.innerHTML = `
-        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <svg class="h-[1.3em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g
             stroke-linejoin="round"
             stroke-linecap="round"
@@ -16,7 +16,7 @@ export const searchBar = (searchMessage: string): HTMLElement => {
             </g>
         </svg>
 
-        <input type="search" required placeholder="${searchMessage}" />
+        <input class='ps-4' type="search" required placeholder="${searchMessage}" />
     `;
     return bar;
 }

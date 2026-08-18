@@ -1,7 +1,68 @@
+@use 'fontNunito' as nunito;
+
+:root{
+    font-family: nunito.$family;
+
+    // Colors
+    // Light Mode Text
+    --text: hsl(200, 15%, 8%);
+    // Light Mode Input
+    --input: hsl(0, 0%, 50%);
+    // Light Mode Background
+    --bg: hsl(0, 0%, 99%);
+    // Light Mode Elements
+    --element: hsl(0, 100%, 100%);
+    // example of use background-color: var(--Grey-50);
+}
+
+[data-theme="dark"] {
+    // Dark Mode Background
+    --bg: hsl(207, 26%, 17%);
+    // Dark Mode Text
+    --text: hsl(0, 100%, 100%);
+    // Dark Mode input
+    --input: hsl(0, 100%, 100%);
+    // Dark Mode Elements
+    --element: hsl(209, 23%, 22%);
+}
+
+main{
+    background-color: var(--bg);
+}
+
+.background {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.searchInput{
+    color: var(--input);
+    width: 100%;
+    height: 3.5rem;
+    max-width: 30rem !important;
+    padding-left: 2rem;
+}
+
+.dropdownBtn{
+    width: 15rem;
+    height: 3.5rem;
+}
+
+.dropdownItems{
+    width: 15rem;
+}
+
+.card{
+    background-color: var(--element);
+}
 
 .theme {
     display: 'block';
     &.hidden{
         display: 'none';
     }
+}
+
+.title {
+    font-size: 1.5rem;
 }

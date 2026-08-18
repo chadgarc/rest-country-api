@@ -1,6 +1,55 @@
+:root {
+  font-family: "Nunito Sans", sans-serif;
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 50%);
+  --bg: hsl(0, 0%, 99%);
+  --element: hsl(0, 100%, 100%);
+}
+
+[data-theme=dark] {
+  --bg: hsl(207, 26%, 17%);
+  --text: hsl(0, 100%, 100%);
+  --input: hsl(0, 100%, 100%);
+  --element: hsl(209, 23%, 22%);
+}
+
+main {
+  background-color: var(--bg);
+}
+
+.background {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.searchInput {
+  color: var(--input);
+  width: 100%;
+  height: 3.5rem;
+  max-width: 30rem !important;
+  padding-left: 2rem;
+}
+
+.dropdownBtn {
+  width: 15rem;
+  height: 3.5rem;
+}
+
+.dropdownItems {
+  width: 15rem;
+}
+
+.card {
+  background-color: var(--element);
+}
+
 .theme {
   display: "block";
 }
 .theme.hidden {
   display: "none";
+}
+
+.title {
+  font-size: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

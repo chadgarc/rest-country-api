@@ -15,7 +15,7 @@ export const themeButton = (): HTMLElement => {
 
         <!-- sun icon -->
         <svg
-            class="swap-off h-5 w-5 fill-current"
+            class="swap-on h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24">
             <path
@@ -24,7 +24,7 @@ export const themeButton = (): HTMLElement => {
 
         <!-- moon icon -->
         <svg
-            class="swap-on h-5 w-5 fill-current"
+            class="swap-off h-5 w-5 fill-white"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24">
             <path
@@ -40,10 +40,13 @@ export const themeToggle = (status: boolean) => {
         lightSpan?.classList.add('hidden');
         localStorage.setItem('theme', themeState.LIGHT);
         checkTheme.checked = true;
+        document.documentElement.setAttribute("data-theme", "light");
     } else {
         darkSpan?.classList.add('hidden')
         lightSpan?.classList.remove('hidden')
         localStorage.setItem('theme', themeState.DARK);
+        // I added this to change the css styles with sass
+        document.documentElement.setAttribute("data-theme", "dark");
         checkTheme.checked = false;
     }
 }

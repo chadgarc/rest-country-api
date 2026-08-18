@@ -20,16 +20,16 @@ const newAnchor = (name:string) => {
     return anchor;
 }
 
-export const dropList = (title: string, targetID: number, list: string[]) => {
+export const dropList = (title: string, targetID: number, list: string[]): HTMLElement[] => {
     const dropBtn = document.createElement('button');
     const ulList = document.createElement('ul');
 
-    dropBtn.className = 'btn';
+    dropBtn.className = 'btn dropdownBtn';
     dropBtn.setAttribute("popovertarget", `popover-${targetID}`);
     dropBtn.style.anchorName = `--anchor-${targetID}`;
     dropBtn.textContent = title;
 
-    ulList.className = 'dropdown menu w-52 rounded-box bg-base-100 shadow-sm';
+    ulList.className = 'dropdownItems dropdown menu w-52 rounded-box bg-base-100 shadow-sm';
     ulList.setAttribute('popover','');
     ulList.id = `popover-${targetID}`;
     ulList.style.positionAnchor = `--anchor-${targetID}`
@@ -39,5 +39,7 @@ export const dropList = (title: string, targetID: number, list: string[]) => {
         li.appendChild(newAnchor(item));
         ulList.appendChild(li);
     });
+
+    return [dropBtn,ulList];
 }
 
