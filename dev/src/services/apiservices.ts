@@ -12,8 +12,8 @@ enum apiCountry {
 export const getSetCountries = async (limit: number = 20, startOn: number = 0) => {
     
     try{
-        const response = await fetch(`${apiCountry.URL}?limit=${limit}&offset=${startOn}&${apiCountry.DETAILS_PARAMETERS}`,
-            { method: "GET", headers: { 'Authorization': apiCountry.TOKEN }} );
+        const response = await fetch(`${apiCountry.CORS_ANYWHERE}${apiCountry.URL}?limit=${limit}&offset=${startOn}&${apiCountry.DETAILS_PARAMETERS}`,
+            { method: "GET", headers: { 'Authorization': apiCountry.TOKEN_DEV}} );
 
         if(!response.ok) {
             throw new Error('Not able to get data');
@@ -34,8 +34,8 @@ export const getSetCountries = async (limit: number = 20, startOn: number = 0) =
 export const getCountruesByRegion = async (region: string) => {
 
     try{
-        const response = await fetch(`${apiCountry.URL}?${region}`,
-            { method: "GET", headers: { 'Authorization': apiCountry.TOKEN }} );
+        const response = await fetch(`${apiCountry.CORS_ANYWHERE}${apiCountry.URL}?${region}`,
+            { method: "GET", headers: { 'Authorization': apiCountry.TOKEN_DEV }} );
 
         if(!response.ok) return;
 
