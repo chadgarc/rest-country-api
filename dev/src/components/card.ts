@@ -1,4 +1,5 @@
 import type { CountryData } from "../entities/country";
+import { formatPopulation } from "../modules/utils";
 
 /**
  * Creates a country card component used to display basic information
@@ -61,7 +62,7 @@ export const card = (country: CountryData): HTMLElement => {
         <article class="card-body">
             <div class='cardContent flex flex-col gap-1 '>
             <h2 class="card-title">${country.name}</h2>
-            <p>Population: <span>${country.population}</span></p>
+            <p>Population: <span>${formatPopulation(country.population)}</span></p>
             <p>Region: <span>${country.region}</span></p>
             <p>Capital: <span>${country.capital}</span></p>
             </div>
