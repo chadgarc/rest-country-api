@@ -1,5 +1,30 @@
 @use 'fontNunito' as nunito;
 
+/**
+ * Global stylesheet for the application.
+ *
+ * Responsibilities:
+ * - Defines global font family (Nunito)
+ * - Declares CSS variables for both light and dark themes
+ * - Applies theme values through the `data-theme` attribute
+ * - Provides base styling for layout, typography, and components
+ * - Includes responsive adjustments for small screens
+ *
+ * Structure:
+ * 1. Font import and root variables
+ * 2. Light and dark theme definitions
+ * 3. Global layout styles (main, background)
+ * 4. Component styles (searchInput, dropdown, card, countryStack, etc.)
+ * 5. Typography rules
+ * 6. Responsive media queries
+ *
+ * Usage:
+ * - Theme switching is controlled by JS via `data-theme="light"` or `"dark"`
+ * - Components rely on CSS variables (e.g., var(--bg), var(--element))
+ * - SCSS variables from Nunito font module are used for typography
+ *
+ * This file should be imported once at the root of the application.
+ */
 :root{
     font-family: nunito.$family;
 
