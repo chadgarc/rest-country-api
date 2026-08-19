@@ -43,7 +43,7 @@
         <svg class="rotate-90 h-6 w-6 fill-current md:h-8 md:w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
         </svg>
-        `,i.className=`dropdownItems dropdown menu w-52 rounded-box bg-base-100 shadow-sm`,i.setAttribute(`popover`,``),i.id=`popover-${t}`,i.style.positionAnchor=`--anchor-${t}`,n.forEach(e=>{let t=document.createElement(`li`);t.appendChild(l(e)),i.appendChild(t)}),[r,i]},d=e=>{let t=[];e.borderCountries.forEach(e=>t.push(C(e)?.name??``));let n=document.createElement(`div`);return n.className=`flex flex-1 flex-col lg:flex-row md:h-95 gap-10 justify-between lg:justify-around mt-10`,n.innerHTML=`
+        `,i.className=`dropdownItems dropdown menu w-52 rounded-box bg-base-100 shadow-sm`,i.setAttribute(`popover`,``),i.id=`popover-${t}`,i.style.positionAnchor=`--anchor-${t}`,n.forEach(e=>{let t=document.createElement(`li`);t.appendChild(l(e)),i.appendChild(t)}),[r,i]},d=e=>e.toLocaleString(`de-DE`),f=e=>{let t=[];e.borderCountries.forEach(e=>t.push(w(e)?.name??``));let n=document.createElement(`div`);return n.className=`flex flex-1 flex-col lg:flex-row md:h-95 gap-10 justify-between lg:justify-around mt-10`,n.innerHTML=`
         <div class='w-97 xl:w-130 aspect-3/2 mx-auto hover-3d'>
 
         <figure class="">
@@ -65,7 +65,7 @@
             <section class='flex flex-col sm:flex-row sm:gap-25 mt-5 ms-[1%] sm:ms-0'>
                 <article class='flex flex-col gap-2 mb-2'>
                     <p>Native Name: <span>${e.nativeName}</span></p>
-                    <p>Population: <span>${e.population}</span></p>
+                    <p>Population: <span>${d(e.population)}</span></p>
                     <p>Region: <span>${e.region}</span></p>
                     <p>Sub Region: : <span>${e.subRegion}</span></p>
                     <p>Capital: <span>${e.capital.join(`, `)}</span></p>
@@ -79,11 +79,11 @@
             <section class="flex flex-col sm:flex-row mt-6 sm:mt-15 gap-2 items-start sm:items-center ms-[1%] sm:ms-0">
                 <p class='mb-2 sm:mb-0'>Border Countries: </p>
                 <div class="flex flex-wrap justify-start gap-2">
-                    ${f(t).innerHTML}
+                    ${p(t).innerHTML}
                 </div>
             <section>
         </section>
-    `,n},f=e=>{let t=document.createElement(`div`);return e.forEach(e=>{let n=document.createElement(`div`);n.className=`countryStack shadow-lg flex items-center justify-center`,n.textContent=e,t.appendChild(n)}),t},p=e=>{let t=document.createElement(`div`);return t.className=`card w-85 md:w-60 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]`,t.dataset.code=e.code,t.innerHTML=`
+    `,n},p=e=>{let t=document.createElement(`div`);return e.forEach(e=>{let n=document.createElement(`div`);n.className=`countryStack shadow-lg flex items-center justify-center`,n.textContent=e,t.appendChild(n)}),t},m=e=>{let t=document.createElement(`div`);return t.className=`card w-85 md:w-60 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]`,t.dataset.code=e.code,t.innerHTML=`
         <div class="hover-3d md:h-34 aspect-3/2">
             <figure >
             <img
@@ -105,16 +105,16 @@
         <article class="card-body">
             <div class='cardContent flex flex-col gap-1 '>
             <h2 class="card-title">${e.name}</h2>
-            <p>Population: <span>${e.population}</span></p>
+            <p>Population: <span>${d(e.population)}</span></p>
             <p>Region: <span>${e.region}</span></p>
             <p>Capital: <span>${e.capital}</span></p>
             </div>
             <div class="card-actions justify-end">
             </div>
         </article>
-    `,t},m=e=>e.map(e=>p(e)),h=e=>{let t=e.codes?.alpha_3||`UNK`,n=e.names?.official||`No Oficial Name`,r=e.population||0,i=e.subregion||`No available`,a=e.region||`No available`,o=e.borders||[`N/A`],s=e.flag?.url_png||`../../assets/placeholder-flag.webp`,c=e.tlds?.length?e.tlds[0]:`No domain`,l=e.names?.native?Object.values(e.names.native).map(e=>e.official):[`N/A`],u=e.languages?.length?e.languages.map(e=>e.iso639_1||e.name):[`No Oficial Language`],d=e.capitals?.length?e.capitals.map(e=>e.name):[`No oficial capital`],f=e.currencies?.length?e.currencies.map(e=>e.code):[`No oficial currency`];return console.log(n),{code:t,name:n,nativeName:l,population:r,region:a,subRegion:i,capital:d,languages:u,domain:c,currencies:f,borderCountries:o,flagRoute:s}},g=async(e=20,t=0)=>{try{let n=await fetch(`https://api.restcountries.com/countries/v5?limit=${e}&offset=${t}&response_fields=codes.alpha_3,names.official,languages,names.native,population,region,subregion,capitals.name,tlds,currencies.code,borders,flag.url_png`,{method:`GET`,headers:{Authorization:`Bearer rc_live_6de58c276c8c48c5b45ff954231d9d39`}});if(!n.ok)throw Error(`Not able to get data`);let r=await n.json();console.log(r);let i=r.data.objects.map(e=>h(e));return console.log(i),i}catch(e){return console.error(e),[]}},_=[],v=localStorage.getItem(`countries`);v&&v.length?_=JSON.parse(v):(_.push(...await g(100)),_.push(...await g(100,100)),_.push(...await g(100,200)),localStorage.setItem(`countries`,JSON.stringify(_)));var y=[`DEU`,`USA`,`BRA`,`ISL`,`AFG`,`ALA`,`ALB`,`DZA`,`ECU`,`COL`],b=[],x=_.filter(e=>y.includes(e.code));y.forEach(e=>{let t=x.find(t=>t.code===e);t&&b.push(t)});var S=b,C=(e,t=_)=>t.find(t=>t.code===e),w=document.getElementById(`searchFilter`),T=document.getElementById(`content`),E=document.createElement(`button`),D=c(`Search for a country...`),O=D.querySelector(`input`),k=[`grid`,`grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]`],A=[`Africa`,`Americas`,`Asia`,`Europe`,`Oceania`,`Reset Filter`],j=A[5],[M,N]=u(`Filter by Region`,1,A);function P(e,t=!1){t&&(w.innerHTML=``,w.appendChild(D),w.appendChild(M),w.appendChild(N)),T.innerHTML=``,T.classList.add(k[0]),T.classList.add(k[1]),m(e).map(e=>T.appendChild(e))}function F(e){w.innerHTML=``,T.innerHTML=``,T.classList.remove(k[0]),T.classList.remove(k[1]),E.className=`btn backBtn mt-7 mb-9 ms-9`,E.innerHTML=`
+    `,t},h=e=>e.map(e=>m(e)),g=e=>{let t=e.codes?.alpha_3||`UNK`,n=e.names?.official||`No Oficial Name`,r=e.population||0,i=e.subregion||`No available`,a=e.region||`No available`,o=e.borders||[`N/A`],s=e.flag?.url_png||`../../assets/placeholder-flag.webp`,c=e.tlds?.length?e.tlds[0]:`No domain`,l=e.names?.native?Object.values(e.names.native).map(e=>e.official):[`N/A`],u=e.languages?.length?e.languages.map(e=>e.iso639_1||e.name):[`No Oficial Language`],d=e.capitals?.length?e.capitals.map(e=>e.name):[`No oficial capital`],f=e.currencies?.length?e.currencies.map(e=>e.code):[`No oficial currency`];return console.log(n),{code:t,name:n,nativeName:l,population:r,region:a,subRegion:i,capital:d,languages:u,domain:c,currencies:f,borderCountries:o,flagRoute:s}},_=async(e=20,t=0)=>{try{let n=await fetch(`https://api.restcountries.com/countries/v5?limit=${e}&offset=${t}&response_fields=codes.alpha_3,names.official,languages,names.native,population,region,subregion,capitals.name,tlds,currencies.code,borders,flag.url_png`,{method:`GET`,headers:{Authorization:`Bearer rc_live_6de58c276c8c48c5b45ff954231d9d39`}});if(!n.ok)throw Error(`Not able to get data`);let r=await n.json();console.log(r);let i=r.data.objects.map(e=>g(e));return console.log(i),i}catch(e){return console.error(e),[]}},v=[],y=localStorage.getItem(`countries`);y&&y.length?v=JSON.parse(y):(v.push(...await _(100)),v.push(...await _(100,100)),v.push(...await _(100,200)),localStorage.setItem(`countries`,JSON.stringify(v)));var b=[`DEU`,`USA`,`BRA`,`ISL`,`AFG`,`ALA`,`ALB`,`DZA`,`ECU`,`COL`],x=[],S=v.filter(e=>b.includes(e.code));b.forEach(e=>{let t=S.find(t=>t.code===e);t&&x.push(t)});var C=x,w=(e,t=v)=>t.find(t=>t.code===e),T=document.getElementById(`searchFilter`),E=document.getElementById(`content`),D=document.createElement(`button`),O=c(`Search for a country...`),k=O.querySelector(`input`),A=[`grid`,`grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]`],j=[`Africa`,`Americas`,`Asia`,`Europe`,`Oceania`,`Reset Filter`],M=j[5],[N,P]=u(`Filter by Region`,1,j);function F(e,t=!1){t&&(T.innerHTML=``,T.appendChild(O),T.appendChild(N),T.appendChild(P)),E.innerHTML=``,E.classList.add(A[0]),E.classList.add(A[1]),h(e).map(e=>E.appendChild(e))}function I(e){T.innerHTML=``,E.innerHTML=``,E.classList.remove(A[0]),E.classList.remove(A[1]),D.className=`btn backBtn mt-7 mb-9 ms-9`,D.innerHTML=`
     <svg class="h-6 w-6 fill-current" viewBox="0 -960 960 960">
     <path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/>
     </svg>
     
-    <span">Back<span>`,w.appendChild(E),T.appendChild(d(e))}E.addEventListener(`click`,()=>{P(S,!0)}),T.addEventListener(`click`,e=>{let t=e.target.closest(`.card`);if(!t)return;let n=C(t.dataset.code??``);n&&F(n)}),O.addEventListener(`input`,()=>{let e=A[5],t=O.value.trim().toLowerCase(),n=[];n=t===``&&j===e?b:t===``?_.filter(e=>e.region===j):j===e?_.filter(e=>e.name.toLowerCase().includes(t)):_.filter(e=>e.region===j&&e.name.toLowerCase().includes(t)),S=n,P(n)}),N.addEventListener(`click`,e=>{let t=e.target.closest(`a`);t&&(j=t.dataset.region||``,S=j===A[5]?b:_.filter(e=>e.region===j),P(S))}),P(b,!0);
+    <span">Back<span>`,T.appendChild(D),E.appendChild(f(e))}D.addEventListener(`click`,()=>{F(C,!0)}),E.addEventListener(`click`,e=>{let t=e.target.closest(`.card`);if(!t)return;let n=w(t.dataset.code??``);n&&I(n)}),k.addEventListener(`input`,()=>{let e=j[5],t=k.value.trim().toLowerCase(),n=[];n=t===``&&M===e?x:t===``?v.filter(e=>e.region===M):M===e?v.filter(e=>e.name.toLowerCase().includes(t)):v.filter(e=>e.region===M&&e.name.toLowerCase().includes(t)),C=n,F(n)}),P.addEventListener(`click`,e=>{let t=e.target.closest(`a`);t&&(M=t.dataset.region||``,C=M===j[5]?x:v.filter(e=>e.region===M),F(C))}),F(x,!0);
