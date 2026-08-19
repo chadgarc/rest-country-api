@@ -1,5 +1,6 @@
 import type { CountryData } from "../entities/country";
 import { getCountry } from "../main";
+import { formatPopulation } from "../modules/utils";
 
 /**
  * Creates a detailed country view component containing extended
@@ -62,7 +63,7 @@ export const detailPost = (country: CountryData) => {
             <section class='flex flex-col sm:flex-row sm:gap-25 mt-5 ms-[1%] sm:ms-0'>
                 <article class='flex flex-col gap-2 mb-2'>
                     <p>Native Name: <span>${country.nativeName}</span></p>
-                    <p>Population: <span>${country.population}</span></p>
+                    <p>Population: <span>${formatPopulation(country.population)}</span></p>
                     <p>Region: <span>${country.region}</span></p>
                     <p>Sub Region: : <span>${country.subRegion}</span></p>
                     <p>Capital: <span>${country.capital.join(', ')}</span></p>
