@@ -21,13 +21,18 @@ if(saved && saved.length){
     localStorage.setItem('countries',JSON.stringify(countries))
 }
 
-const defaultHomeCountries: any = ['DEU','USA','BRA','ISL','AFG','ALA','ALB','DZA']
-const targetCountries = countries.filter( country => defaultHomeCountries.includes(country.code))
-defaultHomeCountries.forEach((code: string, index: number) => targetCountries.find(country => {
-    if(country.code === code){
-        defaultHomeCountries[index] = country;
-    }
-}))
+const defaultCountries = ['DEU','USA','BRA','ISL','AFG','ALA','ALB','DZA'];
+const defaultHomeCountries: CountryData[] = [];
+
+const targetCountries = countries.filter(c =>
+    defaultCountries.includes(c.code)
+);
+
+defaultCountries.forEach(code => {
+    const found = targetCountries.find(c => c.code === code);
+    if (found) defaultHomeCountries.push(found);
+});
+
 
 let previousState: CountryData[] = defaultHomeCountries;
 
