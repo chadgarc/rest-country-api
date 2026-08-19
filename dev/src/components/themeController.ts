@@ -5,6 +5,22 @@ enum themeState{
     LIGHT = 'light'
 }
 
+/**
+ * Creates a theme toggle button using DaisyUI's "swap" component.
+ * The button visually switches between a sun and moon icon depending
+ * on the current theme. The internal checkbox controls the toggle state.
+ *
+ * This component does not attach any event listeners; it only returns
+ * the UI element. External logic (e.g., in main.ts) should handle
+ * click events and call `themeToggle()` accordingly.
+ *
+ * @returns {HTMLElement} A `<label>` element containing the theme toggle
+ * UI, ready to be inserted into the DOM.
+ *
+ * @example
+ * const toggle = themeButton();
+ * document.getElementById("header").appendChild(toggle);
+ */
 export const themeButton = (): HTMLElement => {
     const label = document.createElement('label');
     label.className = "swap swap-rotate";
@@ -34,6 +50,24 @@ export const themeButton = (): HTMLElement => {
     return label;
 }
 
+/**
+ * Applies the selected theme (light or dark) to the application.
+ * This function updates:
+ * - Visible theme icons (sun/moon)
+ * - The `data-theme` attribute on `<html>`
+ * - The `localStorage` theme value
+ * - The state of the hidden checkbox controller
+ *
+ * @param {boolean} status - If true, the light theme is applied.
+ * If false, the dark theme is applied.
+ *
+ * @example
+ * // Switch to dark mode
+ * themeToggle(false);
+ *
+ * // Switch to light mode
+ * themeToggle(true);
+ */
 export const themeToggle = (status: boolean) => {
     if(status){
         darkSpan?.classList.remove('hidden');
@@ -51,11 +85,24 @@ export const themeToggle = (status: boolean) => {
     }
 }
 
+/**
+ * Loads the previously saved theme from localStorage and applies it
+ * using `themeToggle()`. If no theme has been saved yet, the function
+ * defaults to the light theme.
+ *
+ * This function should be called once during application startup
+ * (e.g., inside main.ts) to ensure the correct theme is applied
+ * before rendering UI components.
+ *
+ * @example
+ * // Initialize theme on page load
+ * loadThemeState();
+ */
 export const loadThemeState = () => {
     const previousTheme = localStorage.getItem('theme')
     if(previousTheme){
         themeToggle(previousTheme === themeState.LIGHT);
     } else {
         themeToggle(true);
-}
+    }
 }

@@ -1,4 +1,27 @@
 
+/**
+ * Creates a search bar component consisting of a label wrapper,
+ * a search icon (SVG), and an input field. This component is used
+ * to filter countries in the main view of the application.
+ *
+ * The returned element contains:
+ * - A DaisyUI/Tailwind-styled label wrapper
+ * - A magnifying glass SVG icon
+ * - A search input with a customizable placeholder message
+ *
+ * The input is assigned the ID `searchEntries` so external logic
+ * (e.g., event listeners) can easily attach behavior to it.
+ *
+ * @param {string} searchMessage - The placeholder text displayed inside
+ * the search input field.
+ *
+ * @returns {HTMLElement} A `<label>` element containing the search bar,
+ * ready to be inserted into the DOM.
+ *
+ * @example
+ * const search = searchBar("Search for a country...");
+ * searchFilterSection.appendChild(search);
+ */
 export const searchBar = (searchMessage: string): HTMLElement => {
     const bar = document.createElement('label');
     bar.className = 'input searchInput';

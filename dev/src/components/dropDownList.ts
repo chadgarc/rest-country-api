@@ -1,18 +1,18 @@
 
 /**
- * Component taken from Daisy UI
+ * Creates an anchor (`<a>`) element used inside the dropdown list.
+ * The anchor receives a `data-region` attribute so the caller can
+ * attach filtering or navigation logic based on the selected item.
  *
- * <!-- change popover-1 and --anchor-1 names. Use unique names for each dropdown -->
- * <button class="btn" popovertarget="popover-1" style="anchor-name:--anchor-1">
- *     Button
- * </button>
- * <ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
- *     popover id="popover-1" style="position-anchor:--anchor-1">
- *     <li><a>Item 1</a></li>
- *     <li><a>Item 2</a></li>
- * </ul>
+ * @param {string} name - The text displayed inside the anchor and the
+ * value assigned to `data-region`.
+ *
+ * @returns {HTMLAnchorElement} A configured `<a>` element.
+ *
+ * @example
+ * const anchor = newAnchor("Europe");
+ * li.appendChild(anchor);
  */
-
 const newAnchor = (name:string) => {
     const anchor = document.createElement('a');
     anchor.dataset.region = name;
@@ -20,6 +20,46 @@ const newAnchor = (name:string) => {
     return anchor;
 }
 
+/**
+ * Creates a dropdown (popover-style) component using DaisyUI's popover
+ * pattern. The component consists of two elements:
+ *
+ * 1. A button that toggles the popover.
+ * 2. A list (`<ul>`) containing selectable items.
+ *
+ * Each item in the list is generated from the provided `list` array and
+ * receives a `data-region` attribute, allowing the caller to attach
+ * custom logic (e.g., filtering countries by region).
+ *
+ * This function returns both elements so the caller can decide where
+ * to insert them in the DOM. The popover uses unique IDs and anchor
+ * names based on `targetID`, ensuring multiple dropdowns can coexist
+ * without conflicts.
+ *
+ * @param {string} title - The text displayed inside the dropdown button.
+ * @param {number} targetID - A unique numeric identifier used to generate
+ * popover IDs and anchor names (e.g., "popover-1", "--anchor-1").
+ * @param {string[]} list - An array of strings used to populate the dropdown
+ * items. Each string becomes an `<a>` element inside a `<li>`.
+ *
+ * @returns {HTMLElement[]} An array containing two elements:
+ *  - The dropdown button (`<button>`)
+ *  - The dropdown list (`<ul>`)
+ *
+ * @example
+ * // Create a dropdown for filtering by region
+ * const [button, list] = dropList("Filter by Region", 1, [
+ *   "Africa",
+ *   "Americas",
+ *   "Asia",
+ *   "Europe",
+ *   "Oceania",
+ *   "Reset Filter"
+ * ]);
+ *
+ * searchFilterSection.appendChild(button);
+ * searchFilterSection.appendChild(list);
+ */
 export const dropList = (title: string, targetID: number, list: string[]): HTMLElement[] => {
     const dropBtn = document.createElement('button');
     const ulList = document.createElement('ul');

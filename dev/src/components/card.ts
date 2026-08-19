@@ -1,5 +1,40 @@
 import type { CountryData } from "../entities/country";
 
+/**
+ * Creates a country card component used to display basic information
+ * about a specific country. This component is fully self-contained and
+ * returns a ready-to-render DOM element.
+ *
+ * The card includes:
+ * - Country flag
+ * - Official name
+ * - Population
+ * - Region
+ * - Capital
+ *
+ * It also assigns `dataset.code` to the root element, allowing other
+ * parts of the application to identify which country was clicked
+ * (useful for navigation to a detail view).
+ *
+ * @param {CountryData} country - A normalized country object containing
+ * all required fields for rendering the card.
+ *
+ * @returns {HTMLElement} A `<div>` element representing the country card,
+ * ready to be appended to the DOM.
+ *
+ * @example
+ * // Create a card and append it to the page
+ * const germanyCard = card({
+ *   code: "DEU",
+ *   name: "Germany",
+ *   population: 83200000,
+ *   region: "Europe",
+ *   capital: "Berlin",
+ *   flagRoute: "https://flagcdn.com/w320/de.png"
+ * });
+ *
+ * document.body.appendChild(germanyCard);
+ */
 export const card = (country: CountryData): HTMLElement => {
     const container = document.createElement('div') as HTMLElement;
     container.className = 'card w-85 md:w-60 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]'

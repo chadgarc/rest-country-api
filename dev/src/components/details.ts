@@ -1,6 +1,36 @@
 import type { CountryData } from "../entities/country";
 import { getCountry } from "../main";
 
+/**
+ * Creates a detailed country view component containing extended
+ * information about a specific country. This component is used when
+ * navigating from the country list into the "details" page of the SPA.
+ *
+ * The detail view includes:
+ * - Country flag
+ * - Native name
+ * - Population
+ * - Region and subregion
+ * - Capital(s)
+ * - Top-level domain
+ * - Currencies
+ * - Languages
+ * - Border countries (converted from codes to readable names)
+ *
+ * Border countries are resolved using `getCountry()` and displayed
+ * using the `countriesStack()` helper, which generates a list of
+ * small labeled boxes.
+ *
+ * @param {CountryData} country - A normalized country object containing
+ * all extended fields required for the detailed view.
+ *
+ * @returns {HTMLElement} A `<div>` element representing the full
+ * country detail section, ready to be appended to the DOM.
+ *
+ * @example
+ * const germanyDetails = detailPost(germany);
+ * contentContainer.appendChild(germanyDetails);
+ */
 export const detailPost = (country: CountryData) => {
 
     const borderCountries: string[] = []
@@ -55,6 +85,22 @@ export const detailPost = (country: CountryData) => {
     return container;
 }
 
+/**
+ * Creates a stack of small labeled boxes representing border countries.
+ * Each box displays the readable name of a neighboring country.
+ *
+ * This helper is used inside the `detailPost()` component to render
+ * border countries in a compact, visually consistent layout.
+ *
+ * @param {string[]} countries - An array of country names to display.
+ *
+ * @returns {HTMLElement} A `<div>` element containing a list of
+ * styled country name boxes.
+ *
+ * @example
+ * const stack = countriesStack(["France", "Belgium", "Netherlands"]);
+ * container.appendChild(stack);
+ */
 const countriesStack = (countries: string[]) => {
     const stack = document.createElement('div');
     countries.forEach( country => {

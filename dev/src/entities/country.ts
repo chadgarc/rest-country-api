@@ -1,4 +1,25 @@
 
+/**
+ * Represents the normalized structure of country data used throughout
+ * the application. All fields are standardized to ensure consistency
+ * across UI components and API responses.
+ *
+ * @interface CountryData
+ *
+ * @property {string} code - The ISO alpha-3 country code.
+ * @property {string} name - The official country name.
+ * @property {string[]} nativeName - List of native names in different languages.
+ * @property {number} population - Total population count.
+ * @property {string} region - The geographical region (e.g., "Europe").
+ * @property {string} subRegion - The subregion (e.g., "Western Europe").
+ * @property {string[]} capital - List of capital cities.
+ * @property {string} domain - The top-level domain (e.g., ".de").
+ * @property {string[]} currencies - List of currency codes.
+ * @property {string[]} languages - List of language identifiers.
+ * @property {string[]} borderCountries - List of neighboring country codes.
+ * @property {string} flagRoute - URL to the country’s PNG flag.
+ */
+
 export interface CountryData{
     code: string,
     name: string,
@@ -14,6 +35,18 @@ export interface CountryData{
     flagRoute: string
 }
 
+/**
+ * A class implementation of the `CountryData` interface. This class
+ * provides a structured way to store country information and includes
+ * helper methods for displaying formatted details.
+ *
+ * @class Country
+ * @implements {CountryData}
+ *
+ * @example
+ * const germany = new Country(normalizedData);
+ * console.log(germany.displayDetails());
+ */
 export class Country implements CountryData {
     code: string;
     name: string;
@@ -28,6 +61,11 @@ export class Country implements CountryData {
     borderCountries: string[];
     flagRoute: string;
 
+    /**
+     * Creates a new Country instance from normalized country data.
+     *
+     * @param {CountryData} country - The normalized country data object.
+     */
     constructor(country: CountryData) {
         this.code = country.code; // always alpha3, that's the standard codes.alpha_3
         this.name = country.name; // names.official
@@ -43,12 +81,42 @@ export class Country implements CountryData {
         this.flagRoute = country.flagRoute; //flag.url_png
     }
 
+    /**
+     * Returns a formatted string containing key country details.
+     *
+     * @returns {string} A human-readable summary of the country.
+     *
+     * @example
+     * germany.displayDetails();
+     * // "Country: Germany, Population: 83200000, Capital: Berlin, Languages: de"
+     */
     displayDetails(){
         return `Country: ${this.name}, Population: ${this.population}, Capital: ${this.capital}, Languages: ${this.languages.join(', ')}`;
     }
 
 }
 
+/**
+ * Normalizes raw API country data into the standardized `CountryData`
+ * format used throughout the application. This function ensures that
+ * missing fields, inconsistent structures, and optional values are
+ * safely handled and converted into predictable formats.
+ *
+ * The normalization process includes:
+ * - Extracting ISO codes, names, population, region, and subregion
+ * - Mapping native names from nested objects
+ * - Mapping languages and currencies
+ * - Handling missing capitals, borders, and TLDs
+ * - Providing fallback values when API fields are unavailable
+ *
+ * @param {any} raw - The raw country object returned by the API.
+ *
+ * @returns {CountryData} A fully normalized country data object.
+ *
+ * @example
+ * const normalized = jsonNormalization(rawCountry);
+ * const country = new Country(normalized);
+ */
 export const jsonNormalization = (raw: any): CountryData => {
     const code = raw.codes?.alpha_3 || 'UNK';
     const name = raw.names?.official || "No Oficial Name";
