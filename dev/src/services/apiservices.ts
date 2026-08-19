@@ -9,6 +9,29 @@ enum apiCountry {
     TOKEN_DEV = 'rc_live_31893b86ab1a4231be2c893453cbac9b'
 }
 
+/**
+ * Fetches a paginated set of countries from the RestCountries API,
+ * normalizes the response using `jsonNormalization()`, and returns
+ * a typed array of `CountryData`.
+ *
+ * This function supports:
+ * - Pagination via `limit` and `offset`
+ * - CORS proxy usage (cors-anywhere)
+ * - Custom response field selection through `DETAILS_PARAMETERS`
+ *
+ * If the request fails or the API returns a non‑OK status, the
+ * function logs the error and returns an empty array.
+ *
+ * @param {number} [limit=20] - Number of countries to fetch.
+ * @param {number} [startOn=0] - Offset used for pagination.
+ *
+ * @returns {Promise<CountryData[]>} A promise resolving to an array
+ * of normalized country objects.
+ *
+ * @example
+ * const batch = await getSetCountries(100, 200);
+ * console.log(batch.length); // 100
+ */
 export const getSetCountries = async (limit: number = 20, startOn: number = 0) => {
     
     try{
@@ -31,7 +54,30 @@ export const getSetCountries = async (limit: number = 20, startOn: number = 0) =
     }
 }
 
-export const getCountruesByRegion = async (region: string) => {
+/**
+ * Fetches all countries belonging to a specific region from the
+ * RestCountries API, normalizes the response, and returns the
+ * resulting list.
+ *
+ * This function uses the same CORS proxy and authorization token
+ * as `getSetCountries()`, but filters by region instead of using
+ * pagination.
+ *
+ * If the request fails or the API returns a non‑OK status, the
+ * function returns `undefined`.
+ *
+ * @param {string} region - Region name (e.g., "Europe", "Asia").
+ *
+ * @returns {Promise<CountryData[] | undefined>} A promise resolving
+ * to an array of normalized country objects, or undefined on failure.
+ *
+ * @example
+ * const europeanCountries = await getCountruesByRegion("Europe");
+ * if (europeanCountries) {
+ *   console.log(europeanCountries.length);
+ * }
+ */
+export const getCountriesByRegion = async (region: string) => {
 
     try{
         const response = await fetch(`${apiCountry.CORS_ANYWHERE}${apiCountry.URL}?${region}`,
