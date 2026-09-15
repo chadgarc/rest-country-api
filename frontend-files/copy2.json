@@ -1,0 +1,5839 @@
+{
+    "data": {
+        "objects": [
+            {
+                "names": {
+                    "native": {
+                        "abk": {
+                            "common": "Аҧсны",
+                            "official": "Аҧсны Аҳәынҭқарра"
+                        },
+                        "rus": {
+                            "common": "Абхазия",
+                            "official": "Республика Абхазия"
+                        }
+                    },
+                    "official": "Republic of Abkhazia"
+                },
+                "codes": {
+                    "alpha_3": ""
+                },
+                "capitals": [
+                    {
+                        "name": "Sukhumi"
+                    }
+                ],
+                "flag": {
+                    "url_png": ""
+                },
+                "region": "Asia",
+                "subregion": "Western Asia",
+                "borders": [
+                    "GEO",
+                    "RUS"
+                ],
+                "currencies": [
+                    {
+                        "code": "RUB"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ab",
+                        "iso639_1": "ab",
+                        "iso639_2b": "abk",
+                        "iso639_2t": "abk",
+                        "iso639_3": "abk",
+                        "name": "Abkhaz",
+                        "native_name": "Аҧсуа бызшәа"
+                    },
+                    {
+                        "bcp47": "ru",
+                        "iso639_1": "ru",
+                        "iso639_2b": "rus",
+                        "iso639_2t": "rus",
+                        "iso639_3": "rus",
+                        "name": "Russian",
+                        "native_name": "русский"
+                    }
+                ],
+                "population": 244236,
+                "tlds": [],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526831
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "prs": {
+                            "common": "افغانستان",
+                            "official": "جمهوری اسلامی افغانستان"
+                        },
+                        "pus": {
+                            "common": "افغانستان",
+                            "official": "د افغانستان اسلامي جمهوریت"
+                        },
+                        "tuk": {
+                            "common": "Owganystan",
+                            "official": "Owganystan Yslam Respublikasy"
+                        }
+                    },
+                    "official": "Islamic Republic of Afghanistan"
+                },
+                "codes": {
+                    "alpha_3": "AFG"
+                },
+                "capitals": [
+                    {
+                        "name": "Kabul"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/af.png"
+                },
+                "region": "Asia",
+                "subregion": "Southern Asia",
+                "borders": [
+                    "IRN",
+                    "PAK",
+                    "TKM",
+                    "UZB",
+                    "TJK",
+                    "CHN"
+                ],
+                "currencies": [
+                    {
+                        "code": "AFN"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "prs",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "prs",
+                        "name": "Dari",
+                        "native_name": "دری"
+                    },
+                    {
+                        "bcp47": "ps",
+                        "iso639_1": "ps",
+                        "iso639_2b": "pus",
+                        "iso639_2t": "pus",
+                        "iso639_3": "pus",
+                        "name": "Pashto",
+                        "native_name": "پښتو"
+                    },
+                    {
+                        "bcp47": "tk",
+                        "iso639_1": "tk",
+                        "iso639_2b": "tuk",
+                        "iso639_2t": "tuk",
+                        "iso639_3": "tuk",
+                        "name": "Turkmen",
+                        "native_name": "Türkmençe"
+                    }
+                ],
+                "population": 43844000,
+                "tlds": [
+                    ".af"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526831
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "sqi": {
+                            "common": "Shqipëria",
+                            "official": "Republika e Shqipërisë"
+                        }
+                    },
+                    "official": "Republic of Albania"
+                },
+                "codes": {
+                    "alpha_3": "ALB"
+                },
+                "capitals": [
+                    {
+                        "name": "Tirana"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/al.png"
+                },
+                "region": "Europe",
+                "subregion": "Southeast Europe",
+                "borders": [
+                    "MNE",
+                    "GRC",
+                    "MKD",
+                    "UNK"
+                ],
+                "currencies": [
+                    {
+                        "code": "ALL"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "sq",
+                        "iso639_1": "sq",
+                        "iso639_2b": "alb",
+                        "iso639_2t": "sqi",
+                        "iso639_3": "sqi",
+                        "name": "Albanian",
+                        "native_name": "shqip"
+                    }
+                ],
+                "population": 2335930,
+                "tlds": [
+                    ".al"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783787495
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ara": {
+                            "common": "الجزائر",
+                            "official": "الجمهورية الديمقراطية الشعبية الجزائرية"
+                        }
+                    },
+                    "official": "People's Democratic Republic of Algeria"
+                },
+                "codes": {
+                    "alpha_3": "DZA"
+                },
+                "capitals": [
+                    {
+                        "name": "Algiers"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/dz.png"
+                },
+                "region": "Africa",
+                "subregion": "Northern Africa",
+                "borders": [
+                    "TUN",
+                    "LBY",
+                    "NER",
+                    "ESH",
+                    "MRT",
+                    "MLI",
+                    "MAR"
+                ],
+                "currencies": [
+                    {
+                        "code": "DZD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ar",
+                        "iso639_1": "ar",
+                        "iso639_2b": "ara",
+                        "iso639_2t": "ara",
+                        "iso639_3": "ara",
+                        "name": "Arabic",
+                        "native_name": "العربية"
+                    }
+                ],
+                "population": 47400000,
+                "tlds": [
+                    ".dz",
+                    "الجزائر."
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786264211
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "American Samoa",
+                            "official": "American Samoa"
+                        },
+                        "smo": {
+                            "common": "Sāmoa Amelika",
+                            "official": "Sāmoa Amelika"
+                        }
+                    },
+                    "official": "American Samoa"
+                },
+                "codes": {
+                    "alpha_3": "ASM"
+                },
+                "capitals": [
+                    {
+                        "name": "Pago Pago"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/as.png"
+                },
+                "region": "Oceania",
+                "subregion": "Polynesia",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "USD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "sm",
+                        "iso639_1": "sm",
+                        "iso639_2b": "smo",
+                        "iso639_2t": "smo",
+                        "iso639_3": "smo",
+                        "name": "Samoan",
+                        "native_name": "gagana faʻa Samoa"
+                    }
+                ],
+                "population": 43268,
+                "tlds": [
+                    ".as"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005246
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "cat": {
+                            "common": "Andorra",
+                            "official": "Principat d'Andorra"
+                        }
+                    },
+                    "official": "Principality of Andorra"
+                },
+                "codes": {
+                    "alpha_3": "AND"
+                },
+                "capitals": [
+                    {
+                        "name": "Andorra la Vella"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ad.png"
+                },
+                "region": "Europe",
+                "subregion": "Southern Europe",
+                "borders": [
+                    "FRA",
+                    "ESP"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ca",
+                        "iso639_1": "ca",
+                        "iso639_2b": "cat",
+                        "iso639_2t": "cat",
+                        "iso639_3": "cat",
+                        "name": "Catalan",
+                        "native_name": "català"
+                    }
+                ],
+                "population": 89752,
+                "tlds": [
+                    ".ad"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786028454
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "por": {
+                            "common": "Angola",
+                            "official": "República de Angola"
+                        }
+                    },
+                    "official": "Republic of Angola"
+                },
+                "codes": {
+                    "alpha_3": "AGO"
+                },
+                "capitals": [
+                    {
+                        "name": "Luanda"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ao.png"
+                },
+                "region": "Africa",
+                "subregion": "Middle Africa",
+                "borders": [
+                    "COG",
+                    "COD",
+                    "ZMB",
+                    "NAM"
+                ],
+                "currencies": [
+                    {
+                        "code": "AOA"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "pt",
+                        "iso639_1": "pt",
+                        "iso639_2b": "por",
+                        "iso639_2t": "por",
+                        "iso639_3": "por",
+                        "name": "Portuguese",
+                        "native_name": "português"
+                    }
+                ],
+                "population": 38778554,
+                "tlds": [
+                    ".ao"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786111903
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Anguilla",
+                            "official": "Anguilla"
+                        }
+                    },
+                    "official": "Anguilla"
+                },
+                "codes": {
+                    "alpha_3": "AIA"
+                },
+                "capitals": [
+                    {
+                        "name": "The Valley"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ai.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "XCD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 16010,
+                "tlds": [
+                    ".ai"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005246
+                }
+            },
+            {
+                "names": {
+                    "native": {},
+                    "official": "Antarctica"
+                },
+                "codes": {
+                    "alpha_3": "ATA"
+                },
+                "capitals": [],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/aq.png"
+                },
+                "region": "Antarctic",
+                "subregion": "",
+                "borders": [],
+                "currencies": [],
+                "languages": [],
+                "population": 1300,
+                "tlds": [
+                    ".aq"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005246
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Antigua and Barbuda",
+                            "official": "Antigua and Barbuda"
+                        }
+                    },
+                    "official": "Antigua and Barbuda"
+                },
+                "codes": {
+                    "alpha_3": "ATG"
+                },
+                "capitals": [
+                    {
+                        "name": "Saint John's"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ag.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "XCD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 106365,
+                "tlds": [
+                    ".ag"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629496
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "grn": {
+                            "common": "Argentina",
+                            "official": "Argentine Republic"
+                        },
+                        "spa": {
+                            "common": "Argentina",
+                            "official": "República Argentina"
+                        }
+                    },
+                    "official": "Argentine Republic"
+                },
+                "codes": {
+                    "alpha_3": "ARG"
+                },
+                "capitals": [
+                    {
+                        "name": "Buenos Aires"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ar.png"
+                },
+                "region": "Americas",
+                "subregion": "South America",
+                "borders": [
+                    "BOL",
+                    "BRA",
+                    "CHL",
+                    "PRY",
+                    "URY"
+                ],
+                "currencies": [
+                    {
+                        "code": "ARS"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "gn",
+                        "iso639_1": "gn",
+                        "iso639_2b": "grn",
+                        "iso639_2t": "grn",
+                        "iso639_3": "grn",
+                        "name": "Guarani",
+                        "native_name": "Avañe'ẽ"
+                    },
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 46466688,
+                "tlds": [
+                    ".ar"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785840859
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "hye": {
+                            "common": "Հայաստան",
+                            "official": "Հայաստանի Հանրապետություն"
+                        }
+                    },
+                    "official": "Republic of Armenia"
+                },
+                "codes": {
+                    "alpha_3": "ARM"
+                },
+                "capitals": [
+                    {
+                        "name": "Yerevan"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/am.png"
+                },
+                "region": "Asia",
+                "subregion": "Western Asia",
+                "borders": [
+                    "AZE",
+                    "GEO",
+                    "IRN",
+                    "TUR"
+                ],
+                "currencies": [
+                    {
+                        "code": "AMD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "hy",
+                        "iso639_1": "hy",
+                        "iso639_2b": "arm",
+                        "iso639_2t": "hye",
+                        "iso639_3": "hye",
+                        "name": "Armenian",
+                        "native_name": "Հայերեն"
+                    }
+                ],
+                "population": 3096900,
+                "tlds": [
+                    ".am"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561062
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "nld": {
+                            "common": "Aruba",
+                            "official": "Aruba"
+                        },
+                        "pap": {
+                            "common": "Aruba",
+                            "official": "Aruba"
+                        }
+                    },
+                    "official": "Aruba"
+                },
+                "codes": {
+                    "alpha_3": "ABW"
+                },
+                "capitals": [
+                    {
+                        "name": "Oranjestad"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/aw.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "AWG"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "nl",
+                        "iso639_1": "nl",
+                        "iso639_2b": "dut",
+                        "iso639_2t": "nld",
+                        "iso639_3": "nld",
+                        "name": "Dutch",
+                        "native_name": "Nederlands"
+                    },
+                    {
+                        "bcp47": "pap",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "pap",
+                        "name": "Papiamento",
+                        "native_name": "Papiamentu"
+                    }
+                ],
+                "population": 110625,
+                "tlds": [
+                    ".aw"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Australia",
+                            "official": "Commonwealth of Australia"
+                        }
+                    },
+                    "official": "Commonwealth of Australia"
+                },
+                "codes": {
+                    "alpha_3": "AUS"
+                },
+                "capitals": [
+                    {
+                        "name": "Canberra"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/au.png"
+                },
+                "region": "Oceania",
+                "subregion": "Australia and New Zealand",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "AUD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 27801023,
+                "tlds": [
+                    ".au"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561127
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "deu": {
+                            "common": "Österreich",
+                            "official": "Republik Österreich"
+                        }
+                    },
+                    "official": "Republic of Austria"
+                },
+                "codes": {
+                    "alpha_3": "AUT"
+                },
+                "capitals": [
+                    {
+                        "name": "Vienna"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/at.png"
+                },
+                "region": "Europe",
+                "subregion": "Central Europe",
+                "borders": [
+                    "CZE",
+                    "DEU",
+                    "HUN",
+                    "ITA",
+                    "LIE",
+                    "SVK",
+                    "SVN",
+                    "CHE"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "de",
+                        "iso639_1": "de",
+                        "iso639_2b": "ger",
+                        "iso639_2t": "deu",
+                        "iso639_3": "deu",
+                        "name": "German",
+                        "native_name": "Deutsch"
+                    }
+                ],
+                "population": 9217573,
+                "tlds": [
+                    ".at"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786818728
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "aze": {
+                            "common": "Azərbaycan",
+                            "official": "Azərbaycan Respublikası"
+                        }
+                    },
+                    "official": "Republic of Azerbaijan"
+                },
+                "codes": {
+                    "alpha_3": "AZE"
+                },
+                "capitals": [
+                    {
+                        "name": "Baku"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/az.png"
+                },
+                "region": "Asia",
+                "subregion": "Western Asia",
+                "borders": [
+                    "ARM",
+                    "GEO",
+                    "IRN",
+                    "RUS",
+                    "TUR"
+                ],
+                "currencies": [
+                    {
+                        "code": "AZN"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "az",
+                        "iso639_1": "az",
+                        "iso639_2b": "aze",
+                        "iso639_2t": "aze",
+                        "iso639_3": "aze",
+                        "name": "Azerbaijani",
+                        "native_name": "Azərbaycan dili"
+                    }
+                ],
+                "population": 10266627,
+                "tlds": [
+                    ".az"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526831
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Bahamas",
+                            "official": "Commonwealth of the Bahamas"
+                        }
+                    },
+                    "official": "Commonwealth of the Bahamas"
+                },
+                "codes": {
+                    "alpha_3": "BHS"
+                },
+                "capitals": [
+                    {
+                        "name": "Nassau"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bs.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "BSD"
+                    },
+                    {
+                        "code": "USD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 398165,
+                "tlds": [
+                    ".bs"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629496
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ara": {
+                            "common": "‏البحرين",
+                            "official": "مملكة البحرين"
+                        }
+                    },
+                    "official": "Kingdom of Bahrain"
+                },
+                "codes": {
+                    "alpha_3": "BHR"
+                },
+                "capitals": [
+                    {
+                        "name": "Manama"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bh.png"
+                },
+                "region": "Asia",
+                "subregion": "Western Asia",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "BHD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ar",
+                        "iso639_1": "ar",
+                        "iso639_2b": "ara",
+                        "iso639_2t": "ara",
+                        "iso639_3": "ara",
+                        "name": "Arabic",
+                        "native_name": "العربية"
+                    }
+                ],
+                "population": 1603260,
+                "tlds": [
+                    ".bh"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629357
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ben": {
+                            "common": "বাংলাদেশ",
+                            "official": "বাংলাদেশ গণপ্রজাতন্ত্রী"
+                        }
+                    },
+                    "official": "People's Republic of Bangladesh"
+                },
+                "codes": {
+                    "alpha_3": "BGD"
+                },
+                "capitals": [
+                    {
+                        "name": "Dhaka"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bd.png"
+                },
+                "region": "Asia",
+                "subregion": "Southern Asia",
+                "borders": [
+                    "MMR",
+                    "IND"
+                ],
+                "currencies": [
+                    {
+                        "code": "BDT"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "bn",
+                        "iso639_1": "bn",
+                        "iso639_2b": "ben",
+                        "iso639_2t": "ben",
+                        "iso639_3": "ben",
+                        "name": "Bengali",
+                        "native_name": "বাংলা"
+                    }
+                ],
+                "population": 169828911,
+                "tlds": [
+                    ".bd"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784944958
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Barbados",
+                            "official": "Barbados"
+                        }
+                    },
+                    "official": "Barbados"
+                },
+                "codes": {
+                    "alpha_3": "BRB"
+                },
+                "capitals": [
+                    {
+                        "name": "Bridgetown"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bb.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "BBD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 261692,
+                "tlds": [
+                    ".bb"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "bel": {
+                            "common": "Белару́сь",
+                            "official": "Рэспубліка Беларусь"
+                        },
+                        "rus": {
+                            "common": "Беларусь",
+                            "official": "Республика Беларусь"
+                        }
+                    },
+                    "official": "Republic of Belarus"
+                },
+                "codes": {
+                    "alpha_3": "BLR"
+                },
+                "capitals": [
+                    {
+                        "name": "Minsk"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/by.png"
+                },
+                "region": "Europe",
+                "subregion": "Eastern Europe",
+                "borders": [
+                    "LVA",
+                    "LTU",
+                    "POL",
+                    "RUS",
+                    "UKR"
+                ],
+                "currencies": [
+                    {
+                        "code": "BYN"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "be",
+                        "iso639_1": "be",
+                        "iso639_2b": "bel",
+                        "iso639_2t": "bel",
+                        "iso639_3": "bel",
+                        "name": "Belarusian",
+                        "native_name": "беларуская мова"
+                    },
+                    {
+                        "bcp47": "ru",
+                        "iso639_1": "ru",
+                        "iso639_2b": "rus",
+                        "iso639_2t": "rus",
+                        "iso639_3": "rus",
+                        "name": "Russian",
+                        "native_name": "русский"
+                    }
+                ],
+                "population": 9056080,
+                "tlds": [
+                    ".by"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785726868
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "deu": {
+                            "common": "Belgien",
+                            "official": "Königreich Belgien"
+                        },
+                        "fra": {
+                            "common": "Belgique",
+                            "official": "Royaume de Belgique"
+                        },
+                        "nld": {
+                            "common": "België",
+                            "official": "Koninkrijk België"
+                        }
+                    },
+                    "official": "Kingdom of Belgium"
+                },
+                "codes": {
+                    "alpha_3": "BEL"
+                },
+                "capitals": [
+                    {
+                        "name": "Brussels"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/be.png"
+                },
+                "region": "Europe",
+                "subregion": "Western Europe",
+                "borders": [
+                    "FRA",
+                    "DEU",
+                    "LUX",
+                    "NLD"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "de",
+                        "iso639_1": "de",
+                        "iso639_2b": "ger",
+                        "iso639_2t": "deu",
+                        "iso639_3": "deu",
+                        "name": "German",
+                        "native_name": "Deutsch"
+                    },
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    },
+                    {
+                        "bcp47": "nl",
+                        "iso639_1": "nl",
+                        "iso639_2b": "dut",
+                        "iso639_2t": "nld",
+                        "iso639_3": "nld",
+                        "name": "Dutch",
+                        "native_name": "Nederlands"
+                    }
+                ],
+                "population": 11936546,
+                "tlds": [
+                    ".be"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786314167
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "bjz": {
+                            "common": "Belize",
+                            "official": "Belize"
+                        },
+                        "eng": {
+                            "common": "Belize",
+                            "official": "Belize"
+                        },
+                        "spa": {
+                            "common": "Belice",
+                            "official": "Belice"
+                        }
+                    },
+                    "official": "Belize"
+                },
+                "codes": {
+                    "alpha_3": "BLZ"
+                },
+                "capitals": [
+                    {
+                        "name": "Belmopan"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bz.png"
+                },
+                "region": "Americas",
+                "subregion": "Central America",
+                "borders": [
+                    "GTM",
+                    "MEX"
+                ],
+                "currencies": [
+                    {
+                        "code": "BZD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "bjz",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "bjz",
+                        "name": "Belize Kriol",
+                        "native_name": "Belize Kriol"
+                    },
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 418982,
+                "tlds": [
+                    ".bz"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629357
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Bénin",
+                            "official": "République du Bénin"
+                        }
+                    },
+                    "official": "Republic of Benin"
+                },
+                "codes": {
+                    "alpha_3": "BEN"
+                },
+                "capitals": [
+                    {
+                        "name": "Porto-Novo"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bj.png"
+                },
+                "region": "Africa",
+                "subregion": "Western Africa",
+                "borders": [
+                    "BFA",
+                    "NER",
+                    "NGA",
+                    "TGO"
+                ],
+                "currencies": [
+                    {
+                        "code": "XOF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 13551992,
+                "tlds": [
+                    ".bj"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785856112
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Bermuda",
+                            "official": "Bermuda"
+                        }
+                    },
+                    "official": "Bermuda"
+                },
+                "codes": {
+                    "alpha_3": "BMU"
+                },
+                "capitals": [
+                    {
+                        "name": "Hamilton"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bm.png"
+                },
+                "region": "Americas",
+                "subregion": "North America",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "BMD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 64055,
+                "tlds": [
+                    ".bm"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "dzo": {
+                            "common": "འབྲུག་ཡུལ་",
+                            "official": "འབྲུག་རྒྱལ་ཁབ་"
+                        }
+                    },
+                    "official": "Kingdom of Bhutan"
+                },
+                "codes": {
+                    "alpha_3": "BTN"
+                },
+                "capitals": [
+                    {
+                        "name": "Thimphu"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bt.png"
+                },
+                "region": "Asia",
+                "subregion": "Southern Asia",
+                "borders": [
+                    "CHN",
+                    "IND"
+                ],
+                "currencies": [
+                    {
+                        "code": "BTN"
+                    },
+                    {
+                        "code": "INR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "dz",
+                        "iso639_1": "dz",
+                        "iso639_2b": "dzo",
+                        "iso639_2t": "dzo",
+                        "iso639_3": "dzo",
+                        "name": "Dzongkha",
+                        "native_name": "རྫོང་ཁ"
+                    }
+                ],
+                "population": 784043,
+                "tlds": [
+                    ".bt"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561062
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "aym": {
+                            "common": "Wuliwya",
+                            "official": "Wuliwya Suyu"
+                        },
+                        "grn": {
+                            "common": "Volívia",
+                            "official": "Tetã Volívia"
+                        },
+                        "que": {
+                            "common": "Buliwya",
+                            "official": "Buliwya Mamallaqta"
+                        },
+                        "spa": {
+                            "common": "Bolivia",
+                            "official": "Estado Plurinacional de Bolivia"
+                        }
+                    },
+                    "official": "Plurinational State of Bolivia"
+                },
+                "codes": {
+                    "alpha_3": "BOL"
+                },
+                "capitals": [
+                    {
+                        "name": "Sucre"
+                    },
+                    {
+                        "name": "La Paz"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bo.png"
+                },
+                "region": "Americas",
+                "subregion": "South America",
+                "borders": [
+                    "ARG",
+                    "BRA",
+                    "CHL",
+                    "PRY",
+                    "PER"
+                ],
+                "currencies": [
+                    {
+                        "code": "BOB"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ay",
+                        "iso639_1": "ay",
+                        "iso639_2b": "aym",
+                        "iso639_2t": "aym",
+                        "iso639_3": "aym",
+                        "name": "Aymara",
+                        "native_name": "Aymar aru"
+                    },
+                    {
+                        "bcp47": "gn",
+                        "iso639_1": "gn",
+                        "iso639_2b": "grn",
+                        "iso639_2t": "grn",
+                        "iso639_3": "grn",
+                        "name": "Guarani",
+                        "native_name": "Avañe'ẽ"
+                    },
+                    {
+                        "bcp47": "qu",
+                        "iso639_1": "qu",
+                        "iso639_2b": "que",
+                        "iso639_2t": "que",
+                        "iso639_3": "que",
+                        "name": "Quechua",
+                        "native_name": "Runa Simi"
+                    },
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 11365333,
+                "tlds": [
+                    ".bo"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "bos": {
+                            "common": "Bosna i Hercegovina",
+                            "official": "Bosna i Hercegovina"
+                        },
+                        "hrv": {
+                            "common": "Bosna i Hercegovina",
+                            "official": "Bosna i Hercegovina"
+                        },
+                        "srp": {
+                            "common": "Босна и Херцеговина",
+                            "official": "Босна и Херцеговина"
+                        }
+                    },
+                    "official": "Bosnia and Herzegovina"
+                },
+                "codes": {
+                    "alpha_3": "BIH"
+                },
+                "capitals": [
+                    {
+                        "name": "Sarajevo"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ba.png"
+                },
+                "region": "Europe",
+                "subregion": "Southeast Europe",
+                "borders": [
+                    "HRV",
+                    "MNE",
+                    "SRB"
+                ],
+                "currencies": [
+                    {
+                        "code": "BAM"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "bs",
+                        "iso639_1": "bs",
+                        "iso639_2b": "bos",
+                        "iso639_2t": "bos",
+                        "iso639_3": "bos",
+                        "name": "Bosnian",
+                        "native_name": "bosanski jezik"
+                    },
+                    {
+                        "bcp47": "hr",
+                        "iso639_1": "hr",
+                        "iso639_2b": "hrv",
+                        "iso639_2t": "hrv",
+                        "iso639_3": "hrv",
+                        "name": "Croatian",
+                        "native_name": "hrvatski jezik"
+                    },
+                    {
+                        "bcp47": "sr",
+                        "iso639_1": "sr",
+                        "iso639_2b": "srp",
+                        "iso639_2t": "srp",
+                        "iso639_3": "srp",
+                        "name": "Serbian",
+                        "native_name": "српски језик"
+                    }
+                ],
+                "population": 3412000,
+                "tlds": [
+                    ".ba"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783156877
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Botswana",
+                            "official": "Republic of Botswana"
+                        },
+                        "tsn": {
+                            "common": "Botswana",
+                            "official": "Lefatshe la Botswana"
+                        }
+                    },
+                    "official": "Republic of Botswana"
+                },
+                "codes": {
+                    "alpha_3": "BWA"
+                },
+                "capitals": [
+                    {
+                        "name": "Gaborone"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bw.png"
+                },
+                "region": "Africa",
+                "subregion": "Southern Africa",
+                "borders": [
+                    "NAM",
+                    "ZAF",
+                    "ZMB",
+                    "ZWE"
+                ],
+                "currencies": [
+                    {
+                        "code": "BWP"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "tn",
+                        "iso639_1": "tn",
+                        "iso639_2b": "tsn",
+                        "iso639_2t": "tsn",
+                        "iso639_3": "tsn",
+                        "name": "Tswana",
+                        "native_name": "Setswana"
+                    }
+                ],
+                "population": 2359609,
+                "tlds": [
+                    ".bw"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "nor": {
+                            "common": "Bouvetøya",
+                            "official": "Bouvetøya"
+                        }
+                    },
+                    "official": "Bouvet Island"
+                },
+                "codes": {
+                    "alpha_3": "BVT"
+                },
+                "capitals": [],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bv.png"
+                },
+                "region": "Antarctic",
+                "subregion": "",
+                "borders": [],
+                "currencies": [],
+                "languages": [
+                    {
+                        "bcp47": "no",
+                        "iso639_1": "no",
+                        "iso639_2b": "nor",
+                        "iso639_2t": "nor",
+                        "iso639_3": "nor",
+                        "name": "Norwegian",
+                        "native_name": "Norsk"
+                    }
+                ],
+                "population": 0,
+                "tlds": [
+                    ".bv"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "por": {
+                            "common": "Brasil",
+                            "official": "República Federativa do Brasil"
+                        }
+                    },
+                    "official": "Federative Republic of Brazil"
+                },
+                "codes": {
+                    "alpha_3": "BRA"
+                },
+                "capitals": [
+                    {
+                        "name": "Brasília"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/br.png"
+                },
+                "region": "Americas",
+                "subregion": "South America",
+                "borders": [
+                    "ARG",
+                    "BOL",
+                    "COL",
+                    "GUF",
+                    "GUY",
+                    "PRY",
+                    "PER",
+                    "SUR",
+                    "URY",
+                    "VEN"
+                ],
+                "currencies": [
+                    {
+                        "code": "BRL"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "pt",
+                        "iso639_1": "pt",
+                        "iso639_2b": "por",
+                        "iso639_2t": "por",
+                        "iso639_3": "por",
+                        "name": "Portuguese",
+                        "native_name": "português"
+                    }
+                ],
+                "population": 213421037,
+                "tlds": [
+                    ".br"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "British Indian Ocean Territory",
+                            "official": "British Indian Ocean Territory"
+                        }
+                    },
+                    "official": "British Indian Ocean Territory"
+                },
+                "codes": {
+                    "alpha_3": "IOT"
+                },
+                "capitals": [
+                    {
+                        "name": "Diego Garcia"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/io.png"
+                },
+                "region": "Africa",
+                "subregion": "Eastern Africa",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "USD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 2000,
+                "tlds": [
+                    ".io"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786725241
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "British Virgin Islands",
+                            "official": "Virgin Islands"
+                        }
+                    },
+                    "official": "Virgin Islands"
+                },
+                "codes": {
+                    "alpha_3": "VGB"
+                },
+                "capitals": [
+                    {
+                        "name": "Road Town"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/vg.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "USD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 38322,
+                "tlds": [
+                    ".vg"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "msa": {
+                            "common": "Negara Brunei Darussalam",
+                            "official": "Nation of Brunei, Abode Damai"
+                        }
+                    },
+                    "official": "Nation of Brunei, the Abode of Peace"
+                },
+                "codes": {
+                    "alpha_3": "BRN"
+                },
+                "capitals": [
+                    {
+                        "name": "Bandar Seri Begawan"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bn.png"
+                },
+                "region": "Asia",
+                "subregion": "South-Eastern Asia",
+                "borders": [
+                    "MYS"
+                ],
+                "currencies": [
+                    {
+                        "code": "BND"
+                    },
+                    {
+                        "code": "SGD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ms",
+                        "iso639_1": "ms",
+                        "iso639_2b": "may",
+                        "iso639_2t": "msa",
+                        "iso639_3": "msa",
+                        "name": "Malay",
+                        "native_name": "Bahasa Melayu"
+                    }
+                ],
+                "population": 458600,
+                "tlds": [
+                    ".bn"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "bul": {
+                            "common": "България",
+                            "official": "Република България"
+                        }
+                    },
+                    "official": "Republic of Bulgaria"
+                },
+                "codes": {
+                    "alpha_3": "BGR"
+                },
+                "capitals": [
+                    {
+                        "name": "Sofia"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bg.png"
+                },
+                "region": "Europe",
+                "subregion": "Southeast Europe",
+                "borders": [
+                    "GRC",
+                    "MKD",
+                    "ROU",
+                    "SRB",
+                    "TUR"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "bg",
+                        "iso639_1": "bg",
+                        "iso639_2b": "bul",
+                        "iso639_2t": "bul",
+                        "iso639_3": "bul",
+                        "name": "Bulgarian",
+                        "native_name": "български език"
+                    }
+                ],
+                "population": 6423207,
+                "tlds": [
+                    ".bg"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Burkina Faso",
+                            "official": "République du Burkina"
+                        }
+                    },
+                    "official": "Burkina Faso"
+                },
+                "codes": {
+                    "alpha_3": "BFA"
+                },
+                "capitals": [
+                    {
+                        "name": "Ouagadougou"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bf.png"
+                },
+                "region": "Africa",
+                "subregion": "Western Africa",
+                "borders": [
+                    "BEN",
+                    "CIV",
+                    "GHA",
+                    "MLI",
+                    "NER",
+                    "TGO"
+                ],
+                "currencies": [
+                    {
+                        "code": "XOF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 22489126,
+                "tlds": [
+                    ".bf"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Burundi",
+                            "official": "République du Burundi"
+                        },
+                        "run": {
+                            "common": "Uburundi",
+                            "official": "Republika y'Uburundi "
+                        }
+                    },
+                    "official": "Republic of Burundi"
+                },
+                "codes": {
+                    "alpha_3": "BDI"
+                },
+                "capitals": [
+                    {
+                        "name": "Gitega"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bi.png"
+                },
+                "region": "Africa",
+                "subregion": "Eastern Africa",
+                "borders": [
+                    "COD",
+                    "RWA",
+                    "TZA"
+                ],
+                "currencies": [
+                    {
+                        "code": "BIF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    },
+                    {
+                        "bcp47": "rn",
+                        "iso639_1": "rn",
+                        "iso639_2b": "run",
+                        "iso639_2t": "run",
+                        "iso639_3": "run",
+                        "name": "Rundi",
+                        "native_name": "Ikirundi"
+                    }
+                ],
+                "population": 12332788,
+                "tlds": [
+                    ".bi"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785038289
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "por": {
+                            "common": "Cabo Verde",
+                            "official": "República de Cabo Verde"
+                        }
+                    },
+                    "official": "Republic of Cabo Verde"
+                },
+                "codes": {
+                    "alpha_3": "CPV"
+                },
+                "capitals": [
+                    {
+                        "name": "Praia"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cv.png"
+                },
+                "region": "Africa",
+                "subregion": "Western Africa",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "CVE"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "pt",
+                        "iso639_1": "pt",
+                        "iso639_2b": "por",
+                        "iso639_2t": "por",
+                        "iso639_3": "por",
+                        "name": "Portuguese",
+                        "native_name": "português"
+                    }
+                ],
+                "population": 491233,
+                "tlds": [
+                    ".cv"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785371694
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "khm": {
+                            "common": "Kâmpŭchéa",
+                            "official": "ព្រះរាជាណាចក្រកម្ពុជា"
+                        }
+                    },
+                    "official": "Kingdom of Cambodia"
+                },
+                "codes": {
+                    "alpha_3": "KHM"
+                },
+                "capitals": [
+                    {
+                        "name": "Phnom Penh"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/kh.png"
+                },
+                "region": "Asia",
+                "subregion": "South-Eastern Asia",
+                "borders": [
+                    "LAO",
+                    "THA",
+                    "VNM"
+                ],
+                "currencies": [
+                    {
+                        "code": "KHR"
+                    },
+                    {
+                        "code": "USD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "km",
+                        "iso639_1": "km",
+                        "iso639_2b": "khm",
+                        "iso639_2t": "khm",
+                        "iso639_3": "khm",
+                        "name": "Khmer",
+                        "native_name": "ខ្មែរ"
+                    }
+                ],
+                "population": 17816143,
+                "tlds": [
+                    ".kh"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629591
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Cameroon",
+                            "official": "Republic of Cameroon"
+                        },
+                        "fra": {
+                            "common": "Cameroun",
+                            "official": "République du Cameroun"
+                        }
+                    },
+                    "official": "Republic of Cameroon"
+                },
+                "codes": {
+                    "alpha_3": "CMR"
+                },
+                "capitals": [
+                    {
+                        "name": "Yaoundé"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cm.png"
+                },
+                "region": "Africa",
+                "subregion": "Middle Africa",
+                "borders": [
+                    "CAF",
+                    "TCD",
+                    "COG",
+                    "GNQ",
+                    "GAB",
+                    "NGA"
+                ],
+                "currencies": [
+                    {
+                        "code": "XAF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 29442327,
+                "tlds": [
+                    ".cm"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561063
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Canada",
+                            "official": "Canada"
+                        },
+                        "fra": {
+                            "common": "Canada",
+                            "official": "Canada"
+                        }
+                    },
+                    "official": "Canada"
+                },
+                "codes": {
+                    "alpha_3": "CAN"
+                },
+                "capitals": [
+                    {
+                        "name": "Ottawa"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ca.png"
+                },
+                "region": "Americas",
+                "subregion": "North America",
+                "borders": [
+                    "USA"
+                ],
+                "currencies": [
+                    {
+                        "code": "CAD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 41417056,
+                "tlds": [
+                    ".ca"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "nld": {
+                            "common": "Caribisch Nederland",
+                            "official": "Bonaire, Sint Eustatius en Saba"
+                        },
+                        "pap": {
+                            "common": "Boneiru, Sint Eustatius y Saba",
+                            "official": "Boneiru, Sint Eustatius y Saba"
+                        }
+                    },
+                    "official": "Bonaire, Sint Eustatius and Saba"
+                },
+                "codes": {
+                    "alpha_3": "BES"
+                },
+                "capitals": [
+                    {
+                        "name": "Kralendijk"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/bq.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "USD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "nl",
+                        "iso639_1": "nl",
+                        "iso639_2b": "dut",
+                        "iso639_2t": "nld",
+                        "iso639_3": "nld",
+                        "name": "Dutch",
+                        "native_name": "Nederlands"
+                    },
+                    {
+                        "bcp47": "pap",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "pap",
+                        "name": "Papiamento",
+                        "native_name": "Papiamentu"
+                    }
+                ],
+                "population": 31980,
+                "tlds": [
+                    ".bq",
+                    ".nl"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783012469
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Cayman Islands",
+                            "official": "Cayman Islands"
+                        }
+                    },
+                    "official": "Cayman Islands"
+                },
+                "codes": {
+                    "alpha_3": "CYM"
+                },
+                "capitals": [
+                    {
+                        "name": "George Town"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ky.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "KYD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 90577,
+                "tlds": [
+                    ".ky"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "République centrafricaine",
+                            "official": "République centrafricaine"
+                        },
+                        "sag": {
+                            "common": "Bêafrîka",
+                            "official": "Ködörösêse tî Bêafrîka"
+                        }
+                    },
+                    "official": "Central African Republic"
+                },
+                "codes": {
+                    "alpha_3": "CAF"
+                },
+                "capitals": [
+                    {
+                        "name": "Bangui"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cf.png"
+                },
+                "region": "Africa",
+                "subregion": "Middle Africa",
+                "borders": [
+                    "CMR",
+                    "TCD",
+                    "COD",
+                    "COG",
+                    "SSD",
+                    "SDN"
+                ],
+                "currencies": [
+                    {
+                        "code": "XAF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    },
+                    {
+                        "bcp47": "sg",
+                        "iso639_1": "sg",
+                        "iso639_2b": "sag",
+                        "iso639_2t": "sag",
+                        "iso639_3": "sag",
+                        "name": "Sango",
+                        "native_name": "yângâ tî sängö"
+                    }
+                ],
+                "population": 5513282,
+                "tlds": [
+                    ".cf"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ara": {
+                            "common": "تشاد‎",
+                            "official": "جمهورية تشاد"
+                        },
+                        "fra": {
+                            "common": "Tchad",
+                            "official": "République du Tchad"
+                        }
+                    },
+                    "official": "Republic of Chad"
+                },
+                "codes": {
+                    "alpha_3": "TCD"
+                },
+                "capitals": [
+                    {
+                        "name": "N'Djamena"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/td.png"
+                },
+                "region": "Africa",
+                "subregion": "Middle Africa",
+                "borders": [
+                    "CMR",
+                    "CAF",
+                    "LBY",
+                    "NER",
+                    "NGA",
+                    "SDN"
+                ],
+                "currencies": [
+                    {
+                        "code": "XAF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ar",
+                        "iso639_1": "ar",
+                        "iso639_2b": "ara",
+                        "iso639_2t": "ara",
+                        "iso639_3": "ara",
+                        "name": "Arabic",
+                        "native_name": "العربية"
+                    },
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 20031602,
+                "tlds": [
+                    ".td"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784301830
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "spa": {
+                            "common": "Chile",
+                            "official": "República de Chile"
+                        }
+                    },
+                    "official": "Republic of Chile"
+                },
+                "codes": {
+                    "alpha_3": "CHL"
+                },
+                "capitals": [
+                    {
+                        "name": "Santiago"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cl.png"
+                },
+                "region": "Americas",
+                "subregion": "South America",
+                "borders": [
+                    "ARG",
+                    "BOL",
+                    "PER"
+                ],
+                "currencies": [
+                    {
+                        "code": "CLP"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 20150948,
+                "tlds": [
+                    ".cl"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785884907
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "zho": {
+                            "common": "中国",
+                            "official": "中华人民共和国"
+                        }
+                    },
+                    "official": "People's Republic of China"
+                },
+                "codes": {
+                    "alpha_3": "CHN"
+                },
+                "capitals": [
+                    {
+                        "name": "Beijing"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cn.png"
+                },
+                "region": "Asia",
+                "subregion": "Eastern Asia",
+                "borders": [
+                    "AFG",
+                    "BTN",
+                    "MMR",
+                    "HKG",
+                    "IND",
+                    "KAZ",
+                    "NPL",
+                    "PRK",
+                    "KGZ",
+                    "LAO",
+                    "MAC",
+                    "MNG",
+                    "PAK",
+                    "RUS",
+                    "TJK",
+                    "VNM"
+                ],
+                "currencies": [
+                    {
+                        "code": "CNY"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "zh",
+                        "iso639_1": "zh",
+                        "iso639_2b": "chi",
+                        "iso639_2t": "zho",
+                        "iso639_3": "zho",
+                        "name": "Chinese",
+                        "native_name": "中文"
+                    }
+                ],
+                "population": 1404890000,
+                "tlds": [
+                    ".cn",
+                    ".中国",
+                    ".中國",
+                    ".公司",
+                    ".网络"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784498927
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Christmas Island",
+                            "official": "Territory of Christmas Island"
+                        }
+                    },
+                    "official": "Territory of Christmas Island"
+                },
+                "codes": {
+                    "alpha_3": "CXR"
+                },
+                "capitals": [
+                    {
+                        "name": "Flying Fish Cove"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cx.png"
+                },
+                "region": "Oceania",
+                "subregion": "Australia and New Zealand",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "AUD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 1692,
+                "tlds": [
+                    ".cx"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Cocos (Keeling) Islands",
+                            "official": "Territory of the Cocos (Keeling) Islands"
+                        }
+                    },
+                    "official": "Territory of the Cocos (Keeling) Islands"
+                },
+                "codes": {
+                    "alpha_3": "CCK"
+                },
+                "capitals": [
+                    {
+                        "name": "West Island"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cc.png"
+                },
+                "region": "Oceania",
+                "subregion": "Australia and New Zealand",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "AUD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 593,
+                "tlds": [
+                    ".cc"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "spa": {
+                            "common": "Colombia",
+                            "official": "República de Colombia"
+                        }
+                    },
+                    "official": "Republic of Colombia"
+                },
+                "codes": {
+                    "alpha_3": "COL"
+                },
+                "capitals": [
+                    {
+                        "name": "Bogotá"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/co.png"
+                },
+                "region": "Americas",
+                "subregion": "South America",
+                "borders": [
+                    "BRA",
+                    "ECU",
+                    "PAN",
+                    "PER",
+                    "VEN"
+                ],
+                "currencies": [
+                    {
+                        "code": "COP"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 53399171,
+                "tlds": [
+                    ".co"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786132794
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ara": {
+                            "common": "القمر‎",
+                            "official": "الاتحاد القمري"
+                        },
+                        "fra": {
+                            "common": "Comores",
+                            "official": "Union des Comores"
+                        },
+                        "zdj": {
+                            "common": "Komori",
+                            "official": "Udzima wa Komori"
+                        }
+                    },
+                    "official": "Union of the Comoros"
+                },
+                "codes": {
+                    "alpha_3": "COM"
+                },
+                "capitals": [
+                    {
+                        "name": "Moroni"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/km.png"
+                },
+                "region": "Africa",
+                "subregion": "Eastern Africa",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "KMF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ar",
+                        "iso639_1": "ar",
+                        "iso639_2b": "ara",
+                        "iso639_2t": "ara",
+                        "iso639_3": "ara",
+                        "name": "Arabic",
+                        "native_name": "العربية"
+                    },
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    },
+                    {
+                        "bcp47": "zdj",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "zdj",
+                        "name": "Ngazidja Comorian",
+                        "native_name": "shiNgazidja"
+                    }
+                ],
+                "population": 944388,
+                "tlds": [
+                    ".km"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "République du Congo",
+                            "official": "République du Congo"
+                        },
+                        "kon": {
+                            "common": "Repubilika ya Kongo",
+                            "official": "Repubilika ya Kongo"
+                        },
+                        "lin": {
+                            "common": "Republíki ya Kongó",
+                            "official": "Republíki ya Kongó"
+                        }
+                    },
+                    "official": "Republic of the Congo"
+                },
+                "codes": {
+                    "alpha_3": "COG"
+                },
+                "capitals": [
+                    {
+                        "name": "Brazzaville"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cg.png"
+                },
+                "region": "Africa",
+                "subregion": "Middle Africa",
+                "borders": [
+                    "AGO",
+                    "CMR",
+                    "CAF",
+                    "COD",
+                    "GAB"
+                ],
+                "currencies": [
+                    {
+                        "code": "XAF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    },
+                    {
+                        "bcp47": "kg",
+                        "iso639_1": "kg",
+                        "iso639_2b": "kon",
+                        "iso639_2t": "kon",
+                        "iso639_3": "kon",
+                        "name": "Kongo",
+                        "native_name": "Kikongo"
+                    },
+                    {
+                        "bcp47": "ln",
+                        "iso639_1": "ln",
+                        "iso639_2b": "lin",
+                        "iso639_2t": "lin",
+                        "iso639_3": "lin",
+                        "name": "Lingala",
+                        "native_name": "Lingála"
+                    }
+                ],
+                "population": 6332961,
+                "tlds": [
+                    ".cg"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784515534
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Cook Islands",
+                            "official": "Cook Islands"
+                        },
+                        "rar": {
+                            "common": "Kūki 'Āirani",
+                            "official": "Kūki 'Āirani"
+                        }
+                    },
+                    "official": "Cook Islands"
+                },
+                "codes": {
+                    "alpha_3": "COK"
+                },
+                "capitals": [
+                    {
+                        "name": "Avarua"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ck.png"
+                },
+                "region": "Oceania",
+                "subregion": "Polynesia",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "CKD"
+                    },
+                    {
+                        "code": "NZD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "rar",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "rar",
+                        "name": "Cook Islands Maori",
+                        "native_name": "Māori Kūki ʻĀirani"
+                    }
+                ],
+                "population": 15040,
+                "tlds": [
+                    ".ck"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629447
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "spa": {
+                            "common": "Costa Rica",
+                            "official": "República de Costa Rica"
+                        }
+                    },
+                    "official": "Republic of Costa Rica"
+                },
+                "codes": {
+                    "alpha_3": "CRI"
+                },
+                "capitals": [
+                    {
+                        "name": "San José"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cr.png"
+                },
+                "region": "Americas",
+                "subregion": "Central America",
+                "borders": [
+                    "NIC",
+                    "PAN"
+                ],
+                "currencies": [
+                    {
+                        "code": "CRC"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 5160700,
+                "tlds": [
+                    ".cr"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785712657
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "hrv": {
+                            "common": "Hrvatska",
+                            "official": "Republika Hrvatska"
+                        }
+                    },
+                    "official": "Republic of Croatia"
+                },
+                "codes": {
+                    "alpha_3": "HRV"
+                },
+                "capitals": [
+                    {
+                        "name": "Zagreb"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/hr.png"
+                },
+                "region": "Europe",
+                "subregion": "Southeast Europe",
+                "borders": [
+                    "BIH",
+                    "HUN",
+                    "MNE",
+                    "SRB",
+                    "SVN"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "hr",
+                        "iso639_1": "hr",
+                        "iso639_2b": "hrv",
+                        "iso639_2t": "hrv",
+                        "iso639_3": "hrv",
+                        "name": "Croatian",
+                        "native_name": "hrvatski jezik"
+                    }
+                ],
+                "population": 3866233,
+                "tlds": [
+                    ".hr"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "spa": {
+                            "common": "Cuba",
+                            "official": "República de Cuba"
+                        }
+                    },
+                    "official": "Republic of Cuba"
+                },
+                "codes": {
+                    "alpha_3": "CUB"
+                },
+                "capitals": [
+                    {
+                        "name": "Havana"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cu.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "CUC"
+                    },
+                    {
+                        "code": "CUP"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 9434593,
+                "tlds": [
+                    ".cu"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786128597
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Curaçao",
+                            "official": "Country of Curaçao"
+                        },
+                        "nld": {
+                            "common": "Curaçao",
+                            "official": "Land Curaçao"
+                        },
+                        "pap": {
+                            "common": "Pais Kòrsou",
+                            "official": "Pais Kòrsou"
+                        }
+                    },
+                    "official": "Country of Curaçao"
+                },
+                "codes": {
+                    "alpha_3": "CUW"
+                },
+                "capitals": [
+                    {
+                        "name": "Willemstad"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cw.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "ANG"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "nl",
+                        "iso639_1": "nl",
+                        "iso639_2b": "dut",
+                        "iso639_2t": "nld",
+                        "iso639_3": "nld",
+                        "name": "Dutch",
+                        "native_name": "Nederlands"
+                    },
+                    {
+                        "bcp47": "pap",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "pap",
+                        "name": "Papiamento",
+                        "native_name": "Papiamentu"
+                    }
+                ],
+                "population": 155826,
+                "tlds": [
+                    ".cw"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ell": {
+                            "common": "Κύπρος",
+                            "official": "Δημοκρατία της Κύπρος"
+                        },
+                        "tur": {
+                            "common": "Kıbrıs",
+                            "official": "Kıbrıs Cumhuriyeti"
+                        }
+                    },
+                    "official": "Republic of Cyprus"
+                },
+                "codes": {
+                    "alpha_3": "CYP"
+                },
+                "capitals": [
+                    {
+                        "name": "Nicosia"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cy.png"
+                },
+                "region": "Europe",
+                "subregion": "Southern Europe",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "el",
+                        "iso639_1": "el",
+                        "iso639_2b": "gre",
+                        "iso639_2t": "ell",
+                        "iso639_3": "ell",
+                        "name": "Greek",
+                        "native_name": "Ελληνικά"
+                    },
+                    {
+                        "bcp47": "tr",
+                        "iso639_1": "tr",
+                        "iso639_2b": "tur",
+                        "iso639_2t": "tur",
+                        "iso639_3": "tur",
+                        "name": "Turkish",
+                        "native_name": "Türkçe"
+                    }
+                ],
+                "population": 983000,
+                "tlds": [
+                    ".cy"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ces": {
+                            "common": "Česko",
+                            "official": "Česká republika"
+                        },
+                        "slk": {
+                            "common": "Česko",
+                            "official": "Česká republika"
+                        }
+                    },
+                    "official": "Czech Republic"
+                },
+                "codes": {
+                    "alpha_3": "CZE"
+                },
+                "capitals": [
+                    {
+                        "name": "Prague"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cz.png"
+                },
+                "region": "Europe",
+                "subregion": "Central Europe",
+                "borders": [
+                    "AUT",
+                    "DEU",
+                    "POL",
+                    "SVK"
+                ],
+                "currencies": [
+                    {
+                        "code": "CZK"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "cs",
+                        "iso639_1": "cs",
+                        "iso639_2b": "cze",
+                        "iso639_2t": "ces",
+                        "iso639_3": "ces",
+                        "name": "Czech",
+                        "native_name": "čeština"
+                    },
+                    {
+                        "bcp47": "sk",
+                        "iso639_1": "sk",
+                        "iso639_2b": "slo",
+                        "iso639_2t": "slk",
+                        "iso639_3": "slk",
+                        "name": "Slovak",
+                        "native_name": "slovenčina"
+                    }
+                ],
+                "population": 10896003,
+                "tlds": [
+                    ".cz"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526831
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "RD Congo",
+                            "official": "République démocratique du Congo"
+                        },
+                        "kon": {
+                            "common": "Repubilika ya Kongo Demokratiki",
+                            "official": "Repubilika ya Kongo Demokratiki"
+                        },
+                        "lin": {
+                            "common": "Republiki ya Kongó Demokratiki",
+                            "official": "Republiki ya Kongó Demokratiki"
+                        },
+                        "lua": {
+                            "common": "Ditunga dia Kongu wa Mungalaata",
+                            "official": "Ditunga dia Kongu wa Mungalaata"
+                        },
+                        "swa": {
+                            "common": "Jamhuri ya Kidemokrasia ya Kongo",
+                            "official": "Jamhuri ya Kidemokrasia ya Kongo"
+                        }
+                    },
+                    "official": "Democratic Republic of the Congo"
+                },
+                "codes": {
+                    "alpha_3": "COD"
+                },
+                "capitals": [
+                    {
+                        "name": "Kinshasa"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/cd.png"
+                },
+                "region": "Africa",
+                "subregion": "Middle Africa",
+                "borders": [
+                    "AGO",
+                    "BDI",
+                    "CAF",
+                    "COG",
+                    "RWA",
+                    "SSD",
+                    "TZA",
+                    "UGA",
+                    "ZMB"
+                ],
+                "currencies": [
+                    {
+                        "code": "CDF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    },
+                    {
+                        "bcp47": "kg",
+                        "iso639_1": "kg",
+                        "iso639_2b": "kon",
+                        "iso639_2t": "kon",
+                        "iso639_3": "kon",
+                        "name": "Kongo",
+                        "native_name": "Kikongo"
+                    },
+                    {
+                        "bcp47": "ln",
+                        "iso639_1": "ln",
+                        "iso639_2b": "lin",
+                        "iso639_2t": "lin",
+                        "iso639_3": "lin",
+                        "name": "Lingala",
+                        "native_name": "Lingála"
+                    },
+                    {
+                        "bcp47": "lua",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "lua",
+                        "name": "Luba-Lulua",
+                        "native_name": "Tshiluba"
+                    },
+                    {
+                        "bcp47": "sw",
+                        "iso639_1": "sw",
+                        "iso639_2b": "swa",
+                        "iso639_2t": "swa",
+                        "iso639_3": "swa",
+                        "name": "Swahili",
+                        "native_name": "Kiswahili"
+                    }
+                ],
+                "population": 116452000,
+                "tlds": [
+                    ".cd"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786241247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "dan": {
+                            "common": "Danmark",
+                            "official": "Kongeriget Danmark"
+                        }
+                    },
+                    "official": "Kingdom of Denmark"
+                },
+                "codes": {
+                    "alpha_3": "DNK"
+                },
+                "capitals": [
+                    {
+                        "name": "Copenhagen"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/dk.png"
+                },
+                "region": "Europe",
+                "subregion": "Northern Europe",
+                "borders": [
+                    "DEU"
+                ],
+                "currencies": [
+                    {
+                        "code": "DKK"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "da",
+                        "iso639_1": "da",
+                        "iso639_2b": "dan",
+                        "iso639_2t": "dan",
+                        "iso639_3": "dan",
+                        "name": "Danish",
+                        "native_name": "dansk"
+                    }
+                ],
+                "population": 6031699,
+                "tlds": [
+                    ".dk"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786818728
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ara": {
+                            "common": "جيبوتي‎",
+                            "official": "جمهورية جيبوتي"
+                        },
+                        "fra": {
+                            "common": "Djibouti",
+                            "official": "République de Djibouti"
+                        }
+                    },
+                    "official": "Republic of Djibouti"
+                },
+                "codes": {
+                    "alpha_3": "DJI"
+                },
+                "capitals": [
+                    {
+                        "name": "Djibouti"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/dj.png"
+                },
+                "region": "Africa",
+                "subregion": "Eastern Africa",
+                "borders": [
+                    "ERI",
+                    "ETH",
+                    "SOM"
+                ],
+                "currencies": [
+                    {
+                        "code": "DJF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ar",
+                        "iso639_1": "ar",
+                        "iso639_2b": "ara",
+                        "iso639_2t": "ara",
+                        "iso639_3": "ara",
+                        "name": "Arabic",
+                        "native_name": "العربية"
+                    },
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 1066809,
+                "tlds": [
+                    ".dj"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Dominica",
+                            "official": "Commonwealth of Dominica"
+                        }
+                    },
+                    "official": "Commonwealth of Dominica"
+                },
+                "codes": {
+                    "alpha_3": "DMA"
+                },
+                "capitals": [
+                    {
+                        "name": "Roseau"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/dm.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "XCD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 65514,
+                "tlds": [
+                    ".dm"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561062
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "spa": {
+                            "common": "República Dominicana",
+                            "official": "República Dominicana"
+                        }
+                    },
+                    "official": "Dominican Republic"
+                },
+                "codes": {
+                    "alpha_3": "DOM"
+                },
+                "capitals": [
+                    {
+                        "name": "Santo Domingo"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/do.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [
+                    "HTI"
+                ],
+                "currencies": [
+                    {
+                        "code": "DOP"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 11532151,
+                "tlds": [
+                    ".do"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "spa": {
+                            "common": "Ecuador",
+                            "official": "República del Ecuador"
+                        }
+                    },
+                    "official": "Republic of Ecuador"
+                },
+                "codes": {
+                    "alpha_3": "ECU"
+                },
+                "capitals": [
+                    {
+                        "name": "Quito"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ec.png"
+                },
+                "region": "Americas",
+                "subregion": "South America",
+                "borders": [
+                    "COL",
+                    "PER"
+                ],
+                "currencies": [
+                    {
+                        "code": "USD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 18103660,
+                "tlds": [
+                    ".ec"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561063
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ara": {
+                            "common": "مصر",
+                            "official": "جمهورية مصر العربية"
+                        }
+                    },
+                    "official": "Arab Republic of Egypt"
+                },
+                "codes": {
+                    "alpha_3": "EGY"
+                },
+                "capitals": [
+                    {
+                        "name": "Cairo"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/eg.png"
+                },
+                "region": "Africa",
+                "subregion": "Northern Africa",
+                "borders": [
+                    "ISR",
+                    "LBY",
+                    "PSE",
+                    "SDN"
+                ],
+                "currencies": [
+                    {
+                        "code": "EGP"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ar",
+                        "iso639_1": "ar",
+                        "iso639_2b": "ara",
+                        "iso639_2t": "ara",
+                        "iso639_3": "ara",
+                        "name": "Arabic",
+                        "native_name": "العربية"
+                    }
+                ],
+                "population": 108613296,
+                "tlds": [
+                    ".eg",
+                    ".مصر"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "spa": {
+                            "common": "El Salvador",
+                            "official": "República de El Salvador"
+                        }
+                    },
+                    "official": "Republic of El Salvador"
+                },
+                "codes": {
+                    "alpha_3": "SLV"
+                },
+                "capitals": [
+                    {
+                        "name": "San Salvador"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/sv.png"
+                },
+                "region": "Americas",
+                "subregion": "Central America",
+                "borders": [
+                    "GTM",
+                    "HND"
+                ],
+                "currencies": [
+                    {
+                        "code": "USD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 6029976,
+                "tlds": [
+                    ".sv"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Guinée équatoriale",
+                            "official": "République de la Guinée Équatoriale"
+                        },
+                        "por": {
+                            "common": "Guiné Equatorial",
+                            "official": "República da Guiné Equatorial"
+                        },
+                        "spa": {
+                            "common": "Guinea Ecuatorial",
+                            "official": "República de Guinea Ecuatorial"
+                        }
+                    },
+                    "official": "Republic of Equatorial Guinea"
+                },
+                "codes": {
+                    "alpha_3": "GNQ"
+                },
+                "capitals": [
+                    {
+                        "name": "Malabo"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gq.png"
+                },
+                "region": "Africa",
+                "subregion": "Middle Africa",
+                "borders": [
+                    "CMR",
+                    "GAB"
+                ],
+                "currencies": [
+                    {
+                        "code": "XAF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    },
+                    {
+                        "bcp47": "pt",
+                        "iso639_1": "pt",
+                        "iso639_2b": "por",
+                        "iso639_2t": "por",
+                        "iso639_3": "por",
+                        "name": "Portuguese",
+                        "native_name": "português"
+                    },
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 1795834,
+                "tlds": [
+                    ".gq"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ara": {
+                            "common": "إرتريا‎",
+                            "official": "دولة إرتريا"
+                        },
+                        "eng": {
+                            "common": "Eritrea",
+                            "official": "State of Eritrea"
+                        },
+                        "tir": {
+                            "common": "ኤርትራ",
+                            "official": "ሃገረ ኤርትራ"
+                        }
+                    },
+                    "official": "State of Eritrea"
+                },
+                "codes": {
+                    "alpha_3": "ERI"
+                },
+                "capitals": [
+                    {
+                        "name": "Asmara"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/er.png"
+                },
+                "region": "Africa",
+                "subregion": "Eastern Africa",
+                "borders": [
+                    "DJI",
+                    "ETH",
+                    "SDN"
+                ],
+                "currencies": [
+                    {
+                        "code": "ERN"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ar",
+                        "iso639_1": "ar",
+                        "iso639_2b": "ara",
+                        "iso639_2t": "ara",
+                        "iso639_3": "ara",
+                        "name": "Arabic",
+                        "native_name": "العربية"
+                    },
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "ti",
+                        "iso639_1": "ti",
+                        "iso639_2b": "tir",
+                        "iso639_2t": "tir",
+                        "iso639_3": "tir",
+                        "name": "Tigrinya",
+                        "native_name": "ትግርኛ"
+                    }
+                ],
+                "population": 3682669,
+                "tlds": [
+                    ".er"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785884907
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "est": {
+                            "common": "Eesti",
+                            "official": "Eesti Vabariik"
+                        }
+                    },
+                    "official": "Republic of Estonia"
+                },
+                "codes": {
+                    "alpha_3": "EST"
+                },
+                "capitals": [
+                    {
+                        "name": "Tallinn"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ee.png"
+                },
+                "region": "Europe",
+                "subregion": "Northern Europe",
+                "borders": [
+                    "LVA",
+                    "RUS"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "et",
+                        "iso639_1": "et",
+                        "iso639_2b": "est",
+                        "iso639_2t": "est",
+                        "iso639_3": "est",
+                        "name": "Estonian",
+                        "native_name": "eesti"
+                    }
+                ],
+                "population": 1360745,
+                "tlds": [
+                    ".ee"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561102
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Eswatini",
+                            "official": "Kingdom of Eswatini"
+                        },
+                        "ssw": {
+                            "common": "eSwatini",
+                            "official": "Umbuso weSwatini"
+                        }
+                    },
+                    "official": "Kingdom of Eswatini"
+                },
+                "codes": {
+                    "alpha_3": "SWZ"
+                },
+                "capitals": [
+                    {
+                        "name": "Mbabane"
+                    },
+                    {
+                        "name": "Lobamba"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/sz.png"
+                },
+                "region": "Africa",
+                "subregion": "Southern Africa",
+                "borders": [
+                    "MOZ",
+                    "ZAF"
+                ],
+                "currencies": [
+                    {
+                        "code": "SZL"
+                    },
+                    {
+                        "code": "ZAR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "ss",
+                        "iso639_1": "ss",
+                        "iso639_2b": "ssw",
+                        "iso639_2t": "ssw",
+                        "iso639_3": "ssw",
+                        "name": "Swazi",
+                        "native_name": "SiSwati"
+                    }
+                ],
+                "population": 1235549,
+                "tlds": [
+                    ".sz"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784514523
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "amh": {
+                            "common": "ኢትዮጵያ",
+                            "official": "የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ"
+                        }
+                    },
+                    "official": "Federal Democratic Republic of Ethiopia"
+                },
+                "codes": {
+                    "alpha_3": "ETH"
+                },
+                "capitals": [
+                    {
+                        "name": "Addis Ababa"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/et.png"
+                },
+                "region": "Africa",
+                "subregion": "Eastern Africa",
+                "borders": [
+                    "DJI",
+                    "ERI",
+                    "KEN",
+                    "SOM",
+                    "SSD",
+                    "SDN"
+                ],
+                "currencies": [
+                    {
+                        "code": "ETB"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "am",
+                        "iso639_1": "am",
+                        "iso639_2b": "amh",
+                        "iso639_2t": "amh",
+                        "iso639_3": "amh",
+                        "name": "Amharic",
+                        "native_name": "አማርኛ"
+                    }
+                ],
+                "population": 111652998,
+                "tlds": [
+                    ".et"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526831
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Falkland Islands",
+                            "official": "Falkland Islands"
+                        }
+                    },
+                    "official": "Falkland Islands"
+                },
+                "codes": {
+                    "alpha_3": "FLK"
+                },
+                "capitals": [
+                    {
+                        "name": "Stanley"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/fk.png"
+                },
+                "region": "Americas",
+                "subregion": "South America",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "FKP"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 3662,
+                "tlds": [
+                    ".fk"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784903336
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "dan": {
+                            "common": "Færøerne",
+                            "official": "Færøerne"
+                        },
+                        "fao": {
+                            "common": "Føroyar",
+                            "official": "Føroyar"
+                        }
+                    },
+                    "official": "Faroe Islands"
+                },
+                "codes": {
+                    "alpha_3": "FRO"
+                },
+                "capitals": [
+                    {
+                        "name": "Tórshavn"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/fo.png"
+                },
+                "region": "Europe",
+                "subregion": "Northern Europe",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "DKK"
+                    },
+                    {
+                        "code": "FOK"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "da",
+                        "iso639_1": "da",
+                        "iso639_2b": "dan",
+                        "iso639_2t": "dan",
+                        "iso639_3": "dan",
+                        "name": "Danish",
+                        "native_name": "dansk"
+                    },
+                    {
+                        "bcp47": "fo",
+                        "iso639_1": "fo",
+                        "iso639_2b": "fao",
+                        "iso639_2t": "fao",
+                        "iso639_3": "fao",
+                        "name": "Faroese",
+                        "native_name": "føroyskt"
+                    }
+                ],
+                "population": 56210,
+                "tlds": [
+                    ".fo"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005247
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Fiji",
+                            "official": "Republic of Fiji"
+                        },
+                        "fij": {
+                            "common": "Viti",
+                            "official": "Matanitu Tugalala o Viti"
+                        },
+                        "hif": {
+                            "common": "फिजी",
+                            "official": "रिपब्लिक ऑफ फीजी"
+                        }
+                    },
+                    "official": "Republic of Fiji"
+                },
+                "codes": {
+                    "alpha_3": "FJI"
+                },
+                "capitals": [
+                    {
+                        "name": "Suva"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/fj.png"
+                },
+                "region": "Oceania",
+                "subregion": "Melanesia",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "FJD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "fj",
+                        "iso639_1": "fj",
+                        "iso639_2b": "fij",
+                        "iso639_2t": "fij",
+                        "iso639_3": "fij",
+                        "name": "Fijian",
+                        "native_name": "vosa Vakaviti"
+                    },
+                    {
+                        "bcp47": "hif",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "hif",
+                        "name": "Fiji Hindi",
+                        "native_name": "फ़िजी हिंदी"
+                    }
+                ],
+                "population": 902623,
+                "tlds": [
+                    ".fj"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629446
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fin": {
+                            "common": "Suomi",
+                            "official": "Suomen tasavalta"
+                        },
+                        "swe": {
+                            "common": "Finland",
+                            "official": "Republiken Finland"
+                        }
+                    },
+                    "official": "Republic of Finland"
+                },
+                "codes": {
+                    "alpha_3": "FIN"
+                },
+                "capitals": [
+                    {
+                        "name": "Helsinki"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/fi.png"
+                },
+                "region": "Europe",
+                "subregion": "Northern Europe",
+                "borders": [
+                    "NOR",
+                    "SWE",
+                    "RUS"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fi",
+                        "iso639_1": "fi",
+                        "iso639_2b": "fin",
+                        "iso639_2t": "fin",
+                        "iso639_3": "fin",
+                        "name": "Finnish",
+                        "native_name": "suomi"
+                    },
+                    {
+                        "bcp47": "sv",
+                        "iso639_1": "sv",
+                        "iso639_2b": "swe",
+                        "iso639_2t": "swe",
+                        "iso639_3": "swe",
+                        "name": "Swedish",
+                        "native_name": "svenska"
+                    }
+                ],
+                "population": 5652897,
+                "tlds": [
+                    ".fi"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785897992
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "France",
+                            "official": "République française"
+                        }
+                    },
+                    "official": "French Republic"
+                },
+                "codes": {
+                    "alpha_3": "FRA"
+                },
+                "capitals": [
+                    {
+                        "name": "Paris"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/fr.png"
+                },
+                "region": "Europe",
+                "subregion": "Western Europe",
+                "borders": [
+                    "AND",
+                    "BEL",
+                    "DEU",
+                    "ITA",
+                    "LUX",
+                    "MCO",
+                    "ESP",
+                    "CHE"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 69081996,
+                "tlds": [
+                    ".fr"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005248
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Guyane française",
+                            "official": "Guyane"
+                        }
+                    },
+                    "official": "Guiana"
+                },
+                "codes": {
+                    "alpha_3": "GUF"
+                },
+                "capitals": [
+                    {
+                        "name": "Cayenne"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gf.png"
+                },
+                "region": "Americas",
+                "subregion": "South America",
+                "borders": [
+                    "BRA",
+                    "SUR"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 254541,
+                "tlds": [
+                    ".gf"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005248
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Polynésie française",
+                            "official": "Polynésie française"
+                        }
+                    },
+                    "official": "French Polynesia"
+                },
+                "codes": {
+                    "alpha_3": "PYF"
+                },
+                "capitals": [
+                    {
+                        "name": "Papeetē"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/pf.png"
+                },
+                "region": "Oceania",
+                "subregion": "Polynesia",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "XPF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 278786,
+                "tlds": [
+                    ".pf"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005248
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Terres australes et antarctiques françaises",
+                            "official": "Territoire des Terres australes et antarctiques françaises"
+                        }
+                    },
+                    "official": "Territory of the French Southern and Antarctic Lands"
+                },
+                "codes": {
+                    "alpha_3": "ATF"
+                },
+                "capitals": [
+                    {
+                        "name": "Port-aux-Français"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/tf.png"
+                },
+                "region": "Antarctic",
+                "subregion": "",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 400,
+                "tlds": [
+                    ".tf"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005248
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Gabon",
+                            "official": "République gabonaise"
+                        }
+                    },
+                    "official": "Gabonese Republic"
+                },
+                "codes": {
+                    "alpha_3": "GAB"
+                },
+                "capitals": [
+                    {
+                        "name": "Libreville"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ga.png"
+                },
+                "region": "Africa",
+                "subregion": "Middle Africa",
+                "borders": [
+                    "CMR",
+                    "COG",
+                    "GNQ"
+                ],
+                "currencies": [
+                    {
+                        "code": "XAF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 2469296,
+                "tlds": [
+                    ".ga"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561127
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Gambia",
+                            "official": "Republic of the Gambia"
+                        }
+                    },
+                    "official": "Republic of the Gambia"
+                },
+                "codes": {
+                    "alpha_3": "GMB"
+                },
+                "capitals": [
+                    {
+                        "name": "Banjul"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gm.png"
+                },
+                "region": "Africa",
+                "subregion": "Western Africa",
+                "borders": [
+                    "SEN"
+                ],
+                "currencies": [
+                    {
+                        "code": "GMD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 2422712,
+                "tlds": [
+                    ".gm"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783032083
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "kat": {
+                            "common": "საქართველო",
+                            "official": "საქართველო"
+                        }
+                    },
+                    "official": "Georgia"
+                },
+                "codes": {
+                    "alpha_3": "GEO"
+                },
+                "capitals": [
+                    {
+                        "name": "Tbilisi"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ge.png"
+                },
+                "region": "Asia",
+                "subregion": "Western Asia",
+                "borders": [
+                    "ARM",
+                    "AZE",
+                    "RUS",
+                    "TUR"
+                ],
+                "currencies": [
+                    {
+                        "code": "GEL"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ka",
+                        "iso639_1": "ka",
+                        "iso639_2b": "geo",
+                        "iso639_2t": "kat",
+                        "iso639_3": "kat",
+                        "name": "Georgian",
+                        "native_name": "ქართული"
+                    }
+                ],
+                "population": 3657000,
+                "tlds": [
+                    ".ge"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005248
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "deu": {
+                            "common": "Deutschland",
+                            "official": "Bundesrepublik Deutschland"
+                        }
+                    },
+                    "official": "Federal Republic of Germany"
+                },
+                "codes": {
+                    "alpha_3": "DEU"
+                },
+                "capitals": [
+                    {
+                        "name": "Berlin"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/de.png"
+                },
+                "region": "Europe",
+                "subregion": "Western Europe",
+                "borders": [
+                    "AUT",
+                    "BEL",
+                    "CZE",
+                    "DNK",
+                    "FRA",
+                    "LUX",
+                    "NLD",
+                    "POL",
+                    "CHE"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "de",
+                        "iso639_1": "de",
+                        "iso639_2b": "ger",
+                        "iso639_2t": "deu",
+                        "iso639_3": "deu",
+                        "name": "German",
+                        "native_name": "Deutsch"
+                    }
+                ],
+                "population": 83467117,
+                "tlds": [
+                    ".de"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784515534
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Ghana",
+                            "official": "Republic of Ghana"
+                        }
+                    },
+                    "official": "Republic of Ghana"
+                },
+                "codes": {
+                    "alpha_3": "GHA"
+                },
+                "capitals": [
+                    {
+                        "name": "Accra"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gh.png"
+                },
+                "region": "Africa",
+                "subregion": "Western Africa",
+                "borders": [
+                    "BFA",
+                    "CIV",
+                    "TGO"
+                ],
+                "currencies": [
+                    {
+                        "code": "GHS"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 34378768,
+                "tlds": [
+                    ".gh"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785811180
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Gibraltar",
+                            "official": "Gibraltar"
+                        }
+                    },
+                    "official": "Gibraltar"
+                },
+                "codes": {
+                    "alpha_3": "GIB"
+                },
+                "capitals": [
+                    {
+                        "name": "Gibraltar"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gi.png"
+                },
+                "region": "Europe",
+                "subregion": "Southern Europe",
+                "borders": [
+                    "ESP"
+                ],
+                "currencies": [
+                    {
+                        "code": "GIP"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 38196,
+                "tlds": [
+                    ".gi"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784903336
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "ell": {
+                            "common": "Ελλάδα",
+                            "official": "Ελληνική Δημοκρατία"
+                        }
+                    },
+                    "official": "Hellenic Republic"
+                },
+                "codes": {
+                    "alpha_3": "GRC"
+                },
+                "capitals": [
+                    {
+                        "name": "Athens"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gr.png"
+                },
+                "region": "Europe",
+                "subregion": "Southern Europe",
+                "borders": [
+                    "ALB",
+                    "BGR",
+                    "TUR",
+                    "MKD"
+                ],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "el",
+                        "iso639_1": "el",
+                        "iso639_2b": "gre",
+                        "iso639_2t": "ell",
+                        "iso639_3": "ell",
+                        "name": "Greek",
+                        "native_name": "Ελληνικά"
+                    }
+                ],
+                "population": 10372335,
+                "tlds": [
+                    ".gr"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784517070
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "kal": {
+                            "common": "Kalaallit Nunaat",
+                            "official": "Kalaallit Nunaat"
+                        }
+                    },
+                    "official": "Greenland"
+                },
+                "codes": {
+                    "alpha_3": "GRL"
+                },
+                "capitals": [
+                    {
+                        "name": "Nuuk"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gl.png"
+                },
+                "region": "Americas",
+                "subregion": "North America",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "DKK"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "kl",
+                        "iso639_1": "kl",
+                        "iso639_2b": "kal",
+                        "iso639_2t": "kal",
+                        "iso639_3": "kal",
+                        "name": "Greenlandic",
+                        "native_name": "kalaallisut"
+                    }
+                ],
+                "population": 56740,
+                "tlds": [
+                    ".gl"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Grenada",
+                            "official": "Grenada"
+                        }
+                    },
+                    "official": "Grenada"
+                },
+                "codes": {
+                    "alpha_3": "GRD"
+                },
+                "capitals": [
+                    {
+                        "name": "St. George's"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gd.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "XCD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 109021,
+                "tlds": [
+                    ".gd"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1786629496
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Guadeloupe",
+                            "official": "Guadeloupe"
+                        }
+                    },
+                    "official": "Guadeloupe"
+                },
+                "codes": {
+                    "alpha_3": "GLP"
+                },
+                "capitals": [
+                    {
+                        "name": "Basse-Terre"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gp.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "EUR"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 400132,
+                "tlds": [
+                    ".gp"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005248
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "cha": {
+                            "common": "Guåhån",
+                            "official": "Guåhån"
+                        },
+                        "eng": {
+                            "common": "Guam",
+                            "official": "Guam"
+                        },
+                        "spa": {
+                            "common": "Guam",
+                            "official": "Guam"
+                        }
+                    },
+                    "official": "Guam"
+                },
+                "codes": {
+                    "alpha_3": "GUM"
+                },
+                "capitals": [
+                    {
+                        "name": "Hagåtña"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gu.png"
+                },
+                "region": "Oceania",
+                "subregion": "Micronesia",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "USD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "ch",
+                        "iso639_1": "ch",
+                        "iso639_2b": "cha",
+                        "iso639_2t": "cha",
+                        "iso639_3": "cha",
+                        "name": "Chamorro",
+                        "native_name": "Chamoru"
+                    },
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 153836,
+                "tlds": [
+                    ".gu"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784514523
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "spa": {
+                            "common": "Guatemala",
+                            "official": "República de Guatemala"
+                        }
+                    },
+                    "official": "Republic of Guatemala"
+                },
+                "codes": {
+                    "alpha_3": "GTM"
+                },
+                "capitals": [
+                    {
+                        "name": "Guatemala City"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gt.png"
+                },
+                "region": "Americas",
+                "subregion": "Central America",
+                "borders": [
+                    "BLZ",
+                    "SLV",
+                    "HND",
+                    "MEX"
+                ],
+                "currencies": [
+                    {
+                        "code": "GTQ"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 18406359,
+                "tlds": [
+                    ".gt"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561062
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Guernsey",
+                            "official": "Bailiwick of Guernsey"
+                        },
+                        "fra": {
+                            "common": "Guernesey",
+                            "official": "Bailliage de Guernesey"
+                        },
+                        "nrf": {
+                            "common": "Dgèrnésiais",
+                            "official": "Dgèrnésiais"
+                        }
+                    },
+                    "official": "Bailiwick of Guernsey"
+                },
+                "codes": {
+                    "alpha_3": "GGY"
+                },
+                "capitals": [
+                    {
+                        "name": "St. Peter Port"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gg.png"
+                },
+                "region": "Europe",
+                "subregion": "Northern Europe",
+                "borders": [],
+                "currencies": [
+                    {
+                        "code": "GBP"
+                    },
+                    {
+                        "code": "GGP"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    },
+                    {
+                        "bcp47": "nrf",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "nrf",
+                        "name": "Norman",
+                        "native_name": "Guernésiais"
+                    }
+                ],
+                "population": 64781,
+                "tlds": [
+                    ".gg"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561085
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Guinée",
+                            "official": "République de Guinée"
+                        }
+                    },
+                    "official": "Republic of Guinea"
+                },
+                "codes": {
+                    "alpha_3": "GIN"
+                },
+                "capitals": [
+                    {
+                        "name": "Conakry"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gn.png"
+                },
+                "region": "Africa",
+                "subregion": "Western Africa",
+                "borders": [
+                    "CIV",
+                    "GNB",
+                    "LBR",
+                    "MLI",
+                    "SEN",
+                    "SLE"
+                ],
+                "currencies": [
+                    {
+                        "code": "GNF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    }
+                ],
+                "population": 17521167,
+                "tlds": [
+                    ".gn"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005248
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "por": {
+                            "common": "Guiné-Bissau",
+                            "official": "República da Guiné-Bissau"
+                        },
+                        "pov": {
+                            "common": "Guiné-Bissau",
+                            "official": "República da Guiné-Bissau"
+                        }
+                    },
+                    "official": "Republic of Guinea-Bissau"
+                },
+                "codes": {
+                    "alpha_3": "GNB"
+                },
+                "capitals": [
+                    {
+                        "name": "Bissau"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gw.png"
+                },
+                "region": "Africa",
+                "subregion": "Western Africa",
+                "borders": [
+                    "GIN",
+                    "SEN"
+                ],
+                "currencies": [
+                    {
+                        "code": "XOF"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "pt",
+                        "iso639_1": "pt",
+                        "iso639_2b": "por",
+                        "iso639_2t": "por",
+                        "iso639_3": "por",
+                        "name": "Portuguese",
+                        "native_name": "português"
+                    },
+                    {
+                        "bcp47": "pov",
+                        "iso639_1": "",
+                        "iso639_2b": "",
+                        "iso639_2t": "",
+                        "iso639_3": "pov",
+                        "name": "Upper Guinea Crioulo",
+                        "native_name": "Kriol"
+                    }
+                ],
+                "population": 1890252,
+                "tlds": [
+                    ".gw"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785871217
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Guyana",
+                            "official": "Co-operative Republic of Guyana"
+                        }
+                    },
+                    "official": "Co-operative Republic of Guyana"
+                },
+                "codes": {
+                    "alpha_3": "GUY"
+                },
+                "capitals": [
+                    {
+                        "name": "Georgetown"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/gy.png"
+                },
+                "region": "Americas",
+                "subregion": "South America",
+                "borders": [
+                    "BRA",
+                    "SUR",
+                    "VEN"
+                ],
+                "currencies": [
+                    {
+                        "code": "GYD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 956044,
+                "tlds": [
+                    ".gy"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784561062
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "fra": {
+                            "common": "Haïti",
+                            "official": "République d'Haïti"
+                        },
+                        "hat": {
+                            "common": "Ayiti",
+                            "official": "Repiblik Ayiti"
+                        }
+                    },
+                    "official": "Republic of Haiti"
+                },
+                "codes": {
+                    "alpha_3": "HTI"
+                },
+                "capitals": [
+                    {
+                        "name": "Port-au-Prince"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/ht.png"
+                },
+                "region": "Americas",
+                "subregion": "Caribbean",
+                "borders": [
+                    "DOM"
+                ],
+                "currencies": [
+                    {
+                        "code": "HTG"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "fr",
+                        "iso639_1": "fr",
+                        "iso639_2b": "fre",
+                        "iso639_2t": "fra",
+                        "iso639_3": "fra",
+                        "name": "French",
+                        "native_name": "français"
+                    },
+                    {
+                        "bcp47": "ht",
+                        "iso639_1": "ht",
+                        "iso639_2b": "hat",
+                        "iso639_2t": "hat",
+                        "iso639_3": "hat",
+                        "name": "Haitian Creole",
+                        "native_name": "Kreyòl ayisyen"
+                    }
+                ],
+                "population": 11867032,
+                "tlds": [
+                    ".ht"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526832
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Heard Island and McDonald Islands",
+                            "official": "Heard Island and McDonald Islands"
+                        }
+                    },
+                    "official": "Heard Island and McDonald Islands"
+                },
+                "codes": {
+                    "alpha_3": "HMD"
+                },
+                "capitals": [],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/hm.png"
+                },
+                "region": "Antarctic",
+                "subregion": "",
+                "borders": [],
+                "currencies": [],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    }
+                ],
+                "population": 0,
+                "tlds": [
+                    ".hm",
+                    ".aq"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1783005248
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "spa": {
+                            "common": "Honduras",
+                            "official": "República de Honduras"
+                        }
+                    },
+                    "official": "Republic of Honduras"
+                },
+                "codes": {
+                    "alpha_3": "HND"
+                },
+                "capitals": [
+                    {
+                        "name": "Tegucigalpa"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/hn.png"
+                },
+                "region": "Americas",
+                "subregion": "Central America",
+                "borders": [
+                    "GTM",
+                    "SLV",
+                    "NIC"
+                ],
+                "currencies": [
+                    {
+                        "code": "HNL"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "es",
+                        "iso639_1": "es",
+                        "iso639_2b": "spa",
+                        "iso639_2t": "spa",
+                        "iso639_3": "spa",
+                        "name": "Spanish",
+                        "native_name": "español"
+                    }
+                ],
+                "population": 10186738,
+                "tlds": [
+                    ".hn"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1784526831
+                }
+            },
+            {
+                "names": {
+                    "native": {
+                        "eng": {
+                            "common": "Hong Kong",
+                            "official": "Hong Kong Special Administrative Region of the People's Republic of China"
+                        },
+                        "zho": {
+                            "common": "香港",
+                            "official": "中华人民共和国香港特别行政区"
+                        }
+                    },
+                    "official": "Hong Kong Special Administrative Region of the People's Republic of China"
+                },
+                "codes": {
+                    "alpha_3": "HKG"
+                },
+                "capitals": [
+                    {
+                        "name": "City of Victoria"
+                    }
+                ],
+                "flag": {
+                    "url_png": "https://flags.restcountries.com/v5/w640/hk.png"
+                },
+                "region": "Asia",
+                "subregion": "Eastern Asia",
+                "borders": [
+                    "CHN"
+                ],
+                "currencies": [
+                    {
+                        "code": "HKD"
+                    }
+                ],
+                "languages": [
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "zh",
+                        "iso639_1": "zh",
+                        "iso639_2b": "chi",
+                        "iso639_2t": "zho",
+                        "iso639_3": "zho",
+                        "name": "Chinese",
+                        "native_name": "中文"
+                    }
+                ],
+                "population": 7498100,
+                "tlds": [
+                    ".hk",
+                    ".香港"
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1785514793
+                }
+            }
+        ],
+        "meta": {
+            "total": 254,
+            "count": 100,
+            "limit": 100,
+            "offset": 0,
+            "more": true,
+            "request_id": "05c4b49e-0784-45f4-a729-e3965ecf1218",
+            "duration": 68
+        }
+    }
+}
