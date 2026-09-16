@@ -1,6 +1,6 @@
 import { CountryStack } from "./CountryStack";
 import { formatPopulation } from "../../modules/utils";
-import { useDataContext } from "../../Contexts and Providers/CountryData";
+import { useDataContext } from "../../ContextsAndProviders/CountryData";
 import { useParams, useNavigate } from "react-router-dom";
 import type { CountrySet} from "../../types";
 

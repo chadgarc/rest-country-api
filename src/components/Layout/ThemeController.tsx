@@ -1,4 +1,4 @@
-import { useThemeContext } from "../../Contexts and Providers/ThemeContext";
+import { useThemeContext } from "../../ContextsAndProviders/ThemeContext";
 
 /**
  * Theme toggle button component.

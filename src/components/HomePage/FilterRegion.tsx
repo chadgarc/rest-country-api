@@ -1,5 +1,5 @@
 import type { Regions } from "../../types";
-import { useDataContext } from "../../Contexts and Providers/CountryData";
+import { useDataContext } from "../../ContextsAndProviders/CountryData";
 
 /**
  * Region filter dropdown component.

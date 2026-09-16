@@ -1,4 +1,4 @@
-import { useDataContext } from "../Contexts and Providers/CountryData";
+import { useDataContext } from "../ContextsAndProviders/CountryData";
 import { SearchBar } from "../components/HomePage/SearchBar";
 import { CountryList } from "../components/HomePage/CountryList";
 import { FilterRegion } from "../components/HomePage/FilterRegion";
@@ -11,7 +11,7 @@ import { FilterRegion } from "../components/HomePage/FilterRegion";
  *
  * @returns {JSX.Element} The home page element.
  */
-export function Home() {
+export function HomePage() {
     const { filteredCountries, countryList } = useDataContext();
     const countriesToShow = filteredCountries.length > 0 ? filteredCountries : countryList;
 

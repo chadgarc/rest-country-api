@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './styles/input.css'
 import './styles/main.scss'
 import App from './App.tsx'
-import Providers from './Contexts and Providers/Providers.tsx'
+import Providers from './ContextsAndProviders/Providers.tsx'
 
 /**
  * Application entry point.

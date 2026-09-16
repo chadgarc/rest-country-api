@@ -7,7 +7,7 @@ import { Top } from '../components/Layout/Top';
  *
  * @returns {JSX.Element} The layout element.
  */
-const Layout = () => {
+export const Layout = () => {
     return (
         <>
             <Top title="REST Countries of the World" />

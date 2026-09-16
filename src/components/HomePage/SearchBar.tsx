@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useDataContext } from "../../Contexts and Providers/CountryData";
+import { useDataContext } from "../../ContextsAndProviders/CountryData";
 
 /**
  * Props for the `SearchBar` component.

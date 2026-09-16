@@ -1,8 +1,8 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import { useThemeContext } from "./Contexts and Providers/ThemeContext"
-import { Home } from './Pages/Home';
-import { Details } from './components/DetailPage/Details';
-import Layout from './Pages/Layout';
+import { useThemeContext } from "./ContextsAndProviders/ThemeContext"
+import { HomePage } from './Pages/HomePage';
+import { DetailsPage } from './Pages/DetailsPage';
+import { Layout }from './Pages/Layout';
 
 /**
  * Main application component.
@@ -24,8 +24,8 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/:countryCode" element={<Details />} />
+            <Route index element={<HomePage />} />
+            <Route path="/:countryCode" element={<DetailsPage />} />
           </Route>
         </Routes>
       </HashRouter>

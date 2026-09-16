@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useDataContext } from "../Contexts and Providers/CountryData";
+import { useDataContext } from "../ContextsAndProviders/CountryData";
 import { Details } from "../components/DetailPage/Details";
 
 /**
