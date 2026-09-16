@@ -10,8 +10,17 @@ import type { CountrySet} from "../types";
 
 export const Details = () => {
     const { countryCode } = useParams<{ countryCode: string }>();
-    const { getCountryByCode } = useDataContext()!;
+    const { getCountryByCode, initialLoading } = useDataContext()!;
     const country = getCountryByCode(countryCode);
+
+    if (initialLoading) {
+        return (
+            <section className="flex flex-col items-center justify-center min-h-screen">
+                <p className="text-xl">Loading...</p>
+            </section>
+        );
+    }
+
     if (!country) {
         throw new Error('Country not found');
     };

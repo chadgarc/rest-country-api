@@ -3,6 +3,8 @@ import type { CountryData } from "../types";
 import { useFetchData } from "../hooks/FetchData";
 import rawDemoData from "../demoData/data.json";
 
+const STORAGE_KEY = 'country-list';
+
 export interface DataContextType {
     countryList: CountryData[];
     setCountryList: React.Dispatch<React.SetStateAction<CountryData[]>>;
@@ -10,6 +12,7 @@ export interface DataContextType {
     filterData: (filter: string) => void;
     getCountryByCode: (code: string) => CountryData | undefined;
     loading: boolean;
+    initialLoading: boolean;
 }
 
 export const DataContext = createContext<DataContextType | null>(null);
@@ -17,16 +20,27 @@ export const DataContext = createContext<DataContextType | null>(null);
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
     const [countryList,setCountryList] = useState<CountryData[]>([]);
     const [filteredCountries, setFilteredCountries] = useState<CountryData[]>([]);
+    const [initialLoading, setInitialLoading] = useState(true);
     const { fetchAllCountries, loading } = useFetchData();
 
     useEffect(() => {
+        const cached = localStorage.getItem(STORAGE_KEY);
+        if (cached) {
+            try {
+                const parsed: CountryData[] = JSON.parse(cached);
+                if (parsed.length > 0) {
+                    setCountryList(parsed);
+                    setFilteredCountries(parsed);
+                }
+            } catch {}
+        }
+
         fetchAllCountries().then((countries) => {
+            let data: CountryData[];
             if (countries && countries.length > 0) {
-                setCountryList(countries);
-                setFilteredCountries(countries);
+                data = countries;
             } else {
-                // Fallback a demoData local si la API o el proxy CORS fallan
-                const normalizedDemo: CountryData[] = rawDemoData.map((item: any) => ({
+                data = rawDemoData.map((item: any) => ({
                     code: item.alpha3Code || item.alpha2Code || 'UNK',
                     name: item.name || 'Unknown',
                     nativeName: item.nativeName ? [item.nativeName] : ['N/A'],
@@ -40,9 +54,13 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
                     borderCountries: item.borders || [],
                     flagRoute: item.flags?.png || item.flag || ''
                 }));
-                setCountryList(normalizedDemo);
-                setFilteredCountries(normalizedDemo);
             }
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            setCountryList(data);
+            setFilteredCountries(data);
+            setInitialLoading(false);
+        }).catch(() => {
+            setInitialLoading(false);
         });
     }, [fetchAllCountries]);
 
@@ -53,7 +71,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
     const getCountryByCode = useCallback((code: string) => countryList.find(country => country.code === code), [countryList]);
 
     return (
-        <DataContext.Provider value={{countryList,setCountryList,filteredCountries, filterData, getCountryByCode, loading}}>
+        <DataContext.Provider value={{countryList,setCountryList,filteredCountries, filterData, getCountryByCode, loading, initialLoading}}>
             {children}
         </DataContext.Provider>
     )

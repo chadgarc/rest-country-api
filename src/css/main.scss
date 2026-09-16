@@ -1,7 +1,10 @@
 @use 'fontNunito' as nunito;
-
+@import "tailwindcss";
+@plugin "daisyui";
 
 :root {
+    font-family: nunito.$family;
+
     --text: #6b6375;
     --text-h: #08060d;
     --bg: #fff;
@@ -17,6 +20,9 @@
     --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
     --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
     --mono: ui-monospace, Consolas, monospace;
+
+    --input: hsl(0, 0%, 50%);
+    --element: hsl(0, 100%, 100%);
 
     font: 18px/145% var(--sans);
     letter-spacing: 0.18px;
@@ -36,19 +42,23 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --text: #9ca3af;
-        --text-h: #f3f4f6;
-        --bg: #16171d;
+        --text-h: #000611;
         --border: #2e303a;
         --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-        rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+        --accent: #c084fc;
+        --accent-bg: rgba(192, 132, 252, 0.15);
+        --accent-border: rgba(192, 132, 252, 0.5);
+        --social-bg: rgba(47, 48, 58, 0.5);
+        --shadow:
+            rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
     }
 }
 
+[data-theme="dark"] {
+    --text: hsl(0, 100%, 100%);
+    --input: hsl(0, 100%, 100%);
+    --element: hsl(209, 23%, 22%);
+}
 
 body {
     margin: 0;
@@ -58,6 +68,7 @@ h1,
 h2 {
     font-family: var(--heading);
     font-weight: 500;
+    color: var(--text-h);
 }
 
 h1 {
@@ -69,6 +80,7 @@ h1 {
         margin: 20px 0;
     }
 }
+
 h2 {
     font-size: 24px;
     line-height: 118%;
@@ -79,40 +91,11 @@ h2 {
     }
 }
 
-
-
 p {
     margin: 0;
 }
 
-
-:root{
-    font-family: nunito.$family;
-
-    // Colors
-    // Light Mode Text
-    --text: hsl(200, 15%, 8%);
-    // Light Mode Input
-    --input: hsl(0, 0%, 50%);
-    // Light Mode Background
-    --bg: hsl(0, 0%, 99%);
-    // Light Mode Elements
-    --element: hsl(0, 100%, 100%);
-    // example of use background-color: var(--Grey-50);
-}
-
-[data-theme="dark"] {
-    // Dark Mode Background
-    --bg: hsl(207, 26%, 17%);
-    // Dark Mode Text
-    --text: hsl(0, 100%, 100%);
-    // Dark Mode input
-    --input: hsl(0, 100%, 100%);
-    // Dark Mode Elements
-    --element: hsl(209, 23%, 22%);
-}
-
-main{
+main {
     background-color: var(--bg);
 }
 
@@ -121,7 +104,7 @@ main{
     color: var(--text);
 }
 
-.searchInput{
+.searchInput {
     color: var(--input);
     width: 100%;
     height: 3.5rem;
@@ -129,24 +112,24 @@ main{
     padding-left: 2rem;
 }
 
-.dropdownBtn{
+.dropdownBtn {
     width: 15rem;
     height: 3.5rem;
     background-color: var(--element);
 }
 
-.dropdownItems{
+.dropdownItems {
     width: 15rem;
     background-color: var(--element);
 }
 
-.card{
+.card {
     background-color: var(--element);
 }
 
 .theme {
     display: 'block';
-    &.hidden{
+    &.hidden {
         display: 'none';
     }
 }
@@ -161,26 +144,58 @@ main{
     font-weight: nunito.$bold;
 }
 
-p{
+.backBtn {
+    width: 10rem;
+    height: 3rem;
+    background-color: var(--element);
+    margin-left: 6%;
+}
+
+p {
     font-size: 0.88rem;
     font-family: nunito.$family;
     font-weight: nunito.$semibold;
-    span{
+    span {
         font-weight: nunito.$light;
     }
 }
 
-.countryStack{
+.countryStack {
     background-color: var(--element);
     padding: 0.5rem 1rem;
 }
 
-.cardTopLeft{
+.cardTopLeft {
     border-top-left-radius: .6rem;
 }
-.cardTopRight{
+
+.cardTopRight {
     border-top-right-radius: .6rem;
 }
-.cardContent{
+
+.cardContent {
     font-size: .5rem !important;
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: .95rem;
+        margin-left: -3rem;
+    }
+
+    .themeArea {
+        margin-right: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .backBtn {
+        margin-left: .1rem;
+    }
 }

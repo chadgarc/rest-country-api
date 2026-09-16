@@ -1,4 +1,5 @@
 :root {
+  font-family: "Nunito Sans", sans-serif;
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -8,11 +9,12 @@
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-      rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+  --input: hsl(0, 0%, 50%);
+  --element: hsl(0, 100%, 100%);
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
@@ -28,7 +30,6 @@
     font-size: 16px;
   }
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -40,20 +41,23 @@
     --accent-bg: rgba(192, 132, 252, 0.15);
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-        rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
+}
+[data-theme=dark] {
+  --bg: hsl(207, 26%, 17%);
+  --text: hsl(0, 100%, 100%);
+  --input: hsl(0, 100%, 100%);
+  --element: hsl(209, 23%, 22%);
 }
 body {
   margin: 0;
 }
-
-h1,
-h2 {
+h1, h2 {
   font-family: var(--heading);
   font-weight: 500;
+  color: var(--text-h);
 }
-
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
@@ -65,7 +69,6 @@ h1 {
     margin: 20px 0;
   }
 }
-
 h2 {
   font-size: 24px;
   line-height: 118%;
@@ -77,35 +80,16 @@ h2 {
     font-size: 20px;
   }
 }
-
 p {
   margin: 0;
 }
-
-:root {
-  font-family: "Nunito Sans", sans-serif;
-  --text: hsl(200, 15%, 8%);
-  --input: hsl(0, 0%, 50%);
-  --bg: hsl(0, 0%, 99%);
-  --element: hsl(0, 100%, 100%);
-}
-
-[data-theme=dark] {
-  --bg: hsl(207, 26%, 17%);
-  --text: hsl(0, 100%, 100%);
-  --input: hsl(0, 100%, 100%);
-  --element: hsl(209, 23%, 22%);
-}
-
 main {
   background-color: var(--bg);
 }
-
 .background {
   background-color: var(--bg);
   color: var(--text);
 }
-
 .searchInput {
   color: var(--input);
   width: 100%;
@@ -113,39 +97,38 @@ main {
   max-width: 30rem !important;
   padding-left: 2rem;
 }
-
 .dropdownBtn {
   width: 15rem;
   height: 3.5rem;
   background-color: var(--element);
 }
-
 .dropdownItems {
   width: 15rem;
   background-color: var(--element);
 }
-
 .card {
   background-color: var(--element);
 }
-
 .theme {
   display: "block";
 }
 .theme.hidden {
   display: "none";
 }
-
 .title {
   font-size: 1.5rem;
 }
-
 .countryTitle {
   font-size: 2rem;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 800;
 }
-
+.backBtn {
+  width: 10rem;
+  height: 3rem;
+  background-color: var(--element);
+  margin-left: 6%;
+}
 p {
   font-size: 0.88rem;
   font-family: "Nunito Sans", sans-serif;
@@ -154,20 +137,34 @@ p {
 p span {
   font-weight: 300;
 }
-
 .countryStack {
   background-color: var(--element);
   padding: 0.5rem 1rem;
 }
-
 .cardTopLeft {
   border-top-left-radius: 0.6rem;
 }
-
 .cardTopRight {
   border-top-right-radius: 0.6rem;
 }
-
 .cardContent {
   font-size: 0.5rem !important;
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 13px;
+  }
+  .title {
+    font-size: 0.95rem;
+    margin-left: -3rem;
+  }
+  .themeArea {
+    margin-right: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .backBtn {
+    margin-left: 0.1rem;
+  }
 }/*# sourceMappingURL=main.css.map */
