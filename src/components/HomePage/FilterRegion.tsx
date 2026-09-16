@@ -27,7 +27,7 @@ export const FilterRegion = () => {
             <details className="w-full">
                 <summary>Filter by Region</summary>
                 <ul className="details-list w-full">
-                    {[null, ...regions].map(r => <li key={r ? r : 'Reset'}><a onClick={() => handleFilter(r as Regions | null)}>{r ? r : 'Reset'}</a></li>)}
+                    {[null, ...regions].map(r => <li key={r ? r : 'Reset'}><a onClick={() => handleFilter(r as Regions | '')}>{r ? r : 'Reset'}</a></li>)}
                 </ul>
             </details>
         </div>
