@@ -38,8 +38,8 @@ export const Details = () => {
         
         <button onClick={() => navigate(-1)} className="btn flex justify-start mt-10 ms-10 border-gray-600 bg-[hsl(0, 100%, 100%)] hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black w-20 h-10">Back</button>
 
-        <div className="flex flex-1 flex-col lg:flex-row gap-10 justify-between lg:justify-around mt-10 mx-auto">
-            <div className="m-auto">
+        <div className="flex flex-1 flex-col lg:flex-row justify-between lg:px-5 lg:justify-around gap-15 lg:gap-10 xl:gap-25 mx-auto mt-10">
+            <div className="m-auto mt-5">
                 <div className="md:w-97 aspect-3/2 mx-auto hover-3d">
                     <figure className="">
                         <img className="w-full aspect-3/2 shadow-2xl" src={country.flagRoute} alt={`Flag of ${country.name}`} />
