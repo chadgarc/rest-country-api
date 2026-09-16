@@ -1,14 +1,15 @@
-interface CountryStackProps {
-    countries: string[];
-}
+import { Link } from "react-router-dom";
+import type { CountryStackType } from "../types";
 
-export const CountryStack = ({ countries }: CountryStackProps) => {
+export const CountryStack = ({ countrySet }: CountryStackType) => {
     return (
         <div>
-            {countries.map((country) => (
-                <div key={country} className="countryStack shadow-lg flex items-center justify-center">
-                    {country}
+            {countrySet.map((country) => (
+                <Link to={`/${country.countryCode}`}>
+                <div key={country.countryCode} className="countryStack shadow-lg flex items-center justify-center">
+                    {country.countryName}
                 </div>
+                </Link>
             ))}
         </div>
     );

@@ -43,3 +43,12 @@ export interface CountryData{
     borderCountries: string[],
     flagRoute: string
 }
+
+export interface CountrySet{
+    countryName: string,
+    countryCode: string
+}
+
+export interface CountryStackType {
+    countrySet: CountrySet[]
+}
