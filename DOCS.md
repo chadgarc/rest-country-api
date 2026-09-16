@@ -230,9 +230,34 @@
  *
  * **Key State Variables:**
  * - `countryList`: Full list of all countries (populated from cache or demo data)
- * - `filteredCountries`: Subset filtered by search (derived from `countryList`)
+ * - `defaultHomeCountries`: The featured/default countries (10 countries like DEU, USA, BRA, etc.)
+ * - `filteredCountries`: Derived list — shows `defaultHomeCountries` when no filters active, otherwise filters `countryList`
+ * - `searchTerm`: Current search query string (empty when no search is active)
+ * - `selectedRegion`: Currently selected region filter (empty string "All" when no region filter is active)
  * - `initialLoading`: `true` while checking cache + fetching; `false` when ready
  * - `loading`: `true` while API request is in progress
+ *
+ * **How Search + Region Filters Compose:**
+ * `filteredCountries` is computed as a derived value:
+ * ```
+ * if (searchTerm || selectedRegion):
+ *   filteredCountries = countryList.filter(country =>
+ *     (!searchTerm || country.name.includes(searchTerm)) &&
+ *     (!selectedRegion || country.region === selectedRegion)
+ *   )
+ * else:
+ *   filteredCountries = defaultHomeCountries  // featured countries only
+ * ```
+ * - On initial load: shows only the 10 featured/default countries
+ * - When a search or region is active: shows all countries matching both filters
+ * - When both filters are cleared: returns to showing only featured countries
+ * - Clearing one filter does NOT affect the other
+ *
+ * **Why defaultHomeCountries exists:**
+ * The user's main/default countries are the first thing visitors see.
+ * The full `countryList` is kept in context so that searches and region
+ * filters can search across ALL countries, but the default view is
+ * curated to the featured countries only.
  *
  * @example
  * // On page reload, the user sees:
@@ -246,19 +271,29 @@
 /**
  * @interface DataContextType
  * @property {CountryData[]} countryList - Full list of all countries.
- * @property {React.Dispatch<React.SetStateAction<CountryData[]>>} setCountryList - Setter for countryList.
- * @property {CountryData[]} filteredCountries - Filtered list based on search.
- * @property {React.Dispatch<React.SetStateAction<CountryData[]>>} setFilteredCountries - Setter for filteredCountries.
- * @property {(filter: string) => void} filterData - Filters countries by name.
+ * @property {CountryData[]} filteredCountries - Derived list filtered by both search term and region.
+ * @property {(filter: string) => void} filterData - Sets the search term to filter by country name.
+ * @property {(region: string) => void} filterByRegion - Sets the selected region to filter by region.
  * @property {(code: string) => CountryData | undefined} getCountryByCode - Looks up a country by its ISO code.
+ * @property {string} searchTerm - Current search query.
+ * @property {string} selectedRegion - Currently selected region filter.
  * @property {boolean} loading - Whether an API fetch is in progress.
  * @property {boolean} initialLoading - Whether the initial data load (cache + fetch) is complete.
  */
 
 /**
  * @function filterData
- * @description Filters `countryList` by country name using case-insensitive matching.
+ * @description Sets the search term to filter `countryList` by country name (case-insensitive).
+ * This is a derived filter — combined with `filterByRegion` to compose both filters.
  * @param {string} filter - Search string to match against country names.
+ */
+
+/**
+ * @function filterByRegion
+ * @description Sets the selected region to filter `countryList` by region.
+ * Passing an empty string `""` resets to show all regions.
+ * Combined with `filterData` to compose both filters.
+ * @param {string} region - The region to filter by (e.g., "Europe"), or "" for "All".
  */
 
 /**

@@ -6,14 +6,14 @@ import { FilterRegion } from "../components/HomePage/FilterRegion";
 /**
  * Home page component.
  * Renders the search bar, region filter, and country list.
- * Uses `useDataContext()` to access `filteredCountries` and `countryList`.
- * Shows filtered results if the search input has content, otherwise shows all countries.
+ * Uses `useDataContext()` to access `filteredCountries`.
+ * Shows default featured countries when no filter is active,
+ * or filtered results when search or region is active.
  *
  * @returns {JSX.Element} The home page element.
  */
 export function HomePage() {
-    const { filteredCountries, countryList } = useDataContext();
-    const countriesToShow = filteredCountries.length > 0 ? filteredCountries : countryList;
+    const { filteredCountries } = useDataContext();
 
     return (
         <section className="container mx-auto mt-5 px-4 sm:px-0">
@@ -22,7 +22,7 @@ export function HomePage() {
                 <SearchBar searchMessage={"Search for a country..."} />
                 <FilterRegion />
             </section>
-            <CountryList countries={countriesToShow} />
+            <CountryList countries={filteredCountries} />
         </section>
     )
 }

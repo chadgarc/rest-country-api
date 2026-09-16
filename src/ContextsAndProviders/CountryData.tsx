@@ -10,11 +10,12 @@ const STORAGE_KEY = 'country-list';
  *
  * @interface DataContextType
  * @property {CountryData[]} countryList - Full list of all countries.
- * @property {React.Dispatch<React.SetStateAction<CountryData[]>>} setCountryList - Setter for countryList.
- * @property {CountryData[]} filteredCountries - Filtered list based on search.
- * @property {React.Dispatch<React.SetStateAction<CountryData[]>>} setFilteredCountries - Setter for filteredCountries.
- * @property {(filter: string) => void} filterData - Filters countries by name.
+ * @property {CountryData[]} filteredCountries - Filtered list based on search and region.
+ * @property {(filter: string) => void} filterData - Filters countries by name (search term).
+ * @property {(region: string) => void} filterByRegion - Filters countries by region.
  * @property {(code: string) => CountryData | undefined} getCountryByCode - Looks up a country by its ISO code.
+ * @property {string} searchTerm - Current search term.
+ * @property {string} selectedRegion - Currently selected region filter.
  * @property {boolean} loading - Whether an API fetch is in progress.
  * @property {boolean} initialLoading - Whether the initial data load is complete.
  */
@@ -22,9 +23,11 @@ export interface DataContextType {
     countryList: CountryData[];
     setCountryList: React.Dispatch<React.SetStateAction<CountryData[]>>;
     filteredCountries: CountryData[];
-    setFilteredCountries: React.Dispatch<React.SetStateAction<CountryData[]>>;
     filterData: (filter: string) => void;
+    filterByRegion: (region: string) => void;
     getCountryByCode: (code: string) => CountryData | undefined;
+    searchTerm: string;
+    selectedRegion: string;
     loading: boolean;
     initialLoading: boolean;
 }
@@ -49,10 +52,25 @@ export const DataContext = createContext<DataContextType | null>(null);
  * @returns {JSX.Element} The DataContext.Provider wrapping the children.
  */
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
-    const [countryList,setCountryList] = useState<CountryData[]>([]);
-    const [filteredCountries, setFilteredCountries] = useState<CountryData[]>([]);
+    const [countryList, setCountryList] = useState<CountryData[]>([]);
+    const [defaultHomeCountries, setDefaultHomeCountries] = useState<CountryData[]>([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedRegion, setSelectedRegion] = useState('');
     const [initialLoading, setInitialLoading] = useState(true);
     const { fetchAllCountries, loading } = useFetchData();
+
+    /**
+     * Derived filtered list based on both `searchTerm` and `selectedRegion`.
+     * When no filters are active, shows `defaultHomeCountries` (the featured countries).
+     * When a search or region is active, filters `countryList` by the active filters.
+     */
+    const filteredCountries = (searchTerm || selectedRegion)
+        ? countryList.filter((country) => {
+            const matchesSearch = !searchTerm || country.name.toLowerCase().includes(searchTerm.toLowerCase());
+            const matchesRegion = !selectedRegion || country.region === selectedRegion;
+            return matchesSearch && matchesRegion;
+        })
+        : defaultHomeCountries;
 
     useEffect(() => {
         const cached = localStorage.getItem(STORAGE_KEY);
@@ -61,7 +79,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
                 const parsed: CountryData[] = JSON.parse(cached);
                 if (parsed.length > 0) {
                     setCountryList(parsed);
-                    setFilteredCountries(parsed);
+                    setDefaultHomeCountries(parsed);
                 }
             } catch {}
         }
@@ -88,11 +106,11 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
             }
             const defaultFetchedCountries = defaultCountries.map((code) => data.find((country) => country.code === code)) as CountryData[];
             const remainFetchedCountries = data.filter((country) => !defaultCountries.includes(country.code)) as CountryData[];
-            const defaultHomeCountries: CountryData[] = [...defaultFetchedCountries, ...remainFetchedCountries];
+            const defaultHomeCountriesList: CountryData[] = [...defaultFetchedCountries, ...remainFetchedCountries];
 
             localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultFetchedCountries));
-            setCountryList(defaultHomeCountries);
-            setFilteredCountries(defaultHomeCountries);
+            setCountryList(defaultHomeCountriesList);
+            setDefaultHomeCountries(defaultFetchedCountries);
             setInitialLoading(false);
         }).catch(() => {
             setInitialLoading(false);
@@ -100,13 +118,22 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
     }, [fetchAllCountries]);
 
     /**
-     * Filters `countryList` by country name using case-insensitive matching.
+     * Sets the search term to filter `countryList` by country name.
      *
      * @param {string} filter - Search string to match against country names.
      */
     const filterData = useCallback((filter: string) => {
-        setFilteredCountries(countryList.filter((country) => country.name.toLowerCase().includes(filter.toLowerCase())));
-    }, [countryList]);
+        setSearchTerm(filter);
+    }, []);
+
+    /**
+     * Sets the selected region to filter `countryList` by region.
+     *
+     * @param {string} region - The region to filter by (e.g., "Europe"), or "" for "All".
+     */
+    const filterByRegion = useCallback((region: string) => {
+        setSelectedRegion(region);
+    }, []);
 
     /**
      * Finds a country in `countryList` by its ISO alpha-3 code.
@@ -117,7 +144,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
     const getCountryByCode = useCallback((code: string) => countryList.find(country => country.code === code), [countryList]);
 
     return (
-        <DataContext.Provider value={{countryList,setCountryList,filteredCountries, setFilteredCountries, filterData, getCountryByCode, loading, initialLoading}}>
+        <DataContext.Provider value={{countryList, setCountryList, filteredCountries, filterData, filterByRegion, getCountryByCode, searchTerm, selectedRegion, loading, initialLoading}}>
             {children}
         </DataContext.Provider>
     )

@@ -13,19 +13,25 @@ interface SearchBarProps {
 
 /**
  * Search bar component with debounced filtering.
- * Uses `useDataContext()` to access `filterData`.
+ * Uses `useDataContext()` to access `searchTerm` (for input value) and `filterData`.
  * Implements a 300ms debounce via `useRef` and `useEffect`.
+ * Initializes local state from context so the search term persists across navigation.
  *
  * @param {SearchBarProps} props - Component props.
  * @param {string} props.searchMessage - Placeholder text for the search input.
  * @returns {JSX.Element} The search input element wrapped in a DaisyUI label.
  */
 export const SearchBar = ({ searchMessage }: SearchBarProps) => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const {filterData} = useDataContext();
+    const { searchTerm: contextSearchTerm, filterData } = useDataContext();
+    const [searchTerm, setSearchTerm] = useState(contextSearchTerm);
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const hasInitialized = useRef(false);
 
-    useEffect(()=>{
+    useEffect(() => {
+        if (!hasInitialized.current) {
+            hasInitialized.current = true;
+            return;
+        }
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
@@ -54,7 +60,7 @@ export const SearchBar = ({ searchMessage }: SearchBarProps) => {
                 </g>
             </svg>
 
-            <input id="searchEntries" onChange={e => setSearchTerm(e.target.value)} className="ps-4" type="search" required placeholder={searchMessage} />
+            <input id="searchEntries" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="ps-4" type="search" required placeholder={searchMessage} />
         </label>
     );
 };
