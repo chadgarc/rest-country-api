@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
 import type { CountryData } from "../types";
 import { useFetchData } from "../hooks/FetchData";
-import rawDemoData from "../demoData/data.json";
+import rawDemoData from "../countryData/data.json";
 
 const STORAGE_KEY = 'country-list';
 

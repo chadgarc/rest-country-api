@@ -89,15 +89,11 @@ export const jsonNormalization = (raw: any): CountryData => {
     const borderCountries = raw.borders || ['N/A'];
     const flagRoute = raw.flags.png || '../../assets/placeholder-flag.webp';
     const domain = raw.topLevelDomain?.length ? raw.topLevelDomain[0] : 'No domain';
-    const nativeName = raw.nativeName
-    ? Object.values(raw.names.native).map((language:any) => language.official)
-    : ['N/A'];
+    const nativeName = raw.nativeName ? [raw.nativeName as string] : ['N/A'];
     const languages = raw.languages?.length
     ? raw.languages.map((language:any) => language.iso639_1 || language.name)
     : ['No Oficial Language'];
-    const capital = raw.capital?.length
-    ?raw.capital.map( (capital:any) => capital.name)
-    : ['No oficial capital'];
+    const capital = raw.capital ? [raw.capital as string] : ['No oficial capital'];
     const currencies = raw.currencies?.length
     ? raw.currencies.map((currency:any) => currency.code)
     : ['No oficial currency'];
@@ -106,29 +102,3 @@ export const jsonNormalization = (raw: any): CountryData => {
 
     return {code,name,nativeName,population,region,subRegion,capital,languages,domain,currencies,borderCountries,flagRoute};
 }
-// export const jsonAPINormalization = (raw: any): CountryData => {
-//     const code = raw.codes?.alpha_3 || 'UNK';
-//     const name = raw.names?.official || "No Oficial Name";
-//     const population = raw.population || 0;
-//     const subRegion = raw.subregion || "No available";
-//     const region = raw.region || "No available";
-//     const borderCountries = raw.borders || ['N/A'];
-//     const flagRoute = raw.flag?.url_png || '../../assets/placeholder-flag.webp';
-//     const domain = raw.tlds?.length ? raw.tlds[0] : 'No domain';
-//     const nativeName = raw.names?.native
-//     ? Object.values(raw.names.native).map((language:any) => language.official)
-//     : ['N/A'];
-//     const languages = raw.languages?.length
-//     ? raw.languages.map((language:any) => language.iso639_1 || language.name)
-//     : ['No Oficial Language'];
-//     const capital = raw.capitals?.length
-//     ?raw.capitals.map( (capital:any) => capital.name)
-//     : ['No oficial capital'];
-//     const currencies = raw.currencies?.length
-//     ? raw.currencies.map((currency:any) => currency.code)
-//     : ['No oficial currency'];
-    
-//     console.log(name)
-
-//     return {code,name,nativeName,population,region,subRegion,capital,languages,domain,currencies,borderCountries,flagRoute};
-// }
