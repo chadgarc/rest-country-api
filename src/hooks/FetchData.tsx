@@ -2,37 +2,6 @@ import { useState, useCallback } from "react";
 import { jsonNormalization } from "../entities/country";
 import type { CountryData } from "../types";
 
-// const API_URL = import.meta.env.VITE_API_URL;
-// const CORS_PROXY = import.meta.env.VITE_CORS_PROXY;
-// const TOKEN = import.meta.env.VITE_TOKEN;
-// const DETAILS_PARAMS = import.meta.env.VITE_DETAILS_PARAMS;
-
-// /**
-//  * Fetches all countries from the RestCountries API,
-//  * normalizes each result using `jsonNormalization()`.
-//  *
-//  * @returns {Promise<CountryData[]>} Array of normalized country objects.
-//  */
-// export async function fetchAPIAll(): Promise<CountryData[]> {
-//   try {
-//     const response = await fetch(
-//       `${CORS_PROXY}${API_URL}?limit=20&offset=0&${DETAILS_PARAMS}`,
-//       {
-//         method: "GET",
-//         headers: { Authorization: TOKEN },
-//       }
-//     );
-
-//     if (!response.ok) throw new Error("Failed to fetch countries");
-
-//     const data = await response.json();
-//     return data.data.objects.map((country: any) => jsonNormalization(country));
-//   } catch (error) {
-//     console.error(error);
-//     return [];
-//   }
-// }
-
 /**
  * Fetches all countries by dynamically importing the demo JSON data
  * and normalizing each entry via `jsonNormalization()`.
@@ -41,37 +10,13 @@ import type { CountryData } from "../types";
  */
 async function fetchAll(): Promise<CountryData[]> {
   try {
-    const response = await import('../demoData/data.json');
+    const response = await import('../countryData/data.json');
     return response.default.map((country: any) => jsonNormalization(country));
   } catch (error) {
     console.error(error);
     return [];
   }
 }
-
-/**
- * Fetches all countries belonging to a specific region from the
- * RestCountries API, normalizes each result using `jsonNormalization()`.
- *
- * @param {string} region - Region name (e.g., "Europe", "Asia").
- * @returns {Promise<CountryData[]>} Array of normalized country objects for the region.
- */
-// export async function fetchAPIByRegion(region: string): Promise<CountryData[]> {
-//   try {
-//     const response = await fetch(`${CORS_PROXY}${API_URL}?${region}`, {
-//       method: "GET",
-//       headers: { Authorization: TOKEN },
-//     });
-
-//     if (!response.ok) return [];
-
-//     const data = await response.json();
-//     return data.data.objects.map((country: any) => jsonNormalization(country));
-//   } catch (error) {
-//     console.error(error);
-//     return [];
-//   }
-// }
 
 /**
  * Fetches countries belonging to a specific region by filtering the demo data
@@ -82,7 +27,7 @@ async function fetchAll(): Promise<CountryData[]> {
  */
 async function fetchByRegion(region: string): Promise<CountryData[]> {
   try {
-    const response = await import(`../demoData/data.json`);
+    const response = await import(`../countryData/data.json`);
     const regionData = response.default.filter((country: any) => country.region.toLowerCase() === region.toLowerCase());
     return regionData.map((country: any) => jsonNormalization(country));
   } catch (error) {
