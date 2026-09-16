@@ -15,7 +15,7 @@ export const FilterRegion = () => {
 
     /**
      * Sets the region filter via `filterByRegion`.
-     * Passing an empty string resets to "All".
+     * Passing an empty string resets to null.
      *
      * @param {Regions | ''} region - The region to filter by, or empty string for "All".
      */
