@@ -133,6 +133,17 @@ main {
 .details-list li a:hover {
   background-color: var(--bg);
 }
+details {
+  list-style: none;
+}
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+details[open] summary {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 .card {
   background-color: var(--element);
 }

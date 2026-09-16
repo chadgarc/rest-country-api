@@ -12,7 +12,7 @@ export const FilterRegion = () => {
         setFilteredCountries(filteredCountries);
     }
     return (
-        <div className="dropdown">
+        <div className="dropdown btn border-black rounded-xl">
             <details>
                 <summary>Filter by Region</summary>
                 <ul className="details-list">
