@@ -9,6 +9,7 @@ export interface DataContextType {
     countryList: CountryData[];
     setCountryList: React.Dispatch<React.SetStateAction<CountryData[]>>;
     filteredCountries: CountryData[];
+    setFilteredCountries: React.Dispatch<React.SetStateAction<CountryData[]>>;
     filterData: (filter: string) => void;
     getCountryByCode: (code: string) => CountryData | undefined;
     loading: boolean;
@@ -71,7 +72,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
     const getCountryByCode = useCallback((code: string) => countryList.find(country => country.code === code), [countryList]);
 
     return (
-        <DataContext.Provider value={{countryList,setCountryList,filteredCountries, filterData, getCountryByCode, loading, initialLoading}}>
+        <DataContext.Provider value={{countryList,setCountryList,filteredCountries, setFilteredCountries, filterData, getCountryByCode, loading, initialLoading}}>
             {children}
         </DataContext.Provider>
     )

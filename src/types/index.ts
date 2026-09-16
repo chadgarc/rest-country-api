@@ -52,3 +52,10 @@ export interface CountrySet{
 export interface CountryStackType {
     countrySet: CountrySet[]
 }
+
+export type Regions = 
+| "Africa"
+| "Americas"
+| "Asia"
+| "Europe"
+| "Oceania";
