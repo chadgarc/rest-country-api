@@ -62,7 +62,7 @@ export const Details = () => {
                 </section>
                 <section className="flex flex-col sm:flex-row mt-6 sm:mt-15 gap-2 items-start sm:items-center ms-[1%] sm:ms-0">
                     <p className="mb-2 sm:mb-0">Border Countries: </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {<CountryStack countrySet={borderCountries} />}
                     </div>
                 </section>
