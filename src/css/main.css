@@ -192,14 +192,6 @@ p span {
   padding: 0.5rem 1rem;
 }
 
-.cardTopLeft {
-  border-top-left-radius: 0.6rem;
-}
-
-.cardTopRight {
-  border-top-right-radius: 0.6rem;
-}
-
 .cardContent {
   font-size: 0.5rem !important;
 }
