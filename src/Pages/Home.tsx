@@ -9,9 +9,10 @@ export function Home() {
 
     return (
         <section className="container mx-auto mt-5 px-4 sm:px-0">
-            <section className="flex justify-between mx-10">
-            <SearchBar searchMessage={"Search for a country..."} />
-            <FilterRegion />
+            <section className="flex flex-col gap-3 items-center
+                            md:flex-row md:mx-10 md:justify-between">
+                <SearchBar searchMessage={"Search for a country..."} />
+                <FilterRegion />
             </section>
             <CountryList countries={countriesToShow} />
         </section>

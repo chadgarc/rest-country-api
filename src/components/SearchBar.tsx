@@ -25,7 +25,7 @@ export const SearchBar = ({ searchMessage }: SearchBarProps) => {
     },[searchTerm]);
 
     return (
-        <label className="input ms-10">
+        <label className="input">
             <svg className="h-[1.3em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g
                     strokeLinejoin="round"

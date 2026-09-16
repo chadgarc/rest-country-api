@@ -12,11 +12,11 @@ export const FilterRegion = () => {
         setFilteredCountries(filteredCountries);
     }
     return (
-        <div className="dropdown btn border-black rounded-xl">
+        <div className="dropdown w-50 btn border-black rounded-xl">
             <details>
                 <summary>Filter by Region</summary>
-                <ul className="details-list">
-                    {['All', ...regions].map(r => <li key={r}><a onClick={() => handleFilter(r as Regions | '')}>{r}</a></li>)}
+                <ul className="details-list w-full">
+                    {['All', ...regions].map(r => <li key={r}><a className="hover:bg-white hover:text-black" onClick={() => handleFilter(r as Regions | '')}>{r}</a></li>)}
                 </ul>
             </details>
         </div>
