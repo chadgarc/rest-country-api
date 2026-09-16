@@ -14,7 +14,7 @@ export function DetailsPage() {
 
     return (
         <section className="container mx-auto mt-5 px-4 sm:px-0">
-            <Details country={country} />
+            <Details />
         </section>
     );
 }
