@@ -16,6 +16,8 @@ export interface DataContextType {
     initialLoading: boolean;
 }
 
+const defaultCountries = ['DEU','USA','BRA','ISL','AFG','ALA','ALB','DZA','ECU','COL'];
+
 export const DataContext = createContext<DataContextType | null>(null);
 
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
@@ -56,9 +58,13 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
                     flagRoute: item.flags?.png || item.flag || ''
                 }));
             }
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-            setCountryList(data);
-            setFilteredCountries(data);
+            const defaultFetchedCountries = defaultCountries.map((code) => data.find((country) => country.code === code))
+            const remainFetchedCountries = data.filter((country) => !defaultCountries.includes(country.code));
+            const defaultHomeCountries: CountryData[] = [...defaultFetchedCountries, ...remainFetchedCountries]
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultFetchedCountries));
+            setCountryList(defaultHomeCountries);
+            setFilteredCountries(defaultHomeCountries);
             setInitialLoading(false);
         }).catch(() => {
             setInitialLoading(false);

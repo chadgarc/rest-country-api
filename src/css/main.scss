@@ -1,6 +1,4 @@
 @use 'fontNunito' as nunito;
-@import "tailwindcss";
-@plugin "daisyui";
 
 :root {
     font-family: nunito.$family;
