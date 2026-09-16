@@ -6,7 +6,7 @@ interface SearchBarProps {
 }
 
 export const SearchBar = ({ searchMessage }: SearchBarProps) => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState(() => sessionStorage.getItem('searchTerm') || '');
     const {filterData} = useDataContext();
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -23,6 +23,10 @@ export const SearchBar = ({ searchMessage }: SearchBarProps) => {
             }
         };
     },[searchTerm]);
+
+    useEffect(() => {
+        sessionStorage.setItem('searchTerm', searchTerm);
+    }, [searchTerm]);
 
     return (
         <label className="input">
