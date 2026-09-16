@@ -1,21 +1,38 @@
 import { CountryStack } from "./CountryStack";
-import type { CountryData } from "../types";
 import { formatPopulation } from "../modules/utils";
 import { useDataContext } from "../Contexts/CountryData";
+import { useParams, useNavigate } from "react-router-dom";
+import type { CountrySet} from "../types";
 
-interface DetailsProps {
-    country: CountryData;
-}
+// interface DetailsProps {
+//     country: CountryData;
+// }
 
-export const Details = ({ country }: DetailsProps) => {
+export const Details = () => {
+    const { countryCode } = useParams<{ countryCode: string }>();
     const { getCountryByCode } = useDataContext()!;
-    const borderCountries: string[] = country.borderCountries.map(code => getCountryByCode(code)?.name ?? '');
+    const country = getCountryByCode(countryCode);
+    if (!country) {
+        throw new Error('Country not found');
+    };
+    const borderCountries: CountrySet[] = country.borderCountries.map(code => {
+        return {
+            countryName: getCountryByCode(code)?.name ?? '',
+            countryCode: code
+        }
+    });
+
+    const navigate = useNavigate();
 
     return (
-        <div className="flex flex-1 flex-col lg:flex-row md:h-95 gap-10 justify-between lg:justify-around mt-10">
-            <div className="w-97 xl:w-130 aspect-3/2 mx-auto hover-3d">
+        <section className="flex flex-col">
+        
+        <button onClick={() => navigate(-1)} className="btn flex justify-start mt-10 ms-10 border-gray-600 bg-[hsl(0, 100%, 100%)] hover:bg-black hover:text-white w-20 h-10">Back</button>
+
+        <div className="flex flex-1 flex-col lg:flex-row gap-10 justify-between lg:justify-around mt-10">
+            <div className="w-97 aspect-3/2 mx-auto hover-3d">
                 <figure className="">
-                    <img className="w-full aspect-3/2" src={country.flagRoute} alt={`Flag of ${country.name}`} />
+                    <img className="w-full aspect-3/2 shadow-2xl" src={country.flagRoute} alt={`Flag of ${country.name}`} />
                 </figure>
                 <div></div>
                 <div></div>
@@ -45,11 +62,12 @@ export const Details = ({ country }: DetailsProps) => {
                 </section>
                 <section className="flex flex-col sm:flex-row mt-6 sm:mt-15 gap-2 items-start sm:items-center ms-[1%] sm:ms-0">
                     <p className="mb-2 sm:mb-0">Border Countries: </p>
-                    <div className="flex flex-wrap justify-start gap-2">
-                        {<CountryStack countries={borderCountries} />}
+                    <div className="grid grid-cols-1 sm:grid-cols-2">
+                        {<CountryStack countrySet={borderCountries} />}
                     </div>
                 </section>
             </section>
         </div>
+        </section>
     );
 };
