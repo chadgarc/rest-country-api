@@ -1,27 +1,34 @@
 import { useState, useCallback } from "react";
-import { jsonNormalization } from "../entities/country";
 import type { CountryData } from "../types";
-import demoData from "../demoData/data.json";
+import rawDemoData from "../demoData/data.json";
 
-const API_URL = 'https://api.restcountries.com/countries/v5';
-const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
-const TOKEN = 'rc_live_31893b86ab1a4231be2c893453cbac9b';
-const DETAILS_PARAMS = 'response_fields=codes.alpha_3,names.official,languages,names.native,population,region,subregion,capitals.name,tlds,currencies.code,borders,flag.url_png';
-
-function hasNulls(data: any[]): boolean {
-    return data && data.some((c: any) => c === null);
+function normalizeRaw(raw: any[]): CountryData[] {
+    return raw.map((item: any) => ({
+        code: item.alpha3Code || item.alpha2Code || 'UNK',
+        name: item.name || 'Unknown',
+        nativeName: item.nativeName ? [item.nativeName] : ['N/A'],
+        population: item.population || 0,
+        region: item.region || 'N/A',
+        subRegion: item.subregion || 'N/A',
+        capital: item.capital ? [item.capital] : ['N/A'],
+        domain: item.topLevelDomain?.length ? item.topLevelDomain[0] : '',
+        currencies: item.currencies?.map((c: any) => c.code) || [],
+        languages: item.languages?.map((l: any) => l.iso639_1 || l.name) || [],
+        borderCountries: item.borders || [],
+        flagRoute: item.flags?.png || item.flag || ''
+    }));
 }
+
+function hasNulls(data: CountryData[]): boolean {
+    return data && data.some((c) => !c);
+}
+
+const demoData = normalizeRaw(rawDemoData as any[]);
 
 async function fetchAll(): Promise<CountryData[]> {
     try {
-        const response = await fetch(`${CORS_PROXY}${API_URL}?limit=20&offset=0&${DETAILS_PARAMS}`, {
-            method: "GET",
-            headers: { 'Authorization': TOKEN }
-        });
-        if (!response.ok) throw new Error('Failed to fetch countries');
-        const data = await response.json();
-        if (hasNulls(data.data.objects)) throw new Error('Data contains null entries');
-        return data.data.objects.map((country: any) => jsonNormalization(country));
+        if (hasNulls(demoData)) throw new Error('Data contains null entries');
+        return demoData;
     } catch (error) {
         console.error(error);
         throw error;
@@ -30,14 +37,8 @@ async function fetchAll(): Promise<CountryData[]> {
 
 async function fetchByRegion(region: string): Promise<CountryData[]> {
     try {
-        const response = await fetch(`${CORS_PROXY}${API_URL}?${region}`, {
-            method: "GET",
-            headers: { 'Authorization': TOKEN }
-        });
-        if (!response.ok) throw new Error('Failed to fetch region');
-        const data = await response.json();
-        if (hasNulls(data.data.objects)) throw new Error('Data contains null entries');
-        return data.data.objects.map((country: any) => jsonNormalization(country));
+        if (hasNulls(demoData)) throw new Error('Data contains null entries');
+        return demoData.filter((country) => country.region === region);
     } catch (error) {
         console.error(error);
         throw error;
@@ -65,7 +66,7 @@ export const useFetchData = (): UseFetchDataReturn => {
             result = await fetchAll();
             setCountries(result);
         } catch {
-            result = demoData as CountryData[];
+            result = demoData;
             setCountries(result);
             setError('API returned insufficient data; using local backup');
         }
@@ -81,7 +82,7 @@ export const useFetchData = (): UseFetchDataReturn => {
             result = await fetchByRegion(region);
             setCountries(result);
         } catch {
-            result = demoData as CountryData[];
+            result = demoData;
             setCountries(result);
             setError('API returned insufficient data; using local backup');
         }
