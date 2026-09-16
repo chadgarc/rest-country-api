@@ -1,9 +1,12 @@
 import { ThemeProvider } from "../Contexts/ThemeContext";
+import { DataProvider } from "../Contexts/CountryData";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
     return (
         <ThemeProvider>
-            {children}
+            <DataProvider>
+                {children}
+            </DataProvider>
         </ThemeProvider>
     )
 }

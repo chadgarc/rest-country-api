@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
-            {/* <Route path="/:country" element={<Details />} /> */}
+            <Route path="/:countryCode" element={<Details />} />
           </Route>
         </Routes>
       </HashRouter>
