@@ -8,7 +8,7 @@ function App() {
   const {theme} = useThemeContext();
 
   return (
-    <div data-theme={theme}>
+    <div data-theme={theme} className='min-h-screen'>
       <HashRouter>
         <Routes>
           <Route path='/' element={<Layout />}>

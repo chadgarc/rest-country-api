@@ -9,7 +9,7 @@ interface CardProps {
 export const Card = ({ country }: CardProps) => {
     return (
         <Link to={`/${country.code}`} className="block">
-            <div className="card w-85 h-85 md:w-60 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]" data-code={country.code}>
+            <div className="card w-70 sm:w-80 md:w-60 shadow-lg mt-10 mb-5 mx-auto rounded-[.6rem]" data-code={country.code}>
                 <div className="hover-3d md:h-34 aspect-3/2">
                     <figure>
                         <img

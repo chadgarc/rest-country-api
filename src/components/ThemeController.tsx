@@ -5,7 +5,7 @@ export const ThemeButton = () => {
     const isDark = theme === 'dark';
 
     return (
-        <div>
+        <div className="flex gap-2">
             <label className="swap swap-rotate" id="themeToggle">
                 <input type="checkbox" className="theme-controller" value="light" checked={!isDark} onChange={() => toggleTheme()} />
 
