@@ -33,6 +33,12 @@ import type { CountryData } from "../types";
 //   }
 // }
 
+/**
+ * Fetches all countries by dynamically importing the demo JSON data
+ * and normalizing each entry via `jsonNormalization()`.
+ *
+ * @returns {Promise<CountryData[]>} Array of normalized country objects.
+ */
 async function fetchAll(): Promise<CountryData[]> {
   try {
     const response = await import('../demoData/data.json');
@@ -67,6 +73,13 @@ async function fetchAll(): Promise<CountryData[]> {
 //   }
 // }
 
+/**
+ * Fetches countries belonging to a specific region by filtering the demo data
+ * and normalizing each entry via `jsonNormalization()`.
+ *
+ * @param {string} region - The region name (e.g., "Europe", "Asia").
+ * @returns {Promise<CountryData[]>} Array of normalized country objects for the region.
+ */
 async function fetchByRegion(region: string): Promise<CountryData[]> {
   try {
     const response = await import(`../demoData/data.json`);
@@ -79,17 +92,22 @@ async function fetchByRegion(region: string): Promise<CountryData[]> {
 }
 
 interface UseFetchDataReturn {
-  fetchAllCountries: () => Promise<CountryData[]>;
-  fetchByRegion: (region: string) => Promise<CountryData[]>;
-  loading: boolean;
-  error: string | null;
-  countries: CountryData[];
+    /** Fetches all countries. */
+    fetchAllCountries: () => Promise<CountryData[]>;
+    /** Fetches countries by region. */
+    fetchByRegion: (region: string) => Promise<CountryData[]>;
+    /** Whether a fetch is in progress. */
+    loading: boolean;
+    /** Error message if fetch failed, or null. */
+    error: string | null;
+    /** The last fetched country data. */
+    countries: CountryData[];
 }
 
 /**
- * Custom hook that provides data fetching capabilities for countries
- * from the RestCountries API. Manages loading, error, and country data
- * state internally.
+ * Custom hook that provides data fetching capabilities for countries.
+ * Manages loading, error, and country data state internally.
+ * Currently loads data from a local demo JSON file via dynamic import.
  *
  * @returns {UseFetchDataReturn} Object containing fetch functions, loading state, error, and countries list.
  *

@@ -21,9 +21,11 @@
  * @description Imports the main SCSS stylesheet (`./css/main.scss`) which
  *              contains all Tailwind CSS, DaisyUI, CSS variables, theme
  *              definitions, and component styles. Vite compiles SCSS at
- *              runtime using `sass-embedded`.
+ *              runtime using `sass-embedded`. Also imports `input.css`
+ *              which contains the `@import "tailwindcss"` and `@plugin "daisyui"` directives.
  *
  * @see {@link src/css/main.scss}
+ * @see {@link src/css/input.css}
  */
 
 /**
@@ -61,30 +63,24 @@
 // ============================================================================
 
 /**
- * @fileoverview Custom hook for fetching country data from the RestCountries API.
+ * @fileoverview Custom hook for fetching country data.
  *
  * @file src/hooks/FetchData.tsx
  *
  * @description
- * The `useFetchData` hook encapsulates all API communication logic. It provides
- * two main functions: `fetchAllCountries` and `fetchByRegion`.
+ * The `useFetchData` hook encapsulates all data fetching logic. It currently
+ * loads country data from a local demo JSON file (`src/demoData/data.json`)
+ * via dynamic `import()`, normalizing each entry through `jsonNormalization()`.
+ * API-based fetching functions are retained but commented out.
  *
  * **How it works:**
  * 1. Maintains internal state: `loading`, `error`, `countries`.
  * 2. `fetchAllCountries()` calls the private `fetchAll()` async function, which:
- *    - Constructs a URL using the API endpoint, CORS proxy, and auth token.
- *    - Sends a GET request with the `Authorization` header.
- *    - Parses the JSON response and maps each country object through
- *      `jsonNormalization()` to standardize the data format.
+ *    - Dynamically imports `../demoData/data.json`.
+ *    - Maps each country object through `jsonNormalization()` to standardize the data format.
  *    - Returns a `Promise<CountryData[]>`.
  * 3. `fetchByRegion(region)` works similarly but filters by region.
  * 4. Both functions set `loading = true` before the request and `loading = false` after.
- *
- * **API Configuration:**
- * - `API_URL`: `https://api.restcountries.com/countries/v5`
- * - `CORS_PROXY`: `https://cors-anywhere.herokuapp.com/`
- * - `TOKEN`: `rc_live_31893b86ab1a4231be2c893453cbac9b`
- * - `DETAILS_PARAMS`: Specifies which fields to return from the API.
  *
  * @example
  * const { fetchAllCountries, fetchByRegion, loading, error } = useFetchData();
@@ -106,9 +102,9 @@
 /**
  * @function fetchAll
  * @private
- * @description Makes the actual HTTP request to the RestCountries API.
- *              Uses `jsonNormalization()` to convert raw API data into
- *              standardized `CountryData` objects.
+ * @description Makes the actual data retrieval by dynamically importing
+ *              the demo JSON data and mapping each entry through
+ *              `jsonNormalization()` to standardized `CountryData` objects.
  * @returns {Promise<CountryData[]>} Array of normalized country objects.
  */
 
@@ -130,7 +126,7 @@
  * @file src/entities/country.ts
  *
  * @description
- * `jsonNormalization` converts raw API responses into the standardized
+ * `jsonNormalization` converts raw API/demo data responses into the standardized
  * `CountryData` interface. It handles missing fields, inconsistent
  * structures, and optional values.
  *
@@ -142,16 +138,16 @@
 
 /**
  * @function jsonNormalization
- * @description Normalizes raw API country data into `CountryData` format.
- * @param {any} raw - The raw country object from the API.
+ * @description Normalizes raw country data into `CountryData` format.
+ * @param {any} raw - The raw country object from the API or demo data.
  * @returns {CountryData} A fully normalized country data object.
  *
  * Normalization includes:
- * - Extracting ISO alpha-3 codes (`codes.alpha_3`)
- * - Mapping official names (`names.official`)
+ * - Extracting ISO alpha-3 codes (`alpha3Code`)
+ * - Mapping official names (`name`)
  * - Mapping native names from nested objects
  * - Mapping languages and currencies
- * - Providing fallback values when API fields are unavailable
+ * - Providing fallback values when fields are unavailable
  */
 
 // ============================================================================
@@ -187,6 +183,8 @@
  *
  * @interface CountryStackType
  * @property {CountrySet[]} countrySet - Array of border country sets
+ *
+ * @type {Regions} Union type of valid region strings.
  */
 
 // ============================================================================
@@ -206,7 +204,7 @@
  * **The Problem (Before Fix):**
  * When the page is reloaded on a deep route like `#/country/ESP`, the
  * `HashRouter` correctly preserves the URL hash. However, `countryList`
- * starts as an empty array `[]`. The async API fetch takes time to complete.
+ * starts as an empty array `[]`. The async data fetch takes time to complete.
  * During this window, `getCountryByCode('ESP')` returns `undefined`, causing
  * `throw new Error('Country not found')`.
  *
@@ -216,25 +214,25 @@
  * 2. If cached data exists and is valid JSON, it is loaded into state
  *    immediately. This means `getCountryByCode()` works right away.
  * 3. Simultaneously, `fetchAllCountries()` is called to get fresh data.
- * 4. When fresh data arrives, it is saved back to `localStorage` via
- *    `localStorage.setItem('country-list', JSON.stringify(data))`.
- * 5. State is updated with the fresh data, and `initialLoading` is set to `false`.
+ * 4. When fresh data arrives, a curated list of default countries is saved
+ *    back to `localStorage` via `localStorage.setItem('country-list', JSON.stringify(data))`.
+ * 5. State is updated with the curated list, and `initialLoading` is set to `false`.
  *
  * **How localStorage Works with Page Changes:**
  *
  * | Event | localStorage Behavior |
  * |-------|----------------------|
- * | Initial load (first visit) | `localStorage` is empty → shows loading state → fetches from API → caches data |
+ * | Initial load (first visit) | `localStorage` is empty → shows loading state → fetches from demo data → caches default countries |
  * | Initial load (returning visitor) | `localStorage` has cached data → state is populated immediately → routes work instantly → also fetches fresh data in background |
- * | Page reload on `#/country/ESP` | Cached data is loaded from `localStorage` → `getCountryByCode('ESP')` finds the country → `Details` renders correctly |
+ * | Page reload on `/:countryCode` | Cached data is loaded from `localStorage` → `getCountryByCode('ESP')` finds the country → `Details` renders correctly |
  * | Theme toggle (via ThemeContext) | `localStorage.setItem('theme', theme)` saves theme preference |
  * | Data updates (filter, etc.) | Only state changes; `localStorage` cache remains unchanged |
  *
  * **Key State Variables:**
- * - `countryList`: Full list of all countries (populated from cache or API)
+ * - `countryList`: Full list of all countries (populated from cache or demo data)
  * - `filteredCountries`: Subset filtered by search (derived from `countryList`)
  * - `initialLoading`: `true` while checking cache + fetching; `false` when ready
- * - `loading`: `true` while API request is in progress (can be true even after initial load if user triggers a fetch)
+ * - `loading`: `true` while API request is in progress
  *
  * @example
  * // On page reload, the user sees:
@@ -250,6 +248,7 @@
  * @property {CountryData[]} countryList - Full list of all countries.
  * @property {React.Dispatch<React.SetStateAction<CountryData[]>>} setCountryList - Setter for countryList.
  * @property {CountryData[]} filteredCountries - Filtered list based on search.
+ * @property {React.Dispatch<React.SetStateAction<CountryData[]>>} setFilteredCountries - Setter for filteredCountries.
  * @property {(filter: string) => void} filterData - Filters countries by name.
  * @property {(code: string) => CountryData | undefined} getCountryByCode - Looks up a country by its ISO code.
  * @property {boolean} loading - Whether an API fetch is in progress.
@@ -298,10 +297,9 @@
  * | System preference | `@media (prefers-color-scheme: dark)` | First priority for automatic theme |
  * | Manual toggle | `[data-theme="dark"]` | JS-controlled, overrides system when user explicitly chooses |
  *
- * **Color Variables (index.css values):**
- * - Light mode: `--bg: #fff`, `--text: #6b6375`, `--text-h: #08060d`
- * - Dark mode (system): `--bg: #16171d`, `--text: #9ca3af`, `--text-h: #f3f4f6`
- * - Dark mode (manual via `[data-theme]`): `--bg: hsl(207, 26%, 17%)`, `--text: hsl(0, 100%, 100%)`
+ * **Color Variables (main.scss values):**
+ * - Light mode: `--bg: #fff`, `--text: #191919`, `--text-h: #04000e`
+ * - Dark mode (manual via `[data-theme]`): `--bg: black`, `--text: #ffffff`
  *
  * @example
  * // Theme is automatically restored on reload:
@@ -314,7 +312,7 @@
  */
 
 // ============================================================================
-// SECTION 7: CSS ARCHITECTURE — main.scss
+// SECTION 7: CSS ARCHITECTURE — main.scss & input.css
 // ============================================================================
 
 /**
@@ -325,8 +323,6 @@
  *
  * **1. Imports:**
  * - `@use 'fontNunito' as nunito` — SCSS module for Nunito Sans font variables
- * - `@import "tailwindcss"` — Tailwind CSS utility classes
- * - `@plugin "daisyui"` — DaisyUI component library
  *
  * **2. CSS Variables (`:root`):**
  * All theme colors are defined as CSS custom properties for both light and dark modes:
@@ -334,7 +330,6 @@
  * - `--input`, `--element` — used by components like `searchInput`, `card`, `countryStack`
  *
  * **3. Theme Definitions:**
- * - `@media (prefers-color-scheme: dark)` — Automatic dark mode based on system preference
  * - `[data-theme="dark"]` — Manual dark mode controlled by JS (DaisyUI + ThemeContext)
  *
  * **4. Base Styles:**
@@ -342,29 +337,24 @@
  * - `main`, `.background` — Layout background colors
  *
  * **5. Component Styles:**
- * - `.searchInput`, `.dropdownBtn`, `.dropdownItems`, `.card`, `.backBtn`
- * - `.countryStack` — Border country tags (uses `padding: 0.5rem 1rem`, no fixed height)
- * - `.countryTitle`, `.title`, `.cardTitle` — Typography classes
- * - `.cardTopLeft`, `.cardTopRight`, `.cardContent` — Card-specific styles
+ * - `.searchInput`, `.dropdownBtn`, `.dropdownItems`, `.dropdown`, `.details-list`
+ * - `.card`, `.cardContent`, `.cardTitle`, `.card-body`
+ * - `.countryStack` — Border country tags
+ * - `.countryTitle`, `.title`, `.backBtn`
  *
  * **6. Responsive Design:**
  * - `@media (max-width: 550px)` — Adjusts font sizes and spacing for small screens
  * - `@media (max-width: 1024px)` — Adjusts root font size for tablets
  *
- * **Grid Layout for Country List (CountryList.tsx):**
- * ```css
- * .grid.md\:grid-cols-\[repeat\(auto-fit\,minmax\(20rem\,1fr\)\)\]
- * ```
- * - `md:grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]` uses CSS Grid's `auto-fit`
- * - As screen width decreases, columns automatically reduce and rows increase
- * - Each column has a minimum width of `20rem` and expands to fill available space
- * - No media queries needed — the grid is fully responsive
+ * @file src/css/input.css
+ * @description Contains the Tailwind CSS and DaisyUI plugin directives:
+ * - `@import "tailwindcss"`
+ * - `@plugin "daisyui"`
  *
  * @example
  * /* Country list grid behavior: *\/
- * /* Desktop (≥768px): 4 columns *\/
- * /* Tablet: 2 columns *\/
- * /* Mobile: 1 column *\/
+ * /* Desktop (≥768px): auto-fit columns with minmax(20rem, 1fr) *\/
+ * /* Mobile: single column *\/
  */
 
 // ============================================================================
@@ -375,13 +365,14 @@
  * @fileoverview Home page component.
  *
  * @file src/Pages/Home.tsx
- * @description Renders the search bar and country list. Uses `useDataContext()`
- *              to access `filteredCountries` and `countryList`. Shows filtered
- *              results if the search input has content, otherwise shows all countries.
+ * @description Renders the search bar, region filter, and country list.
+ *              Uses `useDataContext()` to access `filteredCountries` and `countryList`.
+ *              Shows filtered results if the search input has content, otherwise shows all countries.
  *
  * @example
  * <section className="container mx-auto mt-5 px-4 sm:px-0">
  *     <SearchBar searchMessage={"Search for a country..."} />
+ *     <FilterRegion />
  *     <CountryList countries={countriesToShow} />
  * </section>
  */
@@ -391,6 +382,7 @@
  *
  * @file src/components/SearchBar.tsx
  * @description A styled search input wrapped in a DaisyUI label.
+ *              Implements debounced filtering (300ms) via `useRef` and `useEffect`.
  *              Passes `searchMessage` as the placeholder text.
  * @property {string} searchMessage - Placeholder text for the search input.
  */
@@ -413,6 +405,7 @@
  * @file src/components/Card.tsx
  * @description Renders a clickable card with the country's flag and basic info.
  *              Links to the country detail page via `to={`/${country.code}`}`.
+ *              Displays formatted population via `formatPopulation`.
  * @property {CountryData} country - The country data to display.
  *
  * @see {@link src/modules/utils} for `formatPopulation` utility.
@@ -427,11 +420,11 @@
  *              - Name, population, region, subregion, capital
  *              - Native name, top-level domain, currencies, languages
  *              - Border countries (rendered via `CountryStack`)
+ *              - Back button for navigation
  *
  * **Loading State Handling:**
- * Shows a loading message while `initialLoading` is `true` (data being fetched
- * from cache/API). This prevents the `throw new Error('Country not found')`
- * that would occur on page reload before data is available.
+ * Shows a loading message while `initialLoading` is `true`.
+ * Throws an error if the country is not found after loading completes.
  *
  * @property {string} countryCode - From `useParams`, used to look up the country.
  *
@@ -449,14 +442,9 @@
  * @file src/components/CountryStack.tsx
  * @description Renders a row of clickable tags for border countries.
  *              Each tag is a `Link` to the border country's detail page.
- *
- * **Fix Applied:**
- * Previously used a `<div>` wrapper inside the grid, which caused all items
- * to be a single grid child. Changed to `<>...</>` fragment so each
- * `countryStack` element is a direct child of the grid container,
- * allowing `grid-cols-1 sm:grid-cols-2` to work correctly.
- *
- * @property {CountrySet[]} countrySet - Array of border country objects.
+ *              Uses a React fragment (`<>...</>`) so each `countryStack` element
+ *              is a direct child of the grid container.
+ * @property {CountryStackType} countrySet - Array of border country objects.
  *
  * @see {@link src/css/main.scss} for `.countryStack` styles.
  */
@@ -465,8 +453,27 @@
  * @fileoverview Theme toggle button component.
  *
  * @file src/components/ThemeController.tsx
- * @description Renders a toggle switch for switching between light and dark modes.
+ * @description Renders a swap toggle switch for switching between light and dark modes.
  *              Uses `useThemeContext()` to access `theme` and `toggleTheme`.
+ *              Displays the current theme label ("Light Mode" / "Dark Mode").
+ */
+
+/**
+ * @fileoverview Navigation bar component.
+ *
+ * @file src/components/Top.tsx
+ * @description Renders the top navigation bar with the app title and theme toggle.
+ *              Uses `ThemeButton` for theme switching and `Link` for home navigation.
+ * @property {string} title - The title text displayed in the navbar.
+ */
+
+/**
+ * @fileoverview Region filter dropdown component.
+ *
+ * @file src/components/FilterRegion.tsx
+ * @description Renders a DaisyUI dropdown for filtering countries by region.
+ *              Uses `useDataContext()` to access `countryList` and `setFilteredCountries`.
+ *              Supports filtering by "All" or specific regions (Africa, Americas, Asia, Europe, Oceania).
  */
 
 // ============================================================================
@@ -476,13 +483,41 @@
 /**
  * @fileoverview Utility functions.
  *
- * @file src/modules/utils
+ * @file src/modules/utils.ts
  * @description Contains helper functions used across the application.
  *
+ * @function capitalize
+ * @description Capitalizes a given string by converting its first character to uppercase.
+ * @param {string} text - The text to capitalize.
+ * @returns {string} The capitalized text.
+ *
+ * @function compareStrings
+ * @description Compares two strings in a case-insensitive manner.
+ * @param {string} string1 - The first string to compare.
+ * @param {string} string2 - The second string to compare.
+ * @returns {boolean} True if both strings match (ignoring case), otherwise false.
+ *
  * @function formatPopulation
- * @description Formats a population number for display (e.g., adding commas).
- * @param {number} population - The raw population number.
- * @returns {string} Formatted population string.
+ * @description Formats a population number using the German locale ("de-DE"),
+ *              inserting dots as thousand separators.
+ * @param {number} population - The numeric population value to format.
+ * @returns {string} The formatted population string with thousand separators.
+ */
+
+/**
+ * @fileoverview Error handling utilities.
+ *
+ * @file src/modules/errorHandler.ts
+ * @description Contains custom error types and a centralized error handler.
+ *
+ * @class DataError
+ * @description Custom error type for data-related failures.
+ *              Extends the native `Error` class.
+ *
+ * @function errorHandler
+ * @description Centralized error handler that processes both custom errors (`DataError`)
+ *              and generic runtime errors.
+ * @param {Error} error - The error instance to process.
  */
 
 // ============================================================================
@@ -517,7 +552,7 @@
  *
  * | Key | Purpose | Set By | Read By |
  * |-----|---------|--------|---------|
- * | `'country-list'` | Cached country data for instant route rendering | `DataProvider` after API fetch | `DataProvider` on initialization |
+ * | `'country-list'` | Cached default country data for instant route rendering | `DataProvider` after demo data loads | `DataProvider` on initialization |
  * | `'theme'` | Saved theme preference ('light' or 'dark') | `ThemeProvider` on every theme change | `ThemeProvider` on initialization |
  *
  * **Lifecycle of `country-list` key:**
@@ -527,9 +562,9 @@
  *   ├── localStorage.getItem('country-list')
  *   │   ├── Has cached data → setCountryList(parsed) → routes work instantly
  *   │   └── No cached data → state remains [] → show loading state
- *   ├── fetchAllCountries() → get data from API
- *   ├── localStorage.setItem('country-list', JSON.stringify(data))
- *   ├── setCountryList(data) → state updated
+ *   ├── fetchAllCountries() → get data from demo JSON
+ *   ├── localStorage.setItem('country-list', JSON.stringify(defaultFetchedCountries))
+ *   ├── setCountryList(defaultHomeCountries) → state updated
  *   └── setInitialLoading(false) → UI ready
  * ```
  *
@@ -546,7 +581,7 @@
  * **Why localStorage instead of sessionStorage:**
  * `localStorage` persists across browser sessions, so returning visitors
  * see their cached data and theme preference immediately without needing
- * to refetch from the API.
+ * to refetch from the demo data.
  */
 
 // ============================================================================
@@ -559,27 +594,25 @@
  * @file vite.config.ts
  * @description Vite configuration with:
  * - `react()` - React plugin
- * - `@rolldown/plugin-babel` - Babel transpilation
+ * - `@rolldown/plugin-babel` - Babel transpilation with React compiler preset
  * - `@tailwindcss/vite` - Tailwind CSS Vite plugin
  * - `base: './'` - Base path for asset URLs
  * - `build.outDir: './docs'` - Output directory for production builds
  *
- * **SCSS Compilation:**
- * Vite handles `.scss` files using `sass-embedded`. When `main.tsx` imports
- * `./css/main.scss`, Vite compiles the SCSS including:
- * - `@use 'fontNunito'` - SCSS module resolution
- * - `@import "tailwindcss"` - Tailwind CSS import
- * - `@plugin "daisyui"` - DaisyUI plugin import
- * - All custom SCSS variables and mixins
- *
  * @file package.json
- * @dependencies: tailwindcss@^4.3.3, @tailwindcss/vite@^4.3.3, daisyui@^5.7.22, sass-embedded@1.104.1
+ * @dependencies: tailwindcss@^4.3.3, @tailwindcss/vite@^4.3.3, daisyui@^5.7.38, react@^19.2.8, react-router-dom@^7.18.3, sass@^1.104.1
+ * @devDependencies: typescript@~6.0.2, vite@^8.2.2, @vitejs/plugin-react@^6.1.0
  */
 
 /**
- * @file src/index.css
- * @description Currently empty. Previously contained Tailwind CSS imports and
- *              CSS variables. These have been migrated to `main.scss` which is
- *              now the single entry point for all styles. The `index.css` file
- *              can be removed or kept as a reference.
+ * @file src/css/input.css
+ * @description Contains the Tailwind CSS and DaisyUI plugin directives.
+ *              This is the CSS entry point imported by `main.tsx`.
+ */
+
+/**
+ * @file src/PREVmain.ts
+ * @description Legacy vanilla JS implementation of the application.
+ *              Excluded from TypeScript compilation via `tsconfig.app.json`.
+ *              Retained for reference only.
  */

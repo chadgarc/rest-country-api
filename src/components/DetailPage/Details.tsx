@@ -1,13 +1,23 @@
 import { CountryStack } from "./CountryStack";
-import { formatPopulation } from "../modules/utils";
-import { useDataContext } from "../Contexts/CountryData";
+import { formatPopulation } from "../../modules/utils";
+import { useDataContext } from "../../Contexts and Providers/CountryData";
 import { useParams, useNavigate } from "react-router-dom";
-import type { CountrySet} from "../types";
+import type { CountrySet} from "../../types";
 
-// interface DetailsProps {
-//     country: CountryData;
-// }
-
+/**
+ * Country detail page component.
+ * Shows detailed information about a specific country including:
+ * - Flag image
+ * - Name, population, region, subregion, capital
+ * - Native name, top-level domain, currencies, languages
+ * - Border countries (rendered via `CountryStack`)
+ * - Back button for navigation
+ *
+ * Shows a loading message while `initialLoading` is `true`.
+ * Throws an error if the country is not found after loading completes.
+ *
+ * @returns {JSX.Element} The country detail page element.
+ */
 export const Details = () => {
     const { countryCode } = useParams<{ countryCode: string }>();
     const { getCountryByCode, initialLoading } = useDataContext()!;

@@ -5,6 +5,19 @@ import rawDemoData from "../demoData/data.json";
 
 const STORAGE_KEY = 'country-list';
 
+/**
+ * Interface representing the data context value provided by `DataProvider`.
+ *
+ * @interface DataContextType
+ * @property {CountryData[]} countryList - Full list of all countries.
+ * @property {React.Dispatch<React.SetStateAction<CountryData[]>>} setCountryList - Setter for countryList.
+ * @property {CountryData[]} filteredCountries - Filtered list based on search.
+ * @property {React.Dispatch<React.SetStateAction<CountryData[]>>} setFilteredCountries - Setter for filteredCountries.
+ * @property {(filter: string) => void} filterData - Filters countries by name.
+ * @property {(code: string) => CountryData | undefined} getCountryByCode - Looks up a country by its ISO code.
+ * @property {boolean} loading - Whether an API fetch is in progress.
+ * @property {boolean} initialLoading - Whether the initial data load is complete.
+ */
 export interface DataContextType {
     countryList: CountryData[];
     setCountryList: React.Dispatch<React.SetStateAction<CountryData[]>>;
@@ -18,8 +31,23 @@ export interface DataContextType {
 
 const defaultCountries = ['DEU','USA','BRA','ISL','AFG','ALA','ALB','DZA','ECU','COL'];
 
+/**
+ * React context for accessing country data throughout the application.
+ * Defaults to `null` to enforce consumption within a `DataProvider`.
+ *
+ * @type {React.Context<DataContextType | null>}
+ */
 export const DataContext = createContext<DataContextType | null>(null);
 
+/**
+ * DataProvider component that wraps the application with country data context.
+ * Implements a two-phase loading strategy with localStorage caching to
+ * prevent route bugs on page reload.
+ *
+ * @param {Object} props - Component props.
+ * @param {React.ReactNode} props.children - Child components that will have access to data context.
+ * @returns {JSX.Element} The DataContext.Provider wrapping the children.
+ */
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
     const [countryList,setCountryList] = useState<CountryData[]>([]);
     const [filteredCountries, setFilteredCountries] = useState<CountryData[]>([]);
@@ -71,10 +99,21 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
         });
     }, [fetchAllCountries]);
 
+    /**
+     * Filters `countryList` by country name using case-insensitive matching.
+     *
+     * @param {string} filter - Search string to match against country names.
+     */
     const filterData = useCallback((filter: string) => {
         setFilteredCountries(countryList.filter((country) => country.name.toLowerCase().includes(filter.toLowerCase())));
     }, [countryList]);
 
+    /**
+     * Finds a country in `countryList` by its ISO alpha-3 code.
+     *
+     * @param {string} code - The ISO alpha-3 country code (e.g., "ESP").
+     * @returns {CountryData | undefined} The matching country or `undefined` if not found.
+     */
     const getCountryByCode = useCallback((code: string) => countryList.find(country => country.code === code), [countryList]);
 
     return (
@@ -84,6 +123,13 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
     )
 }
 
+/**
+ * Custom hook to access the data context.
+ * Must be called inside a `DataProvider` component.
+ * Throws a descriptive error if used outside a provider.
+ *
+ * @returns {DataContextType} The data context value.
+ */
 export const useDataContext = () => {
     const context = useContext(DataContext);
     if (!context) {

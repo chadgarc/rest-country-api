@@ -1,10 +1,25 @@
 import { useState, useEffect, useRef } from "react";
-import { useDataContext } from "../Contexts/CountryData";
+import { useDataContext } from "../../Contexts and Providers/CountryData";
 
+/**
+ * Props for the `SearchBar` component.
+ *
+ * @interface SearchBarProps
+ * @property {string} searchMessage - Placeholder text for the search input.
+ */
 interface SearchBarProps {
     searchMessage: string;
 }
 
+/**
+ * Search bar component with debounced filtering.
+ * Uses `useDataContext()` to access `filterData`.
+ * Implements a 300ms debounce via `useRef` and `useEffect`.
+ *
+ * @param {SearchBarProps} props - Component props.
+ * @param {string} props.searchMessage - Placeholder text for the search input.
+ * @returns {JSX.Element} The search input element wrapped in a DaisyUI label.
+ */
 export const SearchBar = ({ searchMessage }: SearchBarProps) => {
     const [searchTerm, setSearchTerm] = useState('');
     const {filterData} = useDataContext();

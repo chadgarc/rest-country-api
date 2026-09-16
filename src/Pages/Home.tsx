@@ -1,8 +1,16 @@
-import { useDataContext } from "../Contexts/CountryData";
-import { SearchBar } from "../components/SearchBar";
-import { CountryList } from "../components/CountryList";
-import { FilterRegion } from "../components/FilterRegion";
+import { useDataContext } from "../Contexts and Providers/CountryData";
+import { SearchBar } from "../components/HomePage/SearchBar";
+import { CountryList } from "../components/HomePage/CountryList";
+import { FilterRegion } from "../components/HomePage/FilterRegion";
 
+/**
+ * Home page component.
+ * Renders the search bar, region filter, and country list.
+ * Uses `useDataContext()` to access `filteredCountries` and `countryList`.
+ * Shows filtered results if the search input has content, otherwise shows all countries.
+ *
+ * @returns {JSX.Element} The home page element.
+ */
 export function Home() {
     const { filteredCountries, countryList } = useDataContext();
     const countriesToShow = filteredCountries.length > 0 ? filteredCountries : countryList;

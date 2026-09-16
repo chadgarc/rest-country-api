@@ -1,9 +1,9 @@
 import type { CountryData } from "../types";
 
 /**
- * A class implementation of the `CountryData` interface. This class
- * provides a structured way to store country information and includes
- * helper methods for displaying formatted details.
+ * A class implementation of the `CountryData` interface. Provides a
+ * structured way to store country information and includes helper
+ * methods for displaying formatted details.
  *
  * @class Country
  * @implements {CountryData}
@@ -27,23 +27,23 @@ export class Country implements CountryData {
     flagRoute: string;
 
     /**
-     * Creates a new Country instance from normalized country data.
+     * Creates a new `Country` instance from normalized country data.
      *
      * @param {CountryData} country - The normalized country data object.
      */
     constructor(country: CountryData) {
-        this.code = country.code; // always alpha3, that's the standard codes.alpha_3
-        this.name = country.name; // names.official
-        this.nativeName = country.nativeName; // names.native
-        this.population = country.population; // population
-        this.region = country.region; // region
-        this.subRegion = country.subRegion ; // subregion
-        this.languages = country.languages; // standard iso639_1 languages.iso639_1
-        this.capital = country.capital; // capitals.name[]
-        this.domain = country.domain; // tlds
-        this.currencies = country.currencies; // currencies.code []
-        this.borderCountries = country.borderCountries; // borders
-        this.flagRoute = country.flagRoute; //flag.url_png
+        this.code = country.code;
+        this.name = country.name;
+        this.nativeName = country.nativeName;
+        this.population = country.population;
+        this.region = country.region;
+        this.subRegion = country.subRegion;
+        this.languages = country.languages;
+        this.capital = country.capital;
+        this.domain = country.domain;
+        this.currencies = country.currencies;
+        this.borderCountries = country.borderCountries;
+        this.flagRoute = country.flagRoute;
     }
 
     /**
@@ -55,27 +55,25 @@ export class Country implements CountryData {
      * germany.displayDetails();
      * // "Country: Germany, Population: 83200000, Capital: Berlin, Languages: de"
      */
-    displayDetails(){
+    displayDetails(): string {
         return `Country: ${this.name}, Population: ${this.population}, Capital: ${this.capital}, Languages: ${this.languages.join(', ')}`;
     }
-
 }
 
 /**
- * Normalizes raw API country data into the standardized `CountryData`
- * format used throughout the application. This function ensures that
- * missing fields, inconsistent structures, and optional values are
- * safely handled and converted into predictable formats.
+ * Normalizes raw country data into the standardized `CountryData` format
+ * used throughout the application. Handles missing fields, inconsistent
+ * structures, and optional values by providing fallback defaults.
  *
  * The normalization process includes:
- * - Extracting ISO codes, names, population, region, and subregion
+ * - Extracting ISO alpha-3 codes (`alpha3Code`)
+ * - Mapping official names (`name`)
  * - Mapping native names from nested objects
  * - Mapping languages and currencies
  * - Handling missing capitals, borders, and TLDs
- * - Providing fallback values when API fields are unavailable
+ * - Providing fallback values when fields are unavailable
  *
- * @param {any} raw - The raw country object returned by the API.
- *`
+ * @param {any} raw - The raw country object from the API or demo data.
  * @returns {CountryData} A fully normalized country data object.
  *
  * @example

@@ -1,3 +1,14 @@
+/**
+ * Vite configuration for the application.
+ *
+ * @file vite.config.ts
+ * @description Vite configuration with React plugin, Babel transpilation,
+ *              and Tailwind CSS Vite plugin.
+ *
+ * @property {string} base - Base path for asset URLs (`'./'`).
+ * @property {string} build.outDir - Output directory for production builds (`'./docs'`).
+ * @property {Object} server - Development server configuration.
+ */
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'

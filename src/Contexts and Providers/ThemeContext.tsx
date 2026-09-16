@@ -3,21 +3,24 @@ import type { ThemeContextType } from "../types";
 
 /**
  * React context for managing the application's theme (light/dark mode).
- * Created with createContext and typed with ThemeContextType.
- * Defaults to undefined to enforce consumption within a ThemeProvider.
+ * Created with `createContext` and typed with `ThemeContextType`.
+ * Defaults to `undefined` to enforce consumption within a `ThemeProvider`.
+ *
+ * @type {React.Context<ThemeContextType | undefined>}
  */
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 /**
- * Retrieves the previously saved theme from localStorage, defaulting to 'light'.
+ * Retrieves the previously saved theme from localStorage, defaulting to `'light'`.
  * Used for rehydrating the theme state on initial app load.
+ *
+ * @type {string | null}
  */
 const prevTheme = localStorage.getItem('theme');
 
 /**
  * ThemeProvider component that wraps the application (or subtree) with theme state.
- *
- * Uses React's useState to track the current theme and useEffect to persist
+ * Uses React's `useState` to track the current theme and `useEffect` to persist
  * changes to localStorage. The `data-theme` attribute is set on the wrapper div,
  * which DaisyUI reads to apply theme-specific CSS variables.
  *
@@ -29,7 +32,7 @@ export function ThemeProvider ({children}: {children: React.ReactNode}){
     const [theme, setTheme] = useState<ThemeContextType['theme']>(prevTheme ? prevTheme as ThemeContextType['theme'] : 'light');
 
     /**
-     * Toggles the theme between 'light' and 'dark'.
+     * Toggles the theme between `'light'` and `'dark'`.
      * Uses functional updater to read the previous state value.
      */
     const toggleTheme = () => {
@@ -56,7 +59,7 @@ export function ThemeProvider ({children}: {children: React.ReactNode}){
 
 /**
  * Custom hook to access the theme context.
- * Must be called inside a ThemeProvider component.
+ * Must be called inside a `ThemeProvider` component.
  * Throws a descriptive error if used outside a provider.
  *
  * @returns {ThemeContextType} An object containing the current `theme` string and `toggleTheme` function.

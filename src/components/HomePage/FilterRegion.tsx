@@ -1,12 +1,23 @@
-import type { Regions } from "../types";
-import { useDataContext } from "../Contexts/CountryData";
+import type { Regions } from "../../types";
+import { useDataContext } from "../../Contexts and Providers/CountryData";
 
-
-
+/**
+ * Region filter dropdown component.
+ * Renders a DaisyUI dropdown for filtering countries by region.
+ * Uses `useDataContext()` to access `countryList` and `setFilteredCountries`.
+ * Supports filtering by "All" or specific regions (Africa, Americas, Asia, Europe, Oceania).
+ *
+ * @returns {JSX.Element} The region filter dropdown element.
+ */
 export const FilterRegion = () => {
     const regions: Regions[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
     const { countryList, setFilteredCountries } = useDataContext();
 
+    /**
+     * Filters `countryList` by the selected region.
+     *
+     * @param {Regions | ''} region - The region to filter by, or empty string for "All".
+     */
     const handleFilter = (region: Regions | '') => {
         const filteredCountries = countryList.filter((country) => country.region === region);
         setFilteredCountries(filteredCountries);

@@ -1,0 +1,9 @@
+/**
+ * CSS entry point for Tailwind CSS and DaisyUI plugin directives.
+ * Imported by `main.tsx` as the primary CSS import.
+ *
+ * @file src/css/input.css
+ * @description Contains `@import "tailwindcss"` and `@plugin "daisyui"` directives.
+ */
+@import "tailwindcss";
+@plugin "daisyui";

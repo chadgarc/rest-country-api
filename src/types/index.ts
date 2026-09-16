@@ -1,6 +1,7 @@
 /**
  * Defines the shape of the ThemeContext value.
- * @interface
+ *
+ * @interface ThemeContextType
  * @property {'light' | 'dark'} theme - Current theme state.
  * @property {() => void} toggleTheme - Function to toggle between light and dark themes.
  */
@@ -15,7 +16,6 @@ export interface ThemeContextType {
  * across UI components and API responses.
  *
  * @interface CountryData
- *
  * @property {string} code - The ISO alpha-3 country code.
  * @property {string} name - The official country name.
  * @property {string[]} nativeName - List of native names in different languages.
@@ -27,7 +27,7 @@ export interface ThemeContextType {
  * @property {string[]} currencies - List of currency codes.
  * @property {string[]} languages - List of language identifiers.
  * @property {string[]} borderCountries - List of neighboring country codes.
- * @property {string} flagRoute - URL to the country’s PNG flag.
+ * @property {string} flagRoute - URL to the country's PNG flag.
  */
 export interface CountryData{
     code: string,
@@ -44,15 +44,33 @@ export interface CountryData{
     flagRoute: string
 }
 
+/**
+ * Represents a border country with its name and code.
+ *
+ * @interface CountrySet
+ * @property {string} countryName - Name of the country.
+ * @property {string} countryCode - Country code.
+ */
 export interface CountrySet{
     countryName: string,
     countryCode: string
 }
 
+/**
+ * Represents a collection of border countries.
+ *
+ * @interface CountryStackType
+ * @property {CountrySet[]} countrySet - Array of border country sets.
+ */
 export interface CountryStackType {
     countrySet: CountrySet[]
 }
 
+/**
+ * Union type of valid region strings for filtering countries.
+ *
+ * @type {Regions}
+ */
 export type Regions = 
 | "Africa"
 | "Americas"

@@ -1,3 +1,35 @@
+/**
+ * Main stylesheet containing all styles, CSS variables, and theme definitions.
+ *
+ * @file src/css/main.scss
+ * @description This is the single entry point for all application styles. It contains:
+ *
+ * **1. Imports:**
+ * - `@use 'fontNunito' as nunito` — SCSS module for Nunito Sans font variables
+ *
+ * **2. CSS Variables (`:root`):**
+ * All theme colors are defined as CSS custom properties for both light and dark modes:
+ * - `--text`, `--text-h`, `--bg`, `--border`, `--code-bg`, `--accent`, etc.
+ * - `--input`, `--element` — used by components like `searchInput`, `card`, `countryStack`
+ *
+ * **3. Theme Definitions:**
+ * - `[data-theme="dark"]` — Manual dark mode controlled by JS (DaisyUI + ThemeContext)
+ *
+ * **4. Base Styles:**
+ * - `body`, `h1`, `h2`, `p` — Typography and reset styles
+ * - `main`, `.background` — Layout background colors
+ *
+ * **5. Component Styles:**
+ * - `.searchInput`, `.dropdownBtn`, `.dropdownItems`, `.dropdown`, `.details-list`
+ * - `.card`, `.cardContent`, `.cardTitle`, `.card-body`
+ * - `.countryStack` — Border country tags
+ * - `.countryTitle`, `.title`, `.backBtn`
+ *
+ * **6. Responsive Design:**
+ * - `@media (max-width: 550px)` — Adjusts font sizes and spacing for small screens
+ * - `@media (max-width: 1024px)` — Adjusts root font size for tablets
+ */
+
 @use 'fontNunito' as nunito;
 
 :root {

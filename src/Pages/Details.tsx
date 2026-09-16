@@ -1,7 +1,16 @@
 import { useParams } from "react-router-dom";
-import { useDataContext } from "../Contexts/CountryData";
-import { Details } from "../components/Details";
+import { useDataContext } from "../Contexts and Providers/CountryData";
+import { Details } from "../components/DetailPage/Details";
 
+/**
+ * Details page component.
+ * Renders the `Details` component for a specific country identified
+ * by the URL parameter `countryCode`.
+ * Uses `useDataContext()` to look up the country by its ISO code.
+ * Displays a "Country not found" message if the country does not exist.
+ *
+ * @returns {JSX.Element} The details page element.
+ */
 export function DetailsPage() {
     const { countryCode } = useParams<{ countryCode: string }>();
     const { getCountryByCode } = useDataContext();

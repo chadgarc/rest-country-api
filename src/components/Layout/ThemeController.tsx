@@ -1,5 +1,13 @@
-import { useThemeContext } from "../Contexts/ThemeContext";
+import { useThemeContext } from "../../Contexts and Providers/ThemeContext";
 
+/**
+ * Theme toggle button component.
+ * Renders a swap toggle switch for switching between light and dark modes.
+ * Uses `useThemeContext()` to access `theme` and `toggleTheme`.
+ * Displays the current theme label ("Light Mode" / "Dark Mode").
+ *
+ * @returns {JSX.Element} The theme toggle element.
+ */
 export const ThemeButton = () => {
     const { theme, toggleTheme } = useThemeContext();
     const isDark = theme === 'dark';
