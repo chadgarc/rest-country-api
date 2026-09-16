@@ -11,10 +11,11 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
   ],
-  build: {
+build: {
     outDir: './docs',
     emptyOutDir: false,
-  },
+    cssMinify: false,
+},
   server: {
     host: true,
     allowedHosts: ['codium.ec']

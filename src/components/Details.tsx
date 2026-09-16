@@ -11,7 +11,7 @@ import type { CountrySet} from "../types";
 export const Details = () => {
     const { countryCode } = useParams<{ countryCode: string }>();
     const { getCountryByCode, initialLoading } = useDataContext()!;
-    const country = getCountryByCode(countryCode);
+    const country = countryCode ? getCountryByCode(countryCode) : undefined;
 
     if (initialLoading) {
         return (

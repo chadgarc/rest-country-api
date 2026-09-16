@@ -1,8 +1,29 @@
+import { useState, useEffect, useRef } from "react";
+import { useDataContext } from "../Contexts/CountryData";
+
 interface SearchBarProps {
     searchMessage: string;
 }
 
 export const SearchBar = ({ searchMessage }: SearchBarProps) => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const {filterData} = useDataContext();
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    useEffect(()=>{
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+        timeoutRef.current = setTimeout(() => {
+            filterData(searchTerm);
+        }, 300);
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
+    },[searchTerm]);
+
     return (
         <label className="input ms-10">
             <svg className="h-[1.3em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -18,7 +39,7 @@ export const SearchBar = ({ searchMessage }: SearchBarProps) => {
                 </g>
             </svg>
 
-            <input id="searchEntries" className="ps-4" type="search" required placeholder={searchMessage} />
+            <input id="searchEntries" onChange={e => setSearchTerm(e.target.value)} className="ps-4" type="search" required placeholder={searchMessage} />
         </label>
     );
 };
