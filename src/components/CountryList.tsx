@@ -8,7 +8,7 @@ interface CountryListProps {
 export const CountryList = ({ countries }: CountryListProps) => {
     return (
         <section className="grid md:grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]">
-            {countries.map((country) => (
+            {countries.filter(Boolean).map((country) => (
                 <Card key={country.code} country={country} />
             ))}
         </section>

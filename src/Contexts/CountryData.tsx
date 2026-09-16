@@ -58,9 +58,9 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
                     flagRoute: item.flags?.png || item.flag || ''
                 }));
             }
-            const defaultFetchedCountries = defaultCountries.map((code) => data.find((country) => country.code === code))
-            const remainFetchedCountries = data.filter((country) => !defaultCountries.includes(country.code));
-            const defaultHomeCountries: CountryData[] = [...defaultFetchedCountries, ...remainFetchedCountries]
+            const defaultFetchedCountries = defaultCountries.map((code) => data.find((country) => country.code === code)) as CountryData[];
+            const remainFetchedCountries = data.filter((country) => !defaultCountries.includes(country.code)) as CountryData[];
+            const defaultHomeCountries: CountryData[] = [...defaultFetchedCountries, ...remainFetchedCountries];
 
             localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultFetchedCountries));
             setCountryList(defaultHomeCountries);
